@@ -52,7 +52,7 @@ MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used fo
 	2.	[2.2 The MCHP-IoT Webpage](#chapter2.2)
 	3.	[2.3 Connecting the Board to Wi-Fi Networks](#chapter2.3)
 	4.	[2.4 Visualizing Cloud Data in Real Time](#chapter2.4)
-	5.  	[2.5 Voice Control](#chapter2.5)
+	5.	[2.5 Voice Control](#chapter2.5)
 	6.	[2.6 Configuring Other Settings](#chapter2.6)
 3.	[Chapter 3: Switching Cloud Instances](#chapter3)
 	1. 	[3.1 Connecting to your own cloud instance](#chapter3.1)
