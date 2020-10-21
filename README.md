@@ -18,17 +18,17 @@ The WFI32-IoT board contains the PIC32MZW1, a highly integrated IoT system core 
 The WFI32-IoT board includes an integrated programmer/debugger using PICkit™ On Board (PKOB4) and requires only a micro USB power cable to power up and program the board and evaluate the module.
 
 The WFI32-IoT board features the following elements:
--	WFI32E01PC, PIC32MZ W1 Wi-Fi Module with PCB antenna with built-in ATECC608A Trust and Go. 
--	mikroBUS™ socket to expand functionality using MikroElectronika Click™ adapter boards.
--	PICkit™ On Board (PKOB4) Universal Serial Bus (USB) Micro-B Socket for programming/debugging.
--	4 on-board LEDs and 2 user configurable buttons.
--	On-board temperature sensor and light sensor.
--	External flash 32Mb.
--	Module power measurement point to test:
--	Power consumption of WFI32E01PC module only.
--	Power consumption of the whole board.
--	5 I/O test pads.
--	USB Power charging circuit for Lithium-ion battery.
+* WFI32E01PC, PIC32MZ W1 Wi-Fi Module with PCB antenna with built-in ATECC608A Trust and Go. 
+* mikroBUS™ socket to expand functionality using MikroElectronika Click™ adapter boards.
+* PICkit™ On Board (PKOB4) Universal Serial Bus (USB) Micro-B Socket for programming/debugging.
+* 4 on-board LEDs and 2 user configurable buttons.
+* On-board temperature sensor and light sensor.
+* External flash 32Mb.
+* Module power measurement point to test:
+	* Power consumption of WFI32E01PC module only.
+	* Power consumption of the whole board.
+* 5 I/O test pads.
+* USB Power charging circuit for Lithium-ion battery.
 
 The WFI32-IoT board comes pre-programmed and configured for demonstrating the connectivity to the AWS Cloud IoT Core.
 
