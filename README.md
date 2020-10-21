@@ -44,29 +44,29 @@ MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used fo
 ## Table of Contents
 
 1. [Chapter1: Overview](#chapter1)
-    1. [1.1 Board Layout](#chapter1.1)
-    2.	[1.2 LED Indicators](#chapter1.2)
-    3.	[1.3 Switch Button Use Cases](#chapter1.3)
+	1. 	[1.1 Board Layout](#chapter1.1)
+	2.	[1.2 LED Indicators](#chapter1.2)
+	3.	[1.3 Switch Button Use Cases](#chapter1.3)
 2. [Chapter 2: Getting Started](#chapter2)
-    1.	[2.1 Connecting the Board to the Host PC](#chapter2.1)
-    2.	[2.2 The MCHP-IoT Webpage](#chapter2.2)
-    3.	[2.3 Connecting the Board to Wi-Fi Networks](#chapter2.3)
-    4.	[2.4 Visualizing Cloud Data in Real Time](#chapter2.4)
-    5.  [2.5 Voice Control](#chapter2.5)
-    6.	[2.6 Configuring Other Settings](#chapter2.6)
-3.	[Chapter 3: Code Generation](#chapter3)
-    1. [3.1 Generating code from MHC](#chapter3.1)
-4.	[Chapter 4: Switching Cloud Instances](#chapter4)
-    1. [4.1 Connecting to your own cloud instance](#chapter4.1)
-    2. [4.2 Restore factory default cloud instance](#chapter4.2)
-5.	[Chapter 5: Application Overview](#chapter5)
-    1. [5.1 Application Structure](#chapter5.1)
-    2. [5.2 Cloud Interaction](#chapter5.2)
+	1.	[2.1 Connecting the Board to the Host PC](#chapter2.1)
+	2.	[2.2 The MCHP-IoT Webpage](#chapter2.2)
+	3.	[2.3 Connecting the Board to Wi-Fi Networks](#chapter2.3)
+	4.	[2.4 Visualizing Cloud Data in Real Time](#chapter2.4)
+	5.  	[2.5 Voice Control](#chapter2.5)
+	6.	[2.6 Configuring Other Settings](#chapter2.6)
+3.	[Chapter 3: Switching Cloud Instances](#chapter3)
+	1. 	[3.1 Connecting to your own cloud instance](#chapter3.1)
+	2. 	[3.2 Restore factory default cloud instance](#chapter3.2)
+4.	[Chapter 4: Application Overview](#chapter4)
+	1. 	[4.1 Application Structure](#chapter4.1)
+	2. 	[4.2 Cloud Interaction](#chapter4.2)
+5.	[Chapter 3: Code Generation](#chapter5)
+	1. 	[5.1 Generating code from MHC](#chapter5.1)
 6.	[FAQs, Tips and Troubleshooting](#chapter6)
-    1.	[6.1 FAQs and Tips](#chapter6.1)
-    2.	[6.2 LED Status Troubleshooting](#chapter6.2)
+	1.	[6.1 FAQs and Tips](#chapter6.1)
+	2.	[6.2 LED Status Troubleshooting](#chapter6.2)
 7.	[Appendix](#chapter7)
-    1. [7.1 Relevant Links](#chapter7.1)
+	1. 	[7.1 Relevant Links](#chapter7.1)
 
  
 
@@ -227,9 +227,9 @@ For users familiar with the MPLAB X IDE, the WFI32-IoT boards can also be progra
 
  
 
-## Chapter 3: Code Generation <a name="chapter3"></a>
+## Chapter 5: Code Generation <a name="chapter5"></a>
 
-### 3.1 Generating code from MHC  <a name="chapter3.1"></a>
+### 5.1 Generating code from MHC  <a name="chapter5.1"></a>
 The source code of the PIC-IoT WG development boards is available using the MPLAB Code Configurator (MCC) in MPLAB X IDE.
 
 3.1.1	Generating the demo
