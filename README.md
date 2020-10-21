@@ -56,11 +56,17 @@ MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used fo
     6.	[2.6 Configuring Other Settings](#chapter2.6)
 3.	[Chapter 3: Code Generation](#chapter3)
     1. [3.1 Generating code from MHC](#chapter3.1)
-4.	[FAQs, Tips and Troubleshooting](#chapter4)
-    1.	[4.1 FAQs and Tips](#chapter4.1)
-    2.	[4.2 LED Status Troubleshooting](#chapter4.2)
-5.	[Appendix](#chapter5)
-    1. [5.1 Relevant Links](#chapter5.1)
+4.	[Chapter 4: Switching Cloud Instances](#chapter4)
+    1. [4.1 Connecting to your own cloud instance](#chapter4.1)
+    2. [4.2 Restore factory default cloud instance](#chapter4.2)
+5.	[Chapter 5: Application Overview](#chapter5)
+    1. [5.1 Application Structure](#chapter5.1)
+    2. [5.2 Cloud Interaction](#chapter5.2)
+6.	[FAQs, Tips and Troubleshooting](#chapter6)
+    1.	[6.1 FAQs and Tips](#chapter6.1)
+    2.	[6.2 LED Status Troubleshooting](#chapter6.2)
+7.	[Appendix](#chapter7)
+    1. [7.1 Relevant Links](#chapter7.1)
 
  
 
@@ -297,9 +303,9 @@ Figure 3-13. Project Properties
 Figure 3-14. Optimization Settings
  
 
-## Chapter 4: FAQs, Tips and Troubleshooting <a name="chapter4"></a>
+## Chapter 6: FAQs, Tips and Troubleshooting <a name="chapter6"></a>
 
-### 4.1 FAQs and Tips  <a name="chapter4.1"></a>
+### 6.1 FAQs and Tips  <a name="chapter6.1"></a>
 1.	How can I change the Wi-Fi configuration?
 There are four ways to do it:
 -	Connect to the USB and click the "click-me" file to reach the https://www.pic-iot.com/ page (with the /device/{deviceID} suffix). Then enter the new credentials in the web form. Download the resulting file to the CURIOSITY drive. Read more in the 2.3.1 Via PIC-IoT Webpage section.
@@ -327,7 +333,7 @@ The following steps are not required for operating the IoT WG Sensor Node board 
 6.	Check your setup ahead of time and verify you have 4G (or LTE if using the phone hotspot), a full charge and no firewall (if using a router) blocking access to the Google Cloud server (try opening any secure webpage such as: https://microchip.com. If you get the homepage, the way is clear).
 
 
-### 4.2 LED Status Troubleshooting  <a name="chapter4.2"></a>
+### 6.2 LED Status Troubleshooting  <a name="chapter6.2"></a>
 Table 5-1. Troubleshooting and Diagnostics
 
 LED Sequence	Description	Diagnosis	Action
@@ -377,9 +383,9 @@ LED Sequence	Description	Diagnosis	Action
 •	Replace the USB connector
  
 
-## Chapter 5: Appendix <a name="chapter5"></a>
+## Chapter 7: Appendix <a name="chapter7"></a>
 
-### 5.1 Relevant Links  <a name="chapter5.1"></a>
+### 7.1 Relevant Links  <a name="chapter7.1"></a>
 The following list contains links to the most relevant documents and software for the PIC-IoT WG board. For those accessing the electronic version of this document, the underlined labels are clickable and will redirect to the appropriate website..
 •	MPLAB® X IDE - Free IDE to develop applications for Microchip microcontrollers and digital signal controllers.
 •	MPLAB® Code Configurator (MCC) - a free, graphical programming environment that generates seamless, easy-to-understand C code to be inserted into the project. Using an intuitive interface, it enables and configures a rich set of peripherals and functions specific to the application.
