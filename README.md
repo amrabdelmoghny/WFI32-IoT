@@ -52,7 +52,8 @@ MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used fo
     2.	[2.2 The MCHP-IoT Webpage](#chapter2.2)
     3.	[2.3 Connecting the Board to Wi-Fi Networks](#chapter2.3)
     4.	[2.4 Visualizing Cloud Data in Real Time](#chapter2.4)
-    5.	[2.5 Configuring Other Settings](#chapter2.5)
+    5.  [Voice Control](#chapter2.5)
+    6.	[2.5 Configuring Other Settings](#chapter2.6)
 3.	[Chapter 3: Code Generation](#chapter3)
     1. [3.1 Generating code from MHC](#chapter3.1)
 4.	[FAQs, Tips and Troubleshooting](#chapter4)
@@ -179,8 +180,24 @@ The message typed in the text field is transmitted in the form of a string to th
 Figure 2-10. Viewing Messages on a Serial Terminal
 There is no permanent storage, or collection of the data published by the boards connected through the Microchip sandbox account. The full storage features available by the AWS Cloud are available to the user after the board has been removed from the demo environment (Microchip Sandbox) and migrated to a private account.
 
+### 2.5 Voice Control <a name="chapter2.5"></a>
+Out of the box, WFI32-IoT board allows you to control an on board LED using Amazon Alex voice control. Please follow the below steps to do that. Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. Please also note that only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
 
-### 2.5 Configuring Other Settings <a name="chapter2.5"></a>
+#### Create an account
+Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file ***voice.html*** on the MSD.
+
+#### Enter thing name
+* Enter your thing name and a friendly name and _claim_ your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
+* Successfully claimed devices will show up in the device listing in the left side panel.
+#### Use Amazon Alexa® app
+Using Amazon Alexa® app, enable the skill ***"<img src="resources/media/APP_ICON.png" width=30 /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)"*** and add the dev board as a smart home device.   
+#### Control the device
+You can now control the on-board user LED with voice commands using the ***"friendly name"*** provided while claiming the device in step 1.:
+   E.g: _Alexa, turn on the light_
+   
+ You can find out more information about connecting a smart home device to Alexa from [this link](http://tinyurl.com/alexa-smart-home)
+
+### 2.6 Configuring Other Settings <a name="chapter2.6"></a>
 While the WFI32-IoT development board comes out of the box fully programmed and provisioned, the user can still control aspects of the application firmware behavior through the USB interface. There are three methods to do this: WIFI.CFG (reconfigure credentials) drag and drop using the mass storage feature, commands through the serial command line interface (CLI), or using MPLAB X® IDE, and the on-board programmer/debugger PKOB4.
 
 #### Serial USB Interface
