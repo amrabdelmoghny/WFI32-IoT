@@ -44,31 +44,31 @@ MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used fo
 ## Table of Contents
 
 1. [Chapter1: Overview](#chapter1)
-    1. [Board Layout](#chapter1.1)
-    2.	[LED Indicators](#chapter1.2)
-    3.	[Switch Button Use Cases](#chapter1.3)
+    1. [1.1 Board Layout](#chapter1.1)
+    2.	[1.2 LED Indicators](#chapter1.2)
+    3.	[1.3 Switch Button Use Cases](#chapter1.3)
 2. [Chapter 2: Getting Started](#chapter2)
-    1.	[Connecting the Board to the Host PC](#chapter2.1)
-    2.	[The MCHP-IoT Webpage](#chapter2.2)
-    3.	[Connecting the Board to Wi-Fi Networks](#chapter2.3)
-    4.	[Visualizing Cloud Data in Real Time](#chapter2.4)
-    5.	[Configuring Other Settings](#chapter2.5)
+    1.	[2.1 Connecting the Board to the Host PC](#chapter2.1)
+    2.	[2.2 The MCHP-IoT Webpage](#chapter2.2)
+    3.	[2.3 Connecting the Board to Wi-Fi Networks](#chapter2.3)
+    4.	[2.4 Visualizing Cloud Data in Real Time](#chapter2.4)
+    5.	[2.5 Configuring Other Settings](#chapter2.5)
 3.	[Chapter 3: Code Generation](#chapter3)
-    1. [Generating code from MHC](#chapter3.1)
+    1. [3.1 Generating code from MHC](#chapter3.1)
 4.	[FAQs, Tips and Troubleshooting](#chapter4)
-    1.	[FAQs and Tips](#chapter4.1)
-    2.	[LED Status Troubleshooting](#chapter4.2)
+    1.	[4.1 FAQs and Tips](#chapter4.1)
+    2.	[4.2 LED Status Troubleshooting](#chapter4.2)
 5.	[Appendix](#chapter5)
-    1. [Relevant Links](#chapter5.1)
+    1. [5.1 Relevant Links](#chapter5.1)
 
  
 
 ## Chapter 1: Overview <a name="chapter1"></a>
 
-### Board Layout <a name="chapter1.1"></a>
+### 1.1 Board Layout <a name="chapter1.1"></a>
 The WFI32-IoT board layout can be seen below.
 
-### LED Indicators <a name="chapter1.2"></a>
+### 1.2 LED Indicators <a name="chapter1.2"></a>
 The development board features four LEDs that the demo code uses to provide diagnostic information as represented in the table below.
 Table 1-1. LED Indicators
 
@@ -85,7 +85,7 @@ LED Color	Type	Indication	Details
  Red	ERROR	Solid Red	Error Status	Indicates an error in the application.
 
 
-### Switch Button Use Cases <a name="chapter1.3"></a>
+### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 The following section gives details on hold buttons at power-up:
 -	Hold SW0 until two LED cycles to enter Soft AP mode (Refer to the 2.3.3 Via Soft AP section).
 -	Hold both SW0 and SW1 to use default Wi-Fi credentials. The default credentials are configurable through MHC, and the application uses the following default values:
@@ -97,7 +97,7 @@ MCHP.IOT	microchip
 
 ## Chapter 2: Getting Started <a name="chapter2"></a>
 
-### Connecting the Board to the Host PC <a name="chapter2.1"></a>
+### 2.1 Connecting the Board to the Host PC <a name="chapter2.1"></a>
 The WFI32-IoT can be connected to a computer using a standard micro-USB cable. Once plugged in, the LED array at the top right-hand corner of the board should flash in the following order twice: Blue-
 >Green->Yellow->Red. When the board is not connected to Wi-Fi, the red LED will light up.
 The board will appear as a removable storage device on the host PC, as shown in the figure below. Double-click the CURIOSITY drive to open it and get started.
@@ -112,7 +112,7 @@ The CURIOSITY drive should contain the following five files:
 Double-click on the CLICK-ME.HTM file to go to the dedicated webpage to access the Google Cloud sandbox account.
  
 
-### The MCHP-IoT Webpage <a name="chapter2.2"></a>
+### 2.2 The MCHP-IoT Webpage <a name="chapter2.2"></a>
 Figure 2-2. WFI32-IoT Webpage
 The figure below shows an image of the WFI32-IoT webpage. This page displays the sensor data and allows the user to regenerate the Wi-Fi credentials as a file labeled WIFI.CFG. This can be loaded onto the board acting as a storage device to re-configure the access point parameters.
 The status markers at the middle of the page, as shown in the following figure, indicate the progress of the system setup. These markers will light up once each stage is completed successfully.
@@ -120,7 +120,7 @@ Figure 2-3. Webpage Status Indicators
 The leftmost marker indicates if the board is connected to the host PC. Next to this, the Wi-Fi marker lights up once the board is connected to a Wi-Fi network. The blue LED will turn on to indicate the board connection state. To the right of the Wi-Fi marker, the AWS Cloud MQTT marker is found, indicating the status of the TCP socket connection and MQTT connection to the Google Cloud. The corresponding green LED will turn on to indicate the board connection state. Finally, the rightmost marker lights up signifying that data is streaming from the board to the server; this is shown by the blinking of the yellow LED on the board for each successful MQTT publication of data.
  
 
-### Connecting the Board to Wi-Fi Networks <a name="chapter2.3"></a>
+### 2.3 Connecting the Board to Wi-Fi Networks <a name="chapter2.3"></a>
 
 #### Via WFI32-IoT Webpage
 There are several ways to connect the WFI32-IoT board to the Internet. The easiest of these methods is through the WFI32-IoT webpage (www.pic-iot.com). The lower left-hand corner of the site will show a wireless network connection window where the user can choose to connect to an open (no password required) network or enter the credentials for a password protected (WPA/WPA2/WEP) Wi-Fi network. The figure below shows how to enter the Wi-Fi credentials on the website.
@@ -142,7 +142,7 @@ The last method to connect to the Wi-Fi is through Soft AP mode and Microchip Wi
 Figure 2-7. Connecting via Soft AP
  
 
-### Visualizing Cloud Data in Real Time <a name="chapter2.4"></a>
+### 2.4 Visualizing Cloud Data in Real Time <a name="chapter2.4"></a>
 Out of the box, all WFI32-IoT boards are pre-registered to Microchip’s AWS Cloud sandbox account. This account is set up for demonstration purposes only. All data gathered by the sensors of the WFI32-IoT boards are published to the Microchip sandbox account and can be identified by the following details:
 Table 2-1. Project details
 
@@ -180,7 +180,7 @@ Figure 2-10. Viewing Messages on a Serial Terminal
 There is no permanent storage, or collection of the data published by the boards connected through the Microchip sandbox account. The full storage features available by the AWS Cloud are available to the user after the board has been removed from the demo environment (Microchip Sandbox) and migrated to a private account.
 
 
-### Configuring Other Settings <a name="chapter2.5"></a>
+### 2.5 Configuring Other Settings <a name="chapter2.5"></a>
 While the WFI32-IoT development board comes out of the box fully programmed and provisioned, the user can still control aspects of the application firmware behavior through the USB interface. There are three methods to do this: WIFI.CFG (reconfigure credentials) drag and drop using the mass storage feature, commands through the serial command line interface (CLI), or using MPLAB X® IDE, and the on-board programmer/debugger PKOB4.
 
 #### Serial USB Interface
@@ -206,7 +206,7 @@ For users familiar with the MPLAB X IDE, the WFI32-IoT boards can also be progra
 
 ## Chapter 3: Code Generation <a name="chapter3"></a>
 
-### Generating code from MHC  <a name="chapter3.1"></a>
+### 3.1 Generating code from MHC  <a name="chapter3.1"></a>
 The source code of the PIC-IoT WG development boards is available using the MPLAB Code Configurator (MCC) in MPLAB X IDE.
 
 3.1.1	Generating the demo
@@ -282,7 +282,7 @@ Figure 3-14. Optimization Settings
 
 ## Chapter 4: FAQs, Tips and Troubleshooting <a name="chapter4"></a>
 
-### FAQs and Tips  <a name="chapter4.1"></a>
+### 4.1 FAQs and Tips  <a name="chapter4.1"></a>
 1.	How can I change the Wi-Fi configuration?
 There are four ways to do it:
 -	Connect to the USB and click the "click-me" file to reach the https://www.pic-iot.com/ page (with the /device/{deviceID} suffix). Then enter the new credentials in the web form. Download the resulting file to the CURIOSITY drive. Read more in the 2.3.1 Via PIC-IoT Webpage section.
@@ -310,7 +310,7 @@ The following steps are not required for operating the IoT WG Sensor Node board 
 6.	Check your setup ahead of time and verify you have 4G (or LTE if using the phone hotspot), a full charge and no firewall (if using a router) blocking access to the Google Cloud server (try opening any secure webpage such as: https://microchip.com. If you get the homepage, the way is clear).
 
 
-### LED Status Troubleshooting  <a name="chapter4.2"></a>
+### 4.2 LED Status Troubleshooting  <a name="chapter4.2"></a>
 Table 5-1. Troubleshooting and Diagnostics
 
 LED Sequence	Description	Diagnosis	Action
@@ -362,7 +362,7 @@ LED Sequence	Description	Diagnosis	Action
 
 ## Chapter 5: Appendix <a name="chapter5"></a>
 
-### Relevant Links  <a name="chapter5.1"></a>
+### 5.1 Relevant Links  <a name="chapter5.1"></a>
 The following list contains links to the most relevant documents and software for the PIC-IoT WG board. For those accessing the electronic version of this document, the underlined labels are clickable and will redirect to the appropriate website..
 •	MPLAB® X IDE - Free IDE to develop applications for Microchip microcontrollers and digital signal controllers.
 •	MPLAB® Code Configurator (MCC) - a free, graphical programming environment that generates seamless, easy-to-understand C code to be inserted into the project. Using an intuitive interface, it enables and configures a rich set of peripherals and functions specific to the application.
