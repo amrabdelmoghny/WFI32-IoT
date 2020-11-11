@@ -79,34 +79,42 @@ The WFI32-IoT board layout can be seen below.
 
 ### 1.2 LED Indicators <a name="chapter1.2"></a>
 The development board features four LEDs that the demo code uses to provide diagnostic information as represented in the table below.
-<p align="center">
-<img src="resources/media/figure_2.png"/ width="720">
-</p>
+LED Color | Label | Pattern | Indication | Details
+--- | --- | --- | --- | ---
+Blue	| WIFI  | Solid Blue 	| Wi-Fi Network Connection | Indicates a successful connection to the local Wi-Fi network.
+Blue	| WIFI | Blinking Blue | Soft AP Mode | Indicates that the board can be detected and used as a Wi-Fi access point. For details refer to the 2.3 section.
+Green	| CONN 	| Solid Green	| AWS Cloud Connection | Indicates a successful connection to the AWS Cloud.
+Green 	| CONN| Blinking Green | Default Wi-Fi credentials	Indicates that the board is trying to establish a Wi-Fi connection using the default credentials.
+Yellow	| DATA | Blinking Yellow | Data Publication to the Cloud | Indicates that sensor data in the form of MQTT packet has been successfully published to the AWS Cloud.
+Yellow	| DATA | Solid 	Yellow for extended time | State of Toggle sent within MQTT publish packet | Indicates the state of the “Toggle” switch, received as part of the packet published by AWS cloud on the subscribed topic.
+Red	| ERROR | Solid Red| Error Status | Indicates an error in the application.
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 The following section gives details on hold buttons at power-up:
 -	Hold SW0 until two LED cycles to enter Soft AP mode (Refer to the 2.3.3 Via Soft AP section).
--	Hold both SW0 and SW1 to use default Wi-Fi credentials. The default credentials are configurable through MHC, and the application uses the following default values:
-Table 1-2. Wi-Fi Credentials
+-	Hold both SW0 and SW1 to use default Wi-Fi credentials. The application uses the following default values:
 
-SSID	Password
-MCHP.IOT	microchip
+ SSID      | Password  
+ --------- | --------- 
+ MCHP.IOT  | microchip
  
 
 ## Chapter 2: Getting Started <a name="chapter2"></a>
 
 ### 2.1 Connecting the Board to the Host PC <a name="chapter2.1"></a>
-The WFI32-IoT can be connected to a computer using a standard micro-USB cable. Once plugged in, the LED array at the top right-hand corner of the board should flash in the following order twice: Blue-
->Green->Yellow->Red. When the board is not connected to Wi-Fi, the red LED will light up.
+The WFI32-IoT can be connected to a computer using a standard micro-USB cable. Once plugged in, the LED array at the top right-hand corner of the board should flash in the following order twice: Blue->Green->Yellow->Red. When the board is not connected to Wi-Fi, the red LED will light up.
 The board will appear as a removable storage device on the host PC, as shown in the figure below. Double-click the CURIOSITY drive to open it and get started.
 Note:  All procedures are the same for Windows®, Mac OS®, and Linux® environments.
-Figure 2-1. Curiosity Board as Removable Storage
+<p align="center">
+<img src="resources/media/figure_2.png"/>
+</p>
+
 The CURIOSITY drive should contain the following five files:
-•	CLICK-ME.HTM - redirects the user to the PIC-IoT web demo application
-•	KIT-INFO.HTM- redirects the user to a site containing information and resources about the board
-•	KIT-INFO.TXT - a text file with details about PKOB nano firmware and the board’s serial number
-•	PUBKEY.TXT - a text file containing the public key used for data encryption
-•	STATUS.TXT - a text file containing the status condition of the board
+* CLICK-ME.HTM - redirects the user to the WFI32-IoT web demo application
+* VOICE.HTM - redirects the user to the WFI32-IoT web demo application
+* KIT-INFO.HTM- redirects the user to a site containing information and resources about the board
+* WIFI.CFG - a text file with Wi-Fi credentials (default are SSID:MCHP.IOT, Passphrase:microchip, Security:WPA/WPA2)
+* CLOUD.JSON - a JSON file with cloud configuration: Endpoint (default is Microchip's Sandbox account) and Client ID.
 Double-click on the CLICK-ME.HTM file to go to the dedicated webpage to access the Google Cloud sandbox account.
  
 
