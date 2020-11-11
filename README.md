@@ -32,7 +32,9 @@ The WFI32-IoT board features the following elements:
 
 The WFI32-IoT board comes pre-programmed and configured for demonstrating the connectivity to the AWS Cloud IoT Core.
 
-Figure 1. WFI32-IoT
+<p align="center">
+<img src="resources/media/figure_1.png"/>
+</p>
 
 MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used for generating the firmware through MPLAB X®. To download/modify the firmware, the system requirements are the following:
 - IDE	MPLAB X IDE v 5.40 or later
