@@ -105,7 +105,7 @@ The following section gives details on hold buttons at power-up:
 The WFI32-IoT can be connected to a computer using a standard micro-USB cable. Once plugged in, the LED array at the top right-hand corner of the board should flash in the following order twice: Blue->Green->Yellow->Red. When the board is not connected to Wi-Fi, the red LED will light up.
 The board will appear as a removable storage device on the host PC, as shown in the figure below. Double-click the CURIOSITY drive to open it and get started.
 
-Note:  All procedures are the same for Windows®, Mac OS®, and Linux® environments.
+**Note**:  All procedures are the same for Windows®, Mac OS®, and Linux® environments.
 <p align="center">
 <img src="resources/media/figure_2_1_1.png"/>
 </p>
@@ -136,14 +136,14 @@ The status markers at the middle of the page, as shown in the following figure, 
 #### Via WFI32-IoT Webpage
 There are several ways to connect the WFI32-IoT board to the Internet. The easiest of these methods is through the WFI32-IoT webpage (www.pic-iot.com). The lower left-hand corner of the site will show a wireless network connection window where the user can choose to connect to an open (no password required) network or enter the credentials for a password protected (WPA/WPA2/WEP) Wi-Fi network. The figure below shows how to enter the Wi-Fi credentials on the website.
 
-**Important**:  The Wi-Fi network SSID and password are limited to 19 characters. Avoid using quotation marks, names, or phrases that begin or end in spaces. The WFI32-IoT board supports only 2.4 GHz networks inline, thus using mobile hotspots to connect the board to the Internet is recommended.
+**Important**: The Wi-Fi network SSID and password are limited to 19 characters. Avoid using quotation marks, names, or phrases that begin or end in spaces. The WFI32-IoT board supports only 2.4 GHz networks inline, thus using mobile hotspots to connect the board to the Internet is recommended.
  <p align="center">
 <img src="resources/media/figure_2_3_1.png"/>
 </p>
 
 Once the required details are entered, click the Download Configuration button. This will download the WIFI.CFG (text) file to the host PC. From the WIFI.CFG’s download location, drag and drop the file to the CURIOSITY drive to update the Wi-Fi credentials of the board. The blue LED will light up once a successful connection to the Wi-Fi Access Point is made. Refer to Chapter 3 to troubleshoot any board issues.
 
-**Important**:  Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the WIFI.CFG file.
+**Important**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the WIFI.CFG file.
 
  
 #### Via Soft AP
@@ -158,11 +158,13 @@ List of available APs is shown and you can press "SCAN" button to refresh.
 </p>
 
 You can chose one of the scanned APs or provide your own AP crednetials. Provided credentials are sent to the WFI32-IoT board as you press "SEND". 
-Note: Nothing is really applied until you go back in the app. So as long as you didn't go back, you can keep sending new crendetials overriding older ones sent by the app to the WFI32-IoT board.
-  <p align="center">
+to the WFI32-IoT board.
+ <p align="center">
 <img src="resources/media/figure_2_3_5.png" width="240"/>
 <img src="resources/media/figure_2_3_6.png" width="240"/>
 </p>
+
+**Note** : Nothing is really applied until you go back in the app. So as long as you didn't go back, you can keep sending new crendetials overriding older ones sent by the app.
 
 Once you go back in the app, WFI32-IoT board will apply new credentilas; will turn off AP mode and trigger STA mode trying to connect to provided AP. Successfull connection is indicated by a solid blue LED.
 
