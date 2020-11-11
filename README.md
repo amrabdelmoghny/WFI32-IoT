@@ -147,7 +147,7 @@ Once the required details are entered, click the Download Configuration button. 
 
  
 #### Via Soft AP
-The last method to connect to the Wi-Fi is through Soft AP mode and Microchip Wi-Fi provisioning Mobile application. This method is ideal if the user is only using a mobile device, such as a mobile phone or tablet, instead of a laptop or PC. The Soft AP mode can be entered by pressing and holding the SW0 push button for most of the start-up time between initial power-up LED cycling. When the Soft AP mode has been successfully entered, the board can be detected as a Wi-Fi access point named *WFI32-IoT_<MAC_ADDRESS>*; the blue LED will begin to blink when Soft AP is available. Using a mobile device such as a mobile phone or tablet, connect to the *WFI32-IoT_<MAC_ADDRESS>* hotspot. Then open Microchip Wi-Fi provisioning Mobile application which can be downloaded for Android here and for iOS [To be continued] and press connect
+The last method to connect to the Wi-Fi is through Soft AP mode and Microchip Wi-Fi provisioning Mobile application. This method is ideal if the user is only using a mobile device, such as a mobile phone or tablet, instead of a laptop or PC. The Soft AP mode can be entered by pressing and holding the SW0 push button for most of the start-up time between initial power-up LED cycling. When the Soft AP mode has been successfully entered, the board can be detected as a Wi-Fi access point named *WFI32-IoT_<MAC_ADDRESS>*; the blue LED will begin to blink when Soft AP is available. Using a mobile device such as a mobile phone or tablet, connect to the *WFI32-IoT_<MAC_ADDRESS>* hotspot. Then open Microchip Wi-Fi provisioning Mobile application which can be downloaded for Android here and for iOS [To be continued] and press connect.
  <p align="center">
 <img src="resources/media/figure_2_3_3.png" width="240"/>
 </p>
@@ -158,7 +158,6 @@ List of available APs is shown and you can press "SCAN" button to refresh.
 </p>
 
 You can chose one of the scanned APs or provide your own AP crednetials. Provided credentials are sent to the WFI32-IoT board as you press "SEND". 
-to the WFI32-IoT board.
  <p align="center">
 <img src="resources/media/figure_2_3_5.png" width="240"/>
 <img src="resources/media/figure_2_3_6.png" width="240"/>
