@@ -91,7 +91,7 @@ Red	| ERROR | Solid Red| Error Status | Indicates an error in the application.
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 The following section gives details on hold buttons at power-up:
--	Hold SW0 until two LED cycles to enter Soft AP mode (Refer to the 2.3.3 Via Soft AP section).
+-	Hold SW0 until two LED cycles to enter Soft AP mode (Refer to the 2.3 section).
 -	Hold both SW0 and SW1 to use default Wi-Fi credentials. The application uses the following default values:
 
  SSID      | Password  
