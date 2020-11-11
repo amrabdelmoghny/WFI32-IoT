@@ -37,11 +37,11 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
 </p>
 
 MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used for generating the firmware through MPLAB X®. To download/modify the firmware, the system requirements are the following:
-- IDE	MPLAB X IDE v 5.40 or later
-- Compiler	XC32 Compiler v 2.41 or later
-- Code Generation	MCC Plug-in v 3.75
-- MCC Foundation Services v 0.1.32
-- MCC PIC-IoT WG Sensor Node v 1.1.1
+* IDE	MPLAB X IDE v 5.40 or later
+* Compiler	XC32 Compiler v 2.41 or later
+* Code Generation	MCC Plug-in v 3.75
+* MCC Foundation Services v 0.1.32
+* MCC PIC-IoT WG Sensor Node v 1.1.1
  
 ## Table of Contents
 
@@ -111,10 +111,11 @@ Note:  All procedures are the same for Windows®, Mac OS®, and Linux® enviro
 
 The CURIOSITY drive should contain the following five files:
 * CLICK-ME.HTM - redirects the user to the WFI32-IoT web demo application
-* VOICE.HTM - redirects the user to the WFI32-IoT web demo application
-* KIT-INFO.HTM- redirects the user to a site containing information and resources about the board
+* VOICE.HTM - redirects the user to the WFI32-IoT device registration page for Alexa voice support
+* KIT-INFO.HTM - redirects the user to WFI32-IoT product page
 * WIFI.CFG - a text file with Wi-Fi credentials (default are SSID:MCHP.IOT, Passphrase:microchip, Security:WPA/WPA2)
 * CLOUD.JSON - a JSON file with cloud configuration: Endpoint (default is Microchip's Sandbox account) and Client ID.
+
 Double-click on the CLICK-ME.HTM file to go to the dedicated webpage to access the Google Cloud sandbox account.
  
 
