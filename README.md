@@ -84,7 +84,7 @@ LED Color | Label | Pattern | Indication | Details
 Blue	| WIFI  | Solid Blue 	| Wi-Fi Network Connection | Indicates a successful connection to the local Wi-Fi network.
 Blue	| WIFI | Blinking Blue | Soft AP Mode | Indicates that the board can be detected and used as a Wi-Fi access point. For details refer to the 2.3 section.
 Green	| CONN 	| Solid Green	| AWS Cloud Connection | Indicates a successful connection to the AWS Cloud.
-Green 	| CONN| Blinking Green | Default Wi-Fi credentials	Indicates that the board is trying to establish a Wi-Fi connection using the default credentials.
+Green 	| CONN| Blinking Green | Default Wi-Fi credentials |	Indicates that the board is trying to establish a Wi-Fi connection using the default credentials.
 Yellow	| DATA | Blinking Yellow | Data Publication to the Cloud | Indicates that sensor data in the form of MQTT packet has been successfully published to the AWS Cloud.
 Yellow	| DATA | Solid 	Yellow for extended time | State of Toggle sent within MQTT publish packet | Indicates the state of the “Toggle” switch, received as part of the packet published by AWS cloud on the subscribed topic.
 Red	| ERROR | Solid Red| Error Status | Indicates an error in the application.
