@@ -121,10 +121,7 @@ Double-click on the CLICK-ME.HTM file to go to the dedicated webpage to access t
  
 
 ### 2.2 The MCHP-IoT Webpage <a name="chapter2.2"></a>
-The figure below shows an image of the WFI32-IoT webpage. This page displays the sensor data and allows the user to regenerate the Wi-Fi credentials as a file labeled WIFI.CFG. This can be loaded onto the board acting as a storage device to re-configure the access point parameters.
-<p align="center">
-<img src="resources/media/figure_2_2_1.png"/>
-</p>
+The WFI32-IoT webpage displays the sensor data and allows the user to regenerate the Wi-Fi credentials as a file labeled WIFI.CFG. This can be loaded onto the board acting as a storage device to re-configure the access point parameters.
 
 The status markers at the middle of the page, as shown in the following figure, indicate the progress of the system setup. These markers will light up once each stage is completed successfully. The leftmost marker indicates if the board is connected to the host PC. Next to this, the Wi-Fi marker lights up once the board is connected to a Wi-Fi network. The blue LED will turn on to indicate the board connection state. To the right of the Wi-Fi marker, the AWS Cloud MQTT marker is found, indicating the status of the TCP socket connection and MQTT connection to the Google Cloud. The corresponding green LED will turn on to indicate the board connection state. Finally, the rightmost marker lights up signifying that data is streaming from the board to the server; this is shown by the blinking of the yellow LED on the board for each successful MQTT publication of data.
 <p align="center">
