@@ -150,7 +150,7 @@ The last method to connect to the Wi-Fi is through Soft AP mode and Microchip Wi
 </p>
 
 List of available APs is shown and you can press "SCAN" button to refresh.
- <p align="center">
+<p align="center">
 <img src="resources/media/figure_2_3_4.png" width="240"/>
 </p>
 
@@ -167,34 +167,32 @@ Once you go back in the app, WFI32-IoT board will apply new credentilas; will tu
 
 ### 2.4 Visualizing Cloud Data in Real Time <a name="chapter2.4"></a>
 Out of the box, all WFI32-IoT boards are pre-registered to Microchip’s AWS Cloud sandbox account. This account is set up for demonstration purposes only. All data gathered by the sensors of the WFI32-IoT boards are published to the Microchip sandbox account and can be identified by the following details:
-Table 2-1. Project details
+Project ID	|	Region
+---		|	---
+pic-IoT		|	us-central1
 
-Project ID	Region
-pic-IoT	us-central1
 There is no permanent storage, or collection of the data published by the boards connected to the Microchip sandbox account. The full storage catalog of the AWS Cloud features, such as data storage/ retention, can be available to the user with use of the board once removed from the demo environment and the associated Device ID/Public Key has been migrated to a private account.
 
-
-
 #### Publishing Data to the AWS Cloud
-A MQTT PUBLISH packet is always sent to the MQTT broker using a specific topic. WFI32-IoT board publishes messages using the topic ‘/devices/{deviceID}/events’ in communication to the AWS Cloud. The messages published on this topic contain the real-time data obtained from the on-board light and temperature sensors. It does not perform any averaging of data, which is done to allow instantly visible changes on the webpage. The frequency of sending a PUBLISH packet can be decided by the user application. The application is written such that the sensor data is published to the Cloud every one second. 
-
+A MQTT PUBLISH packet is always sent to the MQTT broker using a specific topic. WFI32-IoT board publishes messages using the topic ‘{deviceID}/sensors’ in communication to the AWS Cloud. The messages published on this topic contain the real-time data obtained from the on-board light and temperature sensors. It does not perform any averaging of data, which is done to allow instantly visible changes on the webpage. The frequency of sending a PUBLISH packet can be decided by the user application. The application is written such that the sensor data is published to the Cloud every one second. 
 
 #### Viewing the published messages
 Once the board is connected to a Wi-Fi access point, and has established a socket connection to the Cloud, the WFI32-IoT webpage will show a real-time graph of the data captured from the on-board light and temperature sensors. Data is sent as a MQTT PUBLISH packet from the board to the cloud through a JSON object.
 The ASCII string is formatted as follows:
 {‘Light’: XXX, ‘Temp’: YYY },
-where XXX and YYY are numerical values expressed in decimal notation. The yellow LED on the board is turned on for 250 ms, every one second to indicate that the board is publishing data.
-Figure 2-8. Real-Time Data on the WFI32-IoT Webpage
+where XXX and YYY are numerical values expressed in decimal notation. The yellow LED on the board is turned on for 500 ms, every one second to indicate that the board is publishing data.
+ <p align="center">
+<img src="resources/media/figure_2_4_1.png" width="480"/>
+</p>
 
 #### Subscribing to topics
 In addition to publishing its own data, the WFI32-IoT boards are also capable of subscribing to a topic, after which it will receive data from the AWS Cloud whenever data with that topic is published to the broker server. Subscribing to topics is desired when the receiver is interested in the information sent to the broker by other connected client devices publishing data using the subscribed topic. After sending a SUBSCRIBE packet, all the messages published on the specific topic of subscription are received by the board. As of now, the board subscribes to the ‘/devices/{deviceID}/config’ topic. This is the only topic provided by the Google Cloud for subscribing using the MQTT connection.
 
 #### Sending the messages
 The pic-iot.com webpage URL displays a section “Control your device” below the Light and Temperature graphs. The Toggle button is used to send the switch value to the WFI32-IoT board.
- 
-
- 
-Figure 2-9. Sending Messages on the Subscribed Topic
+ <p align="center">
+<img src="resources/media/figure_2_4_2.png" width="480"/>
+</p>
 
 #### Viewing Messages Received on Subscribed Topic
 The toggle switch value corresponds to a short forced ON/OFF state to the yellow LED on the WFI32-IoT board. The LED will stay ON/OFF for a short time depending on the position of the toggle switch. After, the LED will resume normal behavior, blinking to indicate the transmission sensor data through PUBLISH packets.
