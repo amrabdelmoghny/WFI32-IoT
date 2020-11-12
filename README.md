@@ -174,7 +174,7 @@ pic-IoT		|	us-central1
 There is no permanent storage, or collection of the data published by the boards connected to the Microchip sandbox account. The full storage catalog of the AWS Cloud features, such as data storage/ retention, can be available to the user with use of the board once removed from the demo environment and the associated Device ID/Public Key has been migrated to a private account.
 
 #### Publishing Data to the AWS Cloud
-A MQTT PUBLISH packet is always sent to the MQTT broker using a specific topic. WFI32-IoT board publishes messages using the topic ‘{deviceID}/sensors’ in communication to the AWS Cloud. The messages published on this topic contain the real-time data obtained from the on-board light and temperature sensors. It does not perform any averaging of data, which is done to allow instantly visible changes on the webpage. The frequency of sending a PUBLISH packet can be decided by the user application. The application is written such that the sensor data is published to the Cloud every one second. 
+A MQTT PUBLISH packet is always sent to the MQTT broker using a specific topic. The WFI32-IoT board publishes messages using the topic ‘{deviceID}/sensors’ in communication to the AWS Cloud. The messages published on this topic contain the real-time data obtained from the on-board light and temperature sensors. It does not perform any averaging of data, which is done to allow instantly visible changes on the webpage. The frequency of sending a PUBLISH packet can be decided by the user application. The application is written such that the sensor data is published to the Cloud every one second. 
 
 #### Viewing the published messages
 Once the board is connected to a Wi-Fi access point, and has established a socket connection to the Cloud, the WFI32-IoT webpage will show a real-time graph of the data captured from the on-board light and temperature sensors. Data is sent as a MQTT PUBLISH packet from the board to the cloud through a JSON object.
@@ -186,7 +186,7 @@ where XXX and YYY are numerical values expressed in decimal notation. The yellow
 </p>
 
 #### Subscribing to topics
-In addition to publishing its own data, the WFI32-IoT boards are also capable of subscribing to a topic, after which it will receive data from the AWS Cloud whenever data with that topic is published to the broker server. Subscribing to topics is desired when the receiver is interested in the information sent to the broker by other connected client devices publishing data using the subscribed topic. After sending a SUBSCRIBE packet, all the messages published on the specific topic of subscription are received by the board. As of now, the board subscribes to the ‘/devices/{deviceID}/config’ topic. This is the only topic provided by the Google Cloud for subscribing using the MQTT connection.
+In addition to publishing its own data, the WFI32-IoT boards are also capable of subscribing to a topic, after which it will receive data from the AWS Cloud whenever data with that topic is published to the broker server. Subscribing to topics is desired when the receiver is interested in the information sent to the broker by other connected client devices publishing data using the subscribed topic. After sending a SUBSCRIBE packet, all the messages published on the specific topic of subscription are received by the board. As of now, the board subscribes to the '$aws/things/{deviceID}/shadow/update/#' topic but will only make use of data comes via the '$aws/things/{deviceID}/shadow/update/' topic.
 
 #### Sending the messages
 The pic-iot.com webpage URL displays a section “Control your device” below the Light and Temperature graphs. The Toggle button is used to send the switch value to the WFI32-IoT board.
@@ -195,25 +195,27 @@ The pic-iot.com webpage URL displays a section “Control your device” below t
 </p>
 
 #### Viewing Messages Received on Subscribed Topic
-The toggle switch value corresponds to a short forced ON/OFF state to the yellow LED on the WFI32-IoT board. The LED will stay ON/OFF for a short time depending on the position of the toggle switch. After, the LED will resume normal behavior, blinking to indicate the transmission sensor data through PUBLISH packets.
-The message typed in the text field is transmitted in the form of a string to the board. In addition to the yellow LED behavior, the values of the toggle and text field values can be viewed on a Serial Terminal application (such as Tera Term, Realterm, PuTTy, etc.).
+The toggle switch value corresponds to a short forced ON/OFF state to the yellow LED on the WFI32-IoT board. The LED will stay ON/OFF for a short time depending on the position of the toggle switch. After that, the LED will resume normal behavior, blinking to indicate the transmission sensor data through PUBLISH packets. In addition to the yellow LED behavior, the values of the toggle and text field values can be viewed on a Serial Terminal application (such as Tera Term, Realterm, PuTTy, etc.).
 Figure 2-10. Viewing Messages on a Serial Terminal
+
 There is no permanent storage, or collection of the data published by the boards connected through the Microchip sandbox account. The full storage features available by the AWS Cloud are available to the user after the board has been removed from the demo environment (Microchip Sandbox) and migrated to a private account.
 
 ### 2.5 Voice Control <a name="chapter2.5"></a>
-Out of the box, WFI32-IoT board allows you to control an on board LED using Amazon Alex voice control. Please follow the below steps to do that. Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. Please also note that only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
+Out of the box, WFI32-IoT board allows you to control an on board LED using Amazon Alexa voice control. Please follow the below steps to do that. Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. Please also note that only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
 
 #### Create an account
-Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file ***voice.html*** on the MSD.
+Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file 'VOICE.HTM' on the MSD.
 
 #### Enter thing name
-* Enter your thing name and a friendly name and _claim_ your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
+* Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
 * Successfully claimed devices will show up in the device listing in the left side panel.
+
 #### Use Amazon Alexa® app
-Using Amazon Alexa® app, enable the skill ***"<img src="resources/media/APP_ICON.png" width=30 /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)"*** and add the dev board as a smart home device.   
+Using Amazon Alexa® app, enable the skill '<img src="resources/media/figure_2_5_1.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
+
 #### Control the device
-You can now control the on-board user LED with voice commands using the ***"friendly name"*** provided while claiming the device in step 1.:
-   E.g: _Alexa, turn on the light_
+You can now control the on-board Yellow LED with voice commands using the friendly name provided while claiming the device earlier:
+> Alexa, turn on the light
    
  You can find out more information about connecting a smart home device to Alexa from [this link](http://tinyurl.com/alexa-smart-home)
 
