@@ -78,7 +78,7 @@ MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used fo
 The WFI32-IoT board layout can be seen below.
 
 ### 1.2 LED Indicators <a name="chapter1.2"></a>
-The development board features four LEDs that the demo code uses to provide diagnostic information as represented in the table below.
+The WFI32-IoT board features four LEDs that the demo code uses to provide diagnostic information as represented in the table below.
 LED Color | Label | Pattern | Indication | Details
 --- | --- | --- | --- | ---
 Blue	| WIFI  | Solid Blue 	| Wi-Fi Network Connection | Indicates a successful connection to the local Wi-Fi network.
@@ -90,20 +90,21 @@ Yellow	| DATA | Solid 	Yellow for extended time | State of Toggle sent within MQ
 Red	| ERROR | Solid Red| Error Status | Indicates an error in the application.
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
-The following section gives details on hold buttons at power-up:
--	Hold SW0 until two LED cycles to enter Soft AP mode (Refer to the 2.3 section).
--	Hold both SW0 and SW1 to use default Wi-Fi credentials. The application uses the following default values:
-
- SSID      | Password  
- --------- | --------- 
- MCHP.IOT  | microchip
+The WFI32-IoT board features two user buttons where holding them on power up can configure the board as represented in the table below.
+SW0     | SW1  	| Action
+ ------ | ----- | ------ 
+Held  	| 	| Enter Soft AP mode
+Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
  
 
 ## Chapter 2: Getting Started <a name="chapter2"></a>
 
 ### 2.1 Connecting the Board to the Host PC <a name="chapter2.1"></a>
-The WFI32-IoT can be connected to a computer using a standard micro-USB cable. Once plugged in, the LED array at the top right-hand corner of the board should flash in the following order twice: Blue->Green->Yellow->Red. When the board is not connected to Wi-Fi, the red LED will light up.
-The board will appear as a removable storage device on the host PC, as shown in the figure below. Double-click the CURIOSITY drive to open it and get started.
+1. The WFI32-IoT can be connected to a computer using a standard micro-USB cable. 
+2. Once plugged in, the LED array will blink in the following order twice: **Blue -> Green -> Yellow -> Red**. 
+3. When the board is not connected to Wi-Fi, the red LED will light up.
+4. The board will appear as a removable storage device on the host PC
+5. Double-click on the **CLICK-ME.HTM** file to go to the demo webpage.
 
 **Note**:  All procedures are the same for Windows®, Mac OS®, and Linux® environments.
 <p align="center">
@@ -111,19 +112,25 @@ The board will appear as a removable storage device on the host PC, as shown in 
 </p>
 
 The CURIOSITY drive should contain the following five files:
-* CLICK-ME.HTM - redirects the user to the WFI32-IoT web demo application
-* VOICE.HTM - redirects the user to the WFI32-IoT device registration page for Alexa voice support
-* KIT-INFO.HTM - redirects the user to WFI32-IoT product page
-* WIFI.CFG - a text file with Wi-Fi credentials (default are SSID:MCHP.IOT, Passphrase:microchip, Security:WPA/WPA2)
-* CLOUD.JSON - a JSON file with cloud configuration: Endpoint (default is Microchip's Sandbox account) and Client ID.
-
-Double-click on the CLICK-ME.HTM file to go to the dedicated webpage to access the Google Cloud sandbox account.
+* **CLICK-ME.HTM** - redirects the user to the WFI32-IoT web demo application
+* **VOICE.HTM** - redirects the user to the WFI32-IoT device registration page for Alexa voice support
+* **KIT-INFO.HTM** - redirects the user to WFI32-IoT product page
+* **WIFI.CFG** - a text file with Wi-Fi credentials (defaults are **SSID:MCHP.IOT, Passphrase:microchip, Security:WPA/WPA2**)
+* **CLOUD.JSON** - a JSON file with cloud configuration: Endpoint (default is Microchip's Sandbox account) and Client ID.
  
 
 ### 2.2 The MCHP-IoT Webpage <a name="chapter2.2"></a>
-The WFI32-IoT webpage displays the sensor data and allows the user to regenerate the Wi-Fi credentials as a file labeled WIFI.CFG. This can be loaded onto the board acting as a storage device to re-configure the access point parameters.
+The WFI32-IoT webpage is used to:
+1. Display the sensors' data.
+2. Control on board Yellow LED.
+3. Generate the Wi-Fi credentials as a file labeled **WIFI.CFG**.
 
-The status markers at the middle of the page, as shown in the following figure, indicate the progress of the system setup. These markers will light up once each stage is completed successfully. The leftmost marker indicates if the board is connected to the host PC. Next to this, the Wi-Fi marker lights up once the board is connected to a Wi-Fi network. The blue LED will turn on to indicate the board connection state. To the right of the Wi-Fi marker, the AWS Cloud MQTT marker is found, indicating the status of the TCP socket connection and MQTT connection to the Google Cloud. The corresponding green LED will turn on to indicate the board connection state. Finally, the rightmost marker lights up signifying that data is streaming from the board to the server; this is shown by the blinking of the yellow LED on the board for each successful MQTT publication of data.
+The status markers at the middle of the page, as shown in the following figure, indicate the progress of the system setup. Markers from right to left are:
+
+1. The Presence marker indicates if the board is connected to the host PC. 
+2. The Wi-Fi marker indicates if the board is connected to a Wi-Fi network.
+3. The Cloud marker indicates if the board is connected to AWS cloud. 
+4. The Data marker indicates data is being sent from the board to cloud.
 <p align="center">
 <img src="resources/media/figure_2_2_2.png"/>
 </p>
@@ -131,38 +138,41 @@ The status markers at the middle of the page, as shown in the following figure, 
 ### 2.3 Connecting the Board to Wi-Fi Networks <a name="chapter2.3"></a>
 
 #### Via WFI32-IoT Webpage
-There are several ways to connect the WFI32-IoT board to the Internet. The easiest of these methods is through the WFI32-IoT webpage (www.pic-iot.com). The lower left-hand corner of the site will show a wireless network connection window where the user can choose to connect to an open (no password required) network or enter the credentials for a password protected (WPA/WPA2/WEP) Wi-Fi network. The figure below shows how to enter the Wi-Fi credentials on the website.
-
-**Important**: The Wi-Fi network SSID and password are limited to 19 characters. Avoid using quotation marks, names, or phrases that begin or end in spaces. The WFI32-IoT board supports only 2.4 GHz networks inline, thus using mobile hotspots to connect the board to the Internet is recommended.
  <p align="center">
 <img src="resources/media/figure_2_3_1.png"/>
 </p>
 
-Once the required details are entered, click the Download Configuration button. This will download the WIFI.CFG (text) file to the host PC. From the WIFI.CFG’s download location, drag and drop the file to the CURIOSITY drive to update the Wi-Fi credentials of the board. The blue LED will light up once a successful connection to the Wi-Fi Access Point is made. Refer to Chapter 3 to troubleshoot any board issues.
+1. The lower left-hand corner of the web page will show a wireless network connection window.
+2. Once the required details are entered, click the **Download Configuration** button. 
+3. A file named **WIFI.CFG** (text) file is downloaded to the host PC. 
+4. Drag and drop the file to the **CURIOSITY drive** to update the Wi-Fi credentials of the board.
+5. Reboot the device.
+6. The **blue LED** will light up once a successful connection to the Wi-Fi Access Point is made.
 
-**Important**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the WIFI.CFG file.
+**Important**: The Wi-Fi network SSID and password are limited to 19 characters. Avoid using quotation marks, names, or phrases that begin or end in spaces. The WFI32-IoT board supports only 2.4 GHz networks inline, thus using mobile hotspots to connect the board to the Internet is recommended.
+
+**Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the WIFI.CFG file.
 
  
 #### Via Soft AP
-The last method to connect to the Wi-Fi is through Soft AP mode and Microchip Wi-Fi provisioning Mobile application. This method is ideal if the user is only using a mobile device, such as a mobile phone or tablet, instead of a laptop or PC. The Soft AP mode can be entered by pressing and holding the SW0 push button for most of the start-up time between initial power-up LED cycling. When the Soft AP mode has been successfully entered, the board can be detected as a Wi-Fi access point named *WFI32-IoT_<MAC_ADDRESS>*; the blue LED will begin to blink when Soft AP is available. Using a mobile device such as a mobile phone or tablet, connect to the *WFI32-IoT_<MAC_ADDRESS>* hotspot. Then open Microchip Wi-Fi provisioning Mobile application which can be downloaded for Android here and for iOS [To be continued] and press connect.
- <p align="center">
+1. Download **Microchip Wi-Fi provisioning Mobile application** for Android here and for iOS here to your Mobile phone or Tablet.
+2. The Soft AP mode can be entered by pressing and holding the **SW0** push button for most of the power up time. 
+3. The **blue LED** will blink when Soft AP is available.
+4. The board can be detected as a Wi-Fi access point named **WFI32-IoT_<MAC_ADDRESS>**. 
+5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
+
 <img src="resources/media/figure_2_3_3.png" width="240"/>
-</p>
 
-List of available APs is shown and you can press "SCAN" button to refresh.
-<p align="center">
+6. List of available APs is shown and you can press **SCAN** button to refresh.
 <img src="resources/media/figure_2_3_4.png" width="240"/>
-</p>
 
-You can chose one of the scanned APs or provide your own AP crednetials. Provided credentials are sent to the WFI32-IoT board as you press "SEND". 
- <p align="center">
+7. You can chose one of the scanned APs or provide your own AP crednetials. Provided credentials are sent to the WFI32-IoT board as you press **SEND**. 
+
 <img src="resources/media/figure_2_3_5.png" width="240"/>
 <img src="resources/media/figure_2_3_6.png" width="240"/>
-</p>
 
-**Note** : Nothing is really applied until you go back in the app. So as long as you didn't go back, you can keep sending new crendetials overriding older ones sent by the app.
-
-Once you go back in the app, WFI32-IoT board will apply new credentilas; will turn off AP mode and trigger STA mode trying to connect to provided AP. Successfull connection is indicated by a solid blue LED.
+8. Once you go back in the app, WFI32-IoT board will apply new credentilas.
+9. The **blue LED** will light up once a successful connection to the Wi-Fi Access Point is made.
 
 
 ### 2.4 Visualizing Cloud Data in Real Time <a name="chapter2.4"></a>
