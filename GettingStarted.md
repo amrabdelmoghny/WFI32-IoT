@@ -28,10 +28,10 @@ The WFI32-IoT board contains the PIC32MZW1, a highly integrated IoT system core 
 		2. 	[2.2.2 Via Soft AP](#chapter2.2.2)
 	4.	[2.3 Visualizing Cloud Data in Real Time](#chapter2.3)
 	5.	[2.4 Voice Control](#chapter2.4)
-6.[FAQs, Tips and Troubleshooting](#chapter6)
+6. [FAQs, Tips and Troubleshooting](#chapter6)
 	1.	[6.1 FAQs and Tips](#chapter6.1)
 	2.	[6.2 LED Status Troubleshooting](#chapter6.2)
-7.[Appendix](#chapter7)
+7. [Appendix](#chapter7)
 	1. 	[7.1 Relevant Links](#chapter7.1)
 
 
