@@ -32,7 +32,6 @@ The WFI32-IoT board contains the PIC32MZW1, a highly integrated IoT system core 
 7.[Appendix](#chapter7)
 	1. 	[7.1 Relevant Links](#chapter7.1)
 
- 
 
 ## Chapter 1: Overview <a name="chapter1"></a>
 
@@ -115,11 +114,13 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 
 #### Viewing the published messages
 <img src="resources/media/figure_2_4_0.png" width="720"/>
+
 1. After connecting to an access point, WFI32-IoT board will try to connect to AWS cloud Miicrochip Sandbox account which is indicated by a **blinking Green LED**.
 2. Once connection to cloud is successful, **Green LED** will turn solid.
 3. Go to demo webpage (can always be reached out using the file **CLICK-ME.HTM**).
 4. The webpage will show a real-time graph of the data captured from the on-board light and temperature sensors.
 5. The on board **Yellow LED** will blink for 500ms for each message published successfully to te cloud.
+
  <p align="center">
 <img src="resources/media/figure_2_4_1.png" width="720"/>
 </p>
@@ -127,11 +128,17 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 #### Sending messages to the board
 1. Click on **What's Next** button below the Temprature and Light graphs.
 2. Select **Implement a Cloud-Controlled Actuator** to demostrate cloud performed behaviors.
+
 <img src="resources/media/figure_2_4_2.png" width="720"/>
+
 3. Click on **Learn More** button to expand page interface then Scroll to the bottom of **Step 5** where a panel will read **Control Your Device**.
+
 <img src="resources/media/figure_2_4_3.png" width="720"/>
+
 4. By default only a **Toggle** feature is demostrated. Custome implmentations are described further on above the panel.
+
 <img src="resources/media/figure_2_4_4.png" width="720"/>
+
 5. Click on **Send to device** to send **Toggle** button value. 
 6. When **Toggle** button is selected, the **YELLOW LED** will remain on for 3 Seconds. When unselected, the **YELLOW LED** will remain off for 3 Seconds. After the 3 seocnds, the **Yellow LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
 
