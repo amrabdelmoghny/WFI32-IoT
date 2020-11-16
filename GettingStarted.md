@@ -75,9 +75,7 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 ### 2.2 Connecting the Board to Wi-Fi Networks <a name="chapter2.2"></a>
 
 #### Via WFI32-IoT Webpage
- <p align="center">
 <img src="resources/media/figure_2_3_1.png" width="480"/>
-</p>
 
 1. The lower left-hand corner of the web page will show a wireless network connection window.
 2. Once the required details are entered, click the **Download Configuration** button. 
@@ -121,9 +119,7 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 4. The webpage will show a real-time graph of the data captured from the on-board light and temperature sensors.
 5. The on board **Yellow LED** will blink for 500ms for each message published successfully to te cloud.
 
- <p align="center">
 <img src="resources/media/figure_2_4_1.png" width="720"/>
-</p>
 
 #### Sending messages to the board
 1. Click on **What's Next** button below the Temprature and Light graphs.
