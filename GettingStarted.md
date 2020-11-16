@@ -81,7 +81,7 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 3. A file named **WIFI.CFG** (text) file is downloaded to the host PC. 
 4. Drag and drop the file to the **CURIOSITY drive** to update the Wi-Fi credentials of the board.
 5. Reboot the device.
-6. The **blue LED** will light up once a successful connection to the Wi-Fi Access Point is made.
+6. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
 
 **Important**: The Wi-Fi network SSID and password are limited to 19 characters. Avoid using quotation marks, names, or phrases that begin or end in spaces. The WFI32-IoT board supports only 2.4 GHz networks inline, thus using mobile hotspots to connect the board to the Internet is recommended.
 
@@ -90,7 +90,7 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 #### 2.2.2 Via Soft AP <a name="chapter2.2.2"></a>
 1. Download **Microchip Wi-Fi provisioning Mobile application** for Android here and for iOS here to your Mobile phone or Tablet.
 2. The Soft AP mode can be entered by pressing and holding the **SW0** push button for most of the power up time. 
-3. The **blue LED** will blink when Soft AP is available.
+3. The **BLUE LED** will blink when Soft AP is available.
 4. The board can be detected as a Wi-Fi access point named **WFI32-IoT_<MAC_ADDRESS>**. 
 5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
 
@@ -105,7 +105,7 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 <img src="resources/media/figure_2_3_6.png" width="240"/>
 
 8. Once you go back in the app, WFI32-IoT board will apply new credentilas.
-9. The **blue LED** will light up once a successful connection to the Wi-Fi Access Point is made.
+9. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
 
 ### 2.3 Visualizing Cloud Data in Real Time <a name="chapter2.3"></a>
 
