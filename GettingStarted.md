@@ -24,6 +24,8 @@ The WFI32-IoT board contains the PIC32MZW1, a highly integrated IoT system core 
 2. [Chapter 2: Getting Started](#chapter2)
 	1.	[2.1 Connecting the Board to the Host PC](#chapter2.1)
 	3.	[2.2 Connecting the Board to Wi-Fi Networks](#chapter2.2)
+		1. 	[2.2.1 Via WFI32-IoT Web page](#chapter2.2.1)
+		2. 	[2.2.2 Via Soft AP](#chapter2.2.2)
 	4.	[2.3 Visualizing Cloud Data in Real Time](#chapter2.3)
 	5.	[2.4 Voice Control](#chapter2.4)
 6.[FAQs, Tips and Troubleshooting](#chapter6)
@@ -67,14 +69,11 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 4. The board will appear as a removable storage device on the host PC
 5. Double-click on the **CLICK-ME.HTM** file to go to the demo webpage.
 
-**Note**:  All procedures are the same for Windows®, Mac OS®, and Linux® environments.
-<p align="center">
 <img src="resources/media/figure_2_1_1.png"/>
-</p>
 
 ### 2.2 Connecting the Board to Wi-Fi Networks <a name="chapter2.2"></a>
 
-#### Via WFI32-IoT Webpage
+#### 2.2.1 Via WFI32-IoT Webpage <a name="chapter2.2.1"></a>
 <img src="resources/media/figure_2_3_1.png" width="480"/>
 
 1. The lower left-hand corner of the web page will show a wireless network connection window.
@@ -88,7 +87,7 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 
 **Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the WIFI.CFG file.
  
-#### Via Soft AP
+#### 2.2.2 Via Soft AP <a name="chapter2.2.2"></a>
 1. Download **Microchip Wi-Fi provisioning Mobile application** for Android here and for iOS here to your Mobile phone or Tablet.
 2. The Soft AP mode can be entered by pressing and holding the **SW0** push button for most of the power up time. 
 3. The **blue LED** will blink when Soft AP is available.
