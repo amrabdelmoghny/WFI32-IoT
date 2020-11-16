@@ -133,7 +133,7 @@ The WFI32-IoT board layout can be seen below.
 **Note**: Because Toggle manipulates the desired stat, the state must be changed to observe the behavior.
 
 ### 2.4 Voice Control <a name="chapter2.4"></a>
-Out of the box, WFI32-IoT board allows you to control an on board LED using Amazon Alexa voice control. Please follow the below steps to do that. Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. Please also note that only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
+Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. Please also note that only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
 
 1. Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file **VOICE.HTM** on the MSD.
 2. Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
@@ -141,5 +141,10 @@ Out of the box, WFI32-IoT board allows you to control an on board LED using Amaz
 4. Using Amazon Alexa® app, enable the skill '<img src="resources/media/figure_2_5_1.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
 5. You can now control the on-board **YELLOW LED** with voice commands using the friendly name provided while claiming the device earlier:
 > Alexa, turn on the light
+6. The **YELLOW LED** will remain on/off for 3 Seconds based on the voice command.
    
  **Note**: You can find out more information about connecting a smart home device to Alexa from [this link](http://tinyurl.com/alexa-smart-home)
+ 
+ **Note**: Supported browsers inlcude Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. 
+ 
+ **Note**: Only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
