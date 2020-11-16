@@ -64,8 +64,8 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 
 ### 2.1 Connecting the Board to the Host PC <a name="chapter2.1"></a>
 1. The WFI32-IoT can be connected to a computer using a standard micro-USB cable. 
-2. Once plugged in, the LED array will blink in the following order twice: **Blue -> Green -> Yellow -> Red**. 
-3. When the board is not connected to Wi-Fi, the red LED will light up.
+2. Once plugged in, the LED array will blink in the following order twice: **BLUE -> GREEN -> YELLOW -> RED**. 
+3. When the board is not connected to Wi-Fi, the **RED LED** will light up.
 4. The board will appear as a removable storage device on the host PC
 5. Double-click on the **CLICK-ME.HTM** file to go to the demo webpage.
 
@@ -116,7 +116,7 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 2. Once connection to cloud is successful, **Green LED** will turn solid.
 3. Go to demo webpage (can always be reached out using the file **CLICK-ME.HTM**).
 4. The webpage will show a real-time graph of the data captured from the on-board light and temperature sensors.
-5. The on board **Yellow LED** will blink for 500ms for each message published successfully to te cloud.
+5. The on board **YELLOW LED** will blink for 500ms for each message published successfully to te cloud.
 
 <img src="resources/media/figure_2_4_1.png" width="720"/>
 
@@ -135,7 +135,7 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 <img src="resources/media/figure_2_4_4.png" width="720"/>
 
 5. Click on **Send to device** to send **Toggle** button value. 
-6. When **Toggle** button is selected, the **YELLOW LED** will remain on for 3 Seconds. When unselected, the **YELLOW LED** will remain off for 3 Seconds. After the 3 seocnds, the **Yellow LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
+6. When **Toggle** button is selected, the **YELLOW LED** will remain on for 3 Seconds. When unselected, the **YELLOW LED** will remain off for 3 Seconds. After the 3 seocnds, the **YELLOW LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
 
 **Note**: Because Toggle manipulates the desired stat, the state must be changed to observe the behavior.
 
@@ -146,7 +146,7 @@ Out of the box, WFI32-IoT board allows you to control an on board LED using Amaz
 2. Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
 3. Successfully claimed devices will show up in the device listing in the left side panel.
 4. Using Amazon Alexa® app, enable the skill '<img src="resources/media/figure_2_5_1.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
-5. You can now control the on-board **Yellow LED** with voice commands using the friendly name provided while claiming the device earlier:
+5. You can now control the on-board **YELLOW LED** with voice commands using the friendly name provided while claiming the device earlier:
 > Alexa, turn on the light
    
  **Note**: You can find out more information about connecting a smart home device to Alexa from [this link](http://tinyurl.com/alexa-smart-home)
