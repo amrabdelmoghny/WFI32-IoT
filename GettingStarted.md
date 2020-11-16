@@ -14,34 +14,6 @@ Features: **| Secure Cloud connectivity | Voice Control |**
 The WFI32-IoT board is a compact, easy-to-use development board that supports rapid prototyping of IoT devices and demonstrates cloud connectivity with voice control enablement. This kit is also a useful tool to evaluate the features of WFI32E01PC, the single-chip Wi-Fi module.
 
 The WFI32-IoT board contains the PIC32MZW1, a highly integrated IoT system core supporting smart Wi-Fi functionalities and a premium MCU. There are various types of on-board sensors for users to build up their applications. Users can also expand its functionality through MikroElectronika mikroBUS™ Click™ adapter boards. The on-board hardware crypto device can be used to make a secure and authenticated cloud connection.
-
-The WFI32-IoT board includes an integrated programmer/debugger using PICkit™ On Board (PKOB4) and requires only a micro USB power cable to power up and program the board and evaluate the module.
-
-The WFI32-IoT board features the following elements:
-* WFI32E01PC, PIC32MZ W1 Wi-Fi Module with PCB antenna with built-in ATECC608A Trust and Go. 
-* mikroBUS™ socket to expand functionality using MikroElectronika Click™ adapter boards.
-* PICkit™ On Board (PKOB4) Universal Serial Bus (USB) Micro-B Socket for programming/debugging.
-* 4 on-board LEDs and 2 user configurable buttons.
-* On-board temperature sensor and light sensor.
-* External flash 32Mb.
-* Module power measurement point to test:
-	* Power consumption of WFI32E01PC module only.
-	* Power consumption of the whole board.
-* 5 I/O test pads.
-* USB Power charging circuit for Lithium-ion battery.
-
-The WFI32-IoT board comes pre-programmed and configured for demonstrating the connectivity to the AWS Cloud IoT Core.
-
-<p align="center">
-<img src="resources/media/figure_preface_1.png"/>
-</p>
-
-MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used for generating the firmware through MPLAB X®. To download/modify the firmware, the system requirements are the following:
-* IDE	MPLAB X IDE v 5.40 or later
-* Compiler	XC32 Compiler v 2.41 or later
-* Code Generation	MCC Plug-in v 3.75
-* MCC Foundation Services v 0.1.32
-* MCC PIC-IoT WG Sensor Node v 1.1.1
  
 ## Table of Contents
 
@@ -51,23 +23,13 @@ MPLAB® Harmony v3 Configurator with supporting WFI32-IoT library can be used fo
 	3.	[1.3 Switch Button Use Cases](#chapter1.3)
 2. [Chapter 2: Getting Started](#chapter2)
 	1.	[2.1 Connecting the Board to the Host PC](#chapter2.1)
-	2.	[2.2 The MCHP-IoT Webpage](#chapter2.2)
-	3.	[2.3 Connecting the Board to Wi-Fi Networks](#chapter2.3)
-	4.	[2.4 Visualizing Cloud Data in Real Time](#chapter2.4)
-	5.	[2.5 Voice Control](#chapter2.5)
-	6.	[2.6 Configuring Other Settings](#chapter2.6)
-3.	[Chapter 3: Switching Cloud Instances](#chapter3)
-	1. 	[3.1 Connecting to your own cloud instance](#chapter3.1)
-	2. 	[3.2 Restore factory default cloud instance](#chapter3.2)
-4.	[Chapter 4: Application Overview](#chapter4)
-	1. 	[4.1 Application Structure](#chapter4.1)
-	2. 	[4.2 Cloud Interaction](#chapter4.2)
-5.	[Chapter 3: Code Generation](#chapter5)
-	1. 	[5.1 Generating code from MHC](#chapter5.1)
-6.	[FAQs, Tips and Troubleshooting](#chapter6)
+	3.	[2.2 Connecting the Board to Wi-Fi Networks](#chapter2.2)
+	4.	[2.3 Visualizing Cloud Data in Real Time](#chapter2.3)
+	5.	[2.4 Voice Control](#chapter2.4)
+6.[FAQs, Tips and Troubleshooting](#chapter6)
 	1.	[6.1 FAQs and Tips](#chapter6.1)
 	2.	[6.2 LED Status Troubleshooting](#chapter6.2)
-7.	[Appendix](#chapter7)
+7.[Appendix](#chapter7)
 	1. 	[7.1 Relevant Links](#chapter7.1)
 
  
@@ -111,35 +73,11 @@ Held	| Held	| Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 <img src="resources/media/figure_2_1_1.png"/>
 </p>
 
-The CURIOSITY drive should contain the following five files:
-* **CLICK-ME.HTM** - redirects the user to the WFI32-IoT web demo application
-* **VOICE.HTM** - redirects the user to the WFI32-IoT device registration page for Alexa voice support
-* **KIT-INFO.HTM** - redirects the user to WFI32-IoT product page
-* **WIFI.CFG** - a text file with Wi-Fi credentials (defaults are **SSID:MCHP.IOT, Passphrase:microchip, Security:WPA/WPA2**)
-* **CLOUD.JSON** - a JSON file with cloud configuration: Endpoint (default is Microchip's Sandbox account) and Client ID.
- 
-
-### 2.2 The MCHP-IoT Webpage <a name="chapter2.2"></a>
-The WFI32-IoT webpage is used to:
-1. Display the sensors' data.
-2. Control on board Yellow LED.
-3. Generate the Wi-Fi credentials as a file labeled **WIFI.CFG**.
-
-The status markers at the middle of the page, as shown in the following figure, indicate the progress of the system setup. Markers from right to left are:
-
-1. The Presence marker indicates if the board is connected to the host PC. 
-2. The Wi-Fi marker indicates if the board is connected to a Wi-Fi network.
-3. The Cloud marker indicates if the board is connected to AWS cloud. 
-4. The Data marker indicates data is being sent from the board to cloud.
-<p align="center">
-<img src="resources/media/figure_2_2_2.png"/>
-</p>
-
-### 2.3 Connecting the Board to Wi-Fi Networks <a name="chapter2.3"></a>
+### 2.2 Connecting the Board to Wi-Fi Networks <a name="chapter2.2"></a>
 
 #### Via WFI32-IoT Webpage
  <p align="center">
-<img src="resources/media/figure_2_3_1.png"/>
+<img src="resources/media/figure_2_3_1.png" width="480"/>
 </p>
 
 1. The lower left-hand corner of the web page will show a wireless network connection window.
@@ -152,7 +90,6 @@ The status markers at the middle of the page, as shown in the following figure, 
 **Important**: The Wi-Fi network SSID and password are limited to 19 characters. Avoid using quotation marks, names, or phrases that begin or end in spaces. The WFI32-IoT board supports only 2.4 GHz networks inline, thus using mobile hotspots to connect the board to the Internet is recommended.
 
 **Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the WIFI.CFG file.
-
  
 #### Via Soft AP
 1. Download **Microchip Wi-Fi provisioning Mobile application** for Android here and for iOS here to your Mobile phone or Tablet.
@@ -174,159 +111,43 @@ The status markers at the middle of the page, as shown in the following figure, 
 8. Once you go back in the app, WFI32-IoT board will apply new credentilas.
 9. The **blue LED** will light up once a successful connection to the Wi-Fi Access Point is made.
 
-
-### 2.4 Visualizing Cloud Data in Real Time <a name="chapter2.4"></a>
-Out of the box, all WFI32-IoT boards are pre-registered to Microchip’s AWS Cloud sandbox account. This account is set up for demonstration purposes only. All data gathered by the sensors of the WFI32-IoT boards are published to the Microchip sandbox account and can be identified by the following details:
-Project ID	|	Region
----		|	---
-pic-IoT		|	us-central1
-
-There is no permanent storage, or collection of the data published by the boards connected to the Microchip sandbox account. The full storage catalog of the AWS Cloud features, such as data storage/ retention, can be available to the user with use of the board once removed from the demo environment and the associated Device ID/Public Key has been migrated to a private account.
-
-#### Publishing Data to the AWS Cloud
-A MQTT PUBLISH packet is always sent to the MQTT broker using a specific topic. The WFI32-IoT board publishes messages using the topic ‘{deviceID}/sensors’ in communication to the AWS Cloud. The messages published on this topic contain the real-time data obtained from the on-board light and temperature sensors. It does not perform any averaging of data, which is done to allow instantly visible changes on the webpage. The frequency of sending a PUBLISH packet can be decided by the user application. The application is written such that the sensor data is published to the Cloud every one second. 
+### 2.3 Visualizing Cloud Data in Real Time <a name="chapter2.3"></a>
 
 #### Viewing the published messages
-Once the board is connected to a Wi-Fi access point, and has established a socket connection to the Cloud, the WFI32-IoT webpage will show a real-time graph of the data captured from the on-board light and temperature sensors. Data is sent as a MQTT PUBLISH packet from the board to the cloud through a JSON object.
-The ASCII string is formatted as follows:
-{‘Light’: XXX, ‘Temp’: YYY },
-where XXX and YYY are numerical values expressed in decimal notation. The yellow LED on the board is turned on for 500 ms, every one second to indicate that the board is publishing data.
+<img src="resources/media/figure_2_4_0.png" width="720"/>
+1. After connecting to an access point, WFI32-IoT board will try to connect to AWS cloud Miicrochip Sandbox account which is indicated by a **blinking Green LED**.
+2. Once connection to cloud is successful, **Green LED** will turn solid.
+3. Go to demo webpage (can always be reached out using the file **CLICK-ME.HTM**).
+4. The webpage will show a real-time graph of the data captured from the on-board light and temperature sensors.
+5. The on board **Yellow LED** will blink for 500ms for each message published successfully to te cloud.
  <p align="center">
-<img src="resources/media/figure_2_4_1.png" width="480"/>
+<img src="resources/media/figure_2_4_1.png" width="720"/>
 </p>
 
-#### Subscribing to topics
-In addition to publishing its own data, the WFI32-IoT boards are also capable of subscribing to a topic, after which it will receive data from the AWS Cloud whenever data with that topic is published to the broker server. Subscribing to topics is desired when the receiver is interested in the information sent to the broker by other connected client devices publishing data using the subscribed topic. After sending a SUBSCRIBE packet, all the messages published on the specific topic of subscription are received by the board. As of now, the board subscribes to the '$aws/things/{deviceID}/shadow/update/#' topic but will only make use of data comes via the '$aws/things/{deviceID}/shadow/update/' topic.
+#### Sending messages to the board
+1. Click on **What's Next** button below the Temprature and Light graphs.
+2. Select **Implement a Cloud-Controlled Actuator** to demostrate cloud performed behaviors.
+<img src="resources/media/figure_2_4_2.png" width="720"/>
+3. Click on **Learn More** button to expand page interface then Scroll to the bottom of **Step 5** where a panel will read **Control Your Device**.
+<img src="resources/media/figure_2_4_3.png" width="720"/>
+4. By default only a **Toggle** feature is demostrated. Custome implmentations are described further on above the panel.
+<img src="resources/media/figure_2_4_4.png" width="720"/>
+5. Click on **Send to device** to send **Toggle** button value. 
+6. When **Toggle** button is selected, the **YELLOW LED** will remain on for 3 Seconds. When unselected, the **YELLOW LED** will remain off for 3 Seconds. After the 3 seocnds, the **Yellow LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
 
-#### Sending the messages
-The pic-iot.com webpage URL displays a section “Control your device” below the Light and Temperature graphs. The Toggle button is used to send the switch value to the WFI32-IoT board.
- <p align="center">
-<img src="resources/media/figure_2_4_2.png" width="480"/>
-</p>
+**Note**: Because Toggle manipulates the desired stat, the state must be changed to observe the behavior.
 
-#### Viewing Messages Received on Subscribed Topic
-The toggle switch value corresponds to a short forced ON/OFF state to the yellow LED on the WFI32-IoT board. The LED will stay ON/OFF for a short time depending on the position of the toggle switch. After that, the LED will resume normal behavior, blinking to indicate the transmission sensor data through PUBLISH packets. In addition to the yellow LED behavior, the values of the toggle and text field values can be viewed on a Serial Terminal application (such as Tera Term, Realterm, PuTTy, etc.).
-Figure 2-10. Viewing Messages on a Serial Terminal
-
-There is no permanent storage, or collection of the data published by the boards connected through the Microchip sandbox account. The full storage features available by the AWS Cloud are available to the user after the board has been removed from the demo environment (Microchip Sandbox) and migrated to a private account.
-
-### 2.5 Voice Control <a name="chapter2.5"></a>
+### 2.4 Voice Control <a name="chapter2.4"></a>
 Out of the box, WFI32-IoT board allows you to control an on board LED using Amazon Alexa voice control. Please follow the below steps to do that. Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. Please also note that only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
 
-#### Create an account
-Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file 'VOICE.HTM' on the MSD.
-
-#### Enter thing name
-* Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
-* Successfully claimed devices will show up in the device listing in the left side panel.
-
-#### Use Amazon Alexa® app
-Using Amazon Alexa® app, enable the skill '<img src="resources/media/figure_2_5_1.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
-
-#### Control the device
-You can now control the on-board Yellow LED with voice commands using the friendly name provided while claiming the device earlier:
+1. Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file **VOICE.HTM** on the MSD.
+2. Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
+3. Successfully claimed devices will show up in the device listing in the left side panel.
+4. Using Amazon Alexa® app, enable the skill '<img src="resources/media/figure_2_5_1.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
+5. You can now control the on-board **Yellow LED** with voice commands using the friendly name provided while claiming the device earlier:
 > Alexa, turn on the light
    
- You can find out more information about connecting a smart home device to Alexa from [this link](http://tinyurl.com/alexa-smart-home)
-
-### 2.6 Configuring Other Settings <a name="chapter2.6"></a>
-While the WFI32-IoT development board comes out of the box fully programmed and provisioned, the user can still control aspects of the application firmware behavior through the USB interface. There are three methods to do this: WIFI.CFG (reconfigure credentials) drag and drop using the mass storage feature, commands through the serial command line interface (CLI), or using MPLAB X® IDE, and the on-board programmer/debugger PKOB4.
-
-#### Serial USB Interface
-This interface may be used to provide application diagnostic information. To access this interface, use any preferred serial terminal application (i.e. Teraterm, Coolterm, PuTTy) and open the serial port labeled Curiosity Virtual COM port, with the following settings:
-
-
-Table 2-2. Serial USB Interface Settings
-
-Baud Rate	115200
-Data	8-Bit
-Parity Bit	None
-Stop Bit	1 Bit
-Flow Control	None
-Local Echo	ON
-Transmit Protocol	CR+LF (Carriage Return + Line Feed)
-Note:  For users of the Windows environment, the USB serial interface requires the installation of a USB serial port driver, included in the installation of the MPLAB X IDE.
-
-#### On-board Programmer/Debugger Interface
-For users familiar with the MPLAB X IDE, the WFI32-IoT boards can also be programmed, and/or debugged directly via these IDEs standard operations. The WFI32-IoT boards are automatically detected by the MPLAB X enabling full programming and debugging through the on-board PKOB4 interface. For code generation, see Chapter 3 on how to generate a sample application code in MCC.
- 
-
- 
-
-## Chapter 5: Code Generation <a name="chapter5"></a>
-
-### 5.1 Generating code from MHC  <a name="chapter5.1"></a>
-The source code of the PIC-IoT WG development boards is available using the MPLAB Code Configurator (MCC) in MPLAB X IDE.
-
-3.1.1	Generating the demo
-Once the board is connected to the host machine and MPLAB X is launched, follow these steps to generate microcontroller code for it.
-
-3.1.1.1	Generating the demo
-1.	Create a new Standalone project (see the Figure 3-1) in MPLAB X 5.15 using the PIC24FJ128GA705 as device (see the Figure 3-2); the PKOB nano as programming tool (see Figure 3-3); and the XC16 as compiler (see Figure 3-4). Finally, name the MPLAB project and its location (see Figure 3-5). The Start page will then appear.
-2.	On the MPLAB X toolbar, look for and click the MCC Icon ( ) or click Tools>Embedded>MPLAB X Code Configurator v3 Open/Close.
-3.	Under Device Resources, scroll down to the ‘Internet of Things’ header. Under Examples, double- click on PIC-IoT WG Sensor Node (see Figure 3-6).
-Figure 3-1. New Project
- 
-
- 
-Figure 3-2. Selecting a Device
-Figure 3-3. Selecting a Programmer
- 
- 
-
- 
-Figure 3-4. Selecting a Compiler
-Figure 3-5. Naming a New Project
- 
- 
-
- 
-Figure 3-6. MCC Start Page
-3.1.1.2	Configuring the Settings of the Project
-The example module makes use of multiple libraries and peripherals. To configure the libraries, double- click on each library in the Device Resources window (see the Figure 3-7) to view their setup windows.
-Figure 3-7. MCHP-IoT Peripheral Libraries
- 
-
- 
-3.1.1.3	Component Library and Peripherals
-•	CryptoAuthLib
-–	The Crypto Authentication Library (CryptoAuthLib) is not available for user modification but it shows the macros that need to be enabled for the Crypto Authentication functionalities for the PIC-IoT board to work. It also indicates the communication settings between the ECC608 chip and the embedded microcontroller on board (see the Figure 3-8).
-•	WINC
-–	Under the WINC library, the user can configure the default SSID, password, and the authentication type used for the network to which the board will be connected (see the Figure 3-9).
-•	Cloud Services - Google
-–	The Cloud Services Google library contains settings for developers to use customer Google Cloud Project credentials by modifying the Project ID, Project Region, and Registry ID. These credentials configure which Google Cloud Server the Socket connection is established over. The default credentials used are those from the public Microchip sandbox project (see the Figure
-3-10) used for the PIC-IoT demonstration application.
-•	Message Queuing Telemetry Transport (MQTT)
-–	MQTT is used as a messaging protocol that operates on top of a TCP/UDP connection to transporting data between client and broker over the Cloud. In MCC, the user can change their MQTT host and connection time-out duration (see the Figure 3-11).
-Figure 3-8. CryptoAuthLib MCC
- 
-
- 
-Figure 3-9. WINC MCC
- 
-
- 
-Figure 3-10. Cloud Services Google MCC
- 
-
- 
-Figure 3-11. MQTT MCC
-3.1.1.4	Generating MCC Files and Programming the Board
-•	Once the changes are made, click the Generate button on the left-hand corner of the window (see the Figure 3-12) and wait for the generation to complete.
-•	For the code to work at optimal level, the user needs to change the optimization settings for the compilers. Right-click on the project name and select Properties. Click XC16 in the left-hand sidebar (see the Figure 3-13).
-•	Select Most Useful Options in the Categories drop-down menu (see the Figure 3-14). Select Optimization Level "s" from the drop-down menu. Click the Apply button and then OK.
-•	Click the Make and Program Device button near the middle of the toolbar. Make sure the board is connected to the system during programming.
- 
-
- 
-Figure 3-12. Generating MCC Code
-
-Figure 3-13. Project Properties
- 
- 
-
- 
-Figure 3-14. Optimization Settings
+ **Note**: You can find out more information about connecting a smart home device to Alexa from [this link](http://tinyurl.com/alexa-smart-home)
  
 
 ## Chapter 6: FAQs, Tips and Troubleshooting <a name="chapter6"></a>
