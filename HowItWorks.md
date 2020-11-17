@@ -17,10 +17,11 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
 
 1. [Chapter 1: Requirements](#chapter1)
 2. [Chapter 2: Application Scope](#chapter2)
-3. [Chapter 3: Application Description](#chapter3)
-4. [Chapter 4: Secure Provisioning & Transport Layer Security](#chapter4)
-5. [Chapter 5: Understanding the Device Shadow in AWS ](#chapter5)
-6. [Chapter 6: Detailed operation](#chapter6)
+3. [Chapter 3: Application Structure](#chapter3)
+4. [Chapter 4: Application Description](#chapter4)
+5. [Chapter 5: Secure Provisioning & Transport Layer Security](#chapter5)
+6. [Chapter 6: Understanding the Device Shadow in AWS ](#chapter6)
+7. [Chapter 7: Detailed operation](#chapter7)
  
 ## Chapter 1: Requirements <a name="Chapter1"></a>
 
@@ -57,7 +58,35 @@ General Out-Of-Box operation is as described below:
 
 ---
 
-## Chapter 3: Application Description <a name="Chapter3"></a>
+## Chapter 3: Application Structure <a name="Chapter3"></a>
+### OS Tasks Perspective
+* **``_APP_Tasks``**
+	* Manages device's Wi-Fi connection, AP Provisioning, USB Mass Storage Device and Control operations including LED management and sensors access.
+* **``_APP_AWS_Tasks``**
+	* Manages AWS cloud connection/subscribe/publish.
+### Application logical Modules Perspective
+* **``app.c/.h``**: 
+	* This is the main/central module.
+	* Manages all other modules except the cloud module.
+	* Manages **Wi-Fi functionality**.
+* **``app_wifi_prov.c/.h``**
+	* Manages **AP provisioning functionality**.
+	* Gives access to provisioing the device using AP mode and a Mobile application.
+* **``app_usb_msd.c/.h``**
+	* Manages **Mass Storage Device functionality**.
+	* Gives access to:
+		* Configure the device for Wi-Fi connection via **WIFI.CFG**.
+		* configure the device for cloud connection via **CLOUD.JSON**.
+		* Demo Webpage via **CLICK-ME.HTM**.
+		* Device registration for Alexa Voice control via **VOICE.HTM**.
+* **``app_ctrl.c/.h``**
+	* Manages device **Control operations** including LED management and sensors access.
+* **``app_aws.c/.h``**
+	* Manages **AWS cloud connection/subscribe/publish**.
+
+---
+
+## Chapter 4: Application Description <a name="Chapter4"></a>
 
 ### AWS Cloud
 * Publish payload for sensor data (telemetry)
