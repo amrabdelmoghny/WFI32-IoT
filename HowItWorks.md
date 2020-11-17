@@ -170,7 +170,7 @@ General Out-Of-Box operation is as described below:
 	* This process is achieved through: [Trust&Go](https://www.microchip.com/design-centers/security-ics/trust-platform/trust-go)
 	* Full scope of support for Secure Aspects of development can be found here: [Trust Platform](https://www.microchip.com/design-centers/security-ics/trust-platform)
 5. This process has been performed to allow for an Out Of Box (OOB) operation of the WFI32-IoT board along with supporting web page.
-6. Shadow Topic are a key application feature being supported through the AWS platform. Further reference can be found here: [Shadow MQTT Topics](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-mqtt.html)
+6. Shadow Topic are a key application feature being supported through WFI32-IoT demo. Further reference can be found here: [Shadow MQTT Topics](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-mqtt.html)
 
 ---
 
