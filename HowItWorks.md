@@ -49,9 +49,9 @@ General Out-Of-Box operation is as described below:
 5. Capture of Data sent from Broker to Device can be observed through a Serial terminal when USB-Micro is connected to WFI32-IoT board. 
 6. Behavior variation can be observed on the 'Data' LED when triggered through the web based API and sent through the broker to end device.
 
-**Note**:The **SW0 & SW1** user buttons have no effect outside of variation of start-up operation where:
-	* **SW0** held: Enter Soft AP mode.
-	* **SW0 & SW1** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
+**Note**: The **SW0 & SW1** user buttons have no effect outside of variation of start-up operation where:
+* **SW0** held: Enter Soft AP mode.
+* **SW0 & SW1** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 
 **Note**: The **Red 'Data' LED** remaining on may indicate a hardware fault or a non connected Wi-Fi.
 
@@ -60,7 +60,7 @@ General Out-Of-Box operation is as described below:
 ## Chapter 3: Application Description <a name="Chapter3"></a>
 
 ### AWS Cloud
-1. Publish payload for sensor data (telemetry)
+* Publish payload for sensor data (telemetry)
 	* topic: ``<thingName>/sensors ``
 	* payload: 
 	```json
@@ -69,9 +69,9 @@ General Out-Of-Box operation is as described below:
 	  "Temp": temperatureValue
 	} 
 	```
-2. Device publishes payload to update the Device Shadow
-      * topic: ``$aws/things/<thingName>/shadow/update``
-      * payload:
+* Device publishes payload to update the Device Shadow
+	* topic: ``$aws/things/<thingName>/shadow/update``
+	* payload:
 	```json
 	{
 	  "state":
@@ -83,9 +83,9 @@ General Out-Of-Box operation is as described below:
 	  }
 	}
      ```
-3. Web Interface publishes payload to Device Shadow
-      * topic: ``$aws/things/<thingName>/shadow/update``
-      * payload:
+* Web Interface publishes payload to Device Shadow
+	* topic: ``$aws/things/<thingName>/shadow/update``
+	* payload:
 	```json
 	{
 	  "state":
@@ -97,9 +97,9 @@ General Out-Of-Box operation is as described below:
 	  }
 	}
 	```
-4. Device subscribes to delta to receive actionable changes
-      * topic: ``$aws/things/<thingName>/shadow/update/delta``
-      * payload:  
+* Device subscribes to delta to receive actionable changes
+	* topic: ``$aws/things/<thingName>/shadow/update/delta``
+	* payload:  
 	```json
 	{
 	   "state":
@@ -108,21 +108,25 @@ General Out-Of-Box operation is as described below:
 	  }
 	}
 	```
+* The PIC IoT development board publishes data from the on-board light and temperature sensor every 1 second to the cloud.
+* The data received over the subscribed topic is displayed on a serial terminal and **YELLOW LED blinks** accordingly.
 
-The PIC IoT development board publishes data from the on-board light and temperature sensor every 1 second to the cloud.
-The data received over the subscribed topic is displayed on a serial terminal.
+### Establish MQTT connection to cloud  
+* The C code for establishing MQTT connection is available in **src/app_aws.c** file.
+* AWS C SDK API ``IotMqtt_Connect`` is called for publishing data to the cloud.
 
 ### Sending MQTT publish packets  
-+ The C code for sending MQTT publish packets is available in PICIoT.X/mcc_generated_files/application_manager.c file.
-+ The API ``static void sendToCloud(void)`` is responsible for publishing data at an interval of 1 second.
+* The C code for sending MQTT publish packets is available in **src/app_aws.c** file.
+* The API ``static int publishMessages()`` is responsible for publishing data at an interval of 1 second.
+* AWS C SDK API ``IotMqtt_PublishAsync`` is called for publishing data to the cloud.
 
-### Sending MQTT subscribe packets
-+ The C code for sending MQTT subscribe packets is available in PICIoT.X/mcc_generated_files/application_manager.c file.
-+ The API ``static void subscribeToCloud(void)`` is responsible for sending MQTT subscribe packets to the cloud after MQTT connection is established.
+### Subscribe to topic/s
+* The C code for subscribing to topic/s is available in **src/app_aws.c** file.
+* AWS C SDK API ``IotMqtt_SubscribeSync`` is called for subscribing to cloud topic/s.
 
 ### Processing Packets received over subscribed topic
-+ The C code for processing MQTT publish packets received over the subscribed topic is available in PICIoT.X/mcc_generated_files/application_manager.c file.
-+ The ``static void receivedFromCloud(uint8_t *topic, uint8_t *payload)`` function is used for processing packets published over the subscribed topic.
+* The C code for processing MQTT publish packets received over the subscribed topic is available in **src/app_aws.c** file.
+* The ``static void mqttSubscriptionCallback( void * param1, IotMqttCallbackParam_t * const pPublish )`` function is used for processing packets published over the subscribed topic.
 
 ---
 
