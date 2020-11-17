@@ -161,21 +161,16 @@ General Out-Of-Box operation is as described below:
 
 ---
 
-## Secure Provisioning & Transport Layer Security
+## Chapter 5: Secure Provisioning & Transport Layer Security <a name="Chapter5"></a>
 
-1. The PIC-IoT board under the Wireless for Amazon Web Services (WA) variation is shipped pre-provisioned for coordination with the AWS Cloud system.
-2. Security is achieved by using the built-in Transport Layer Security (TLS) 'stack' configured within the WINC Wi-Fi Module.
-3. A Pre-Manufacturing process has configured the appropriate Slot locations on the ATECC608A security device.
-4. All required certificates used for signing and authentication have been written to, and 'locked' into allocated slots.
-     + This process is achieved through: [TrustFlex](https://www.microchip.com/design-centers/security-ics/trust-platform/trustflex/trustflex-aws-iot-authentication)
-     + Additional options are also supported, such as: [Trust&Go](https://www.microchip.com/design-centers/security-ics/trust-platform/trust-go)
-     + Fully scope of support for Secure Aspects of development can be found here: [Trust Platform](https://www.microchip.com/design-centers/security-ics/trust-platform)
-5. This process has been performed to allow for an Out Of Box (OOB) operation of the PIC-IoT development board along with supporting web page.
-6. Shadow Topic are a key application feature being supported through the AWS platform. Further reference can be found here:
-     + [Shadow MQTT Topics](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-mqtt.html)
-7. For PIC-IoT development not provisioned for the AWS platform; refer to the below repo location:
-     + **gitHub Provisioning Repo coming in future. Currently refer to:**
-     + [AVR-IoT AWS Provisioning](https://www.microchip.com/wwwAppNotes/AppNotes.aspx?appnote=en611265)
+1. The WFI32-IoT board is shipped pre-provisioned for coordination with the AWS Cloud system.
+2. Security is achieved by using the WolfSSL Transport Layer Security (TLS) stack configured within Harmony 3 eco-system.
+3. A Pre-Manufacturing process has configured the appropriate slot locations on the ATECC608A security device.
+4. All required certificates used for signing and authentication have been written to and 'locked' into allocated slots.
+	* This process is achieved through: [Trust&Go](https://www.microchip.com/design-centers/security-ics/trust-platform/trust-go)
+	* Full scope of support for Secure Aspects of development can be found here: [Trust Platform](https://www.microchip.com/design-centers/security-ics/trust-platform)
+5. This process has been performed to allow for an Out Of Box (OOB) operation of the WFI32-IoT board along with supporting web page.
+6. Shadow Topic are a key application feature being supported through the AWS platform. Further reference can be found here: [Shadow MQTT Topics](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-mqtt.html)
 
 ---
 
