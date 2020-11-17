@@ -174,52 +174,149 @@ General Out-Of-Box operation is as described below:
 
 ---
 
-## Understanding the Device Shadow in AWS 
+## Chapter 6: Understanding the Device Shadow in AWS <a name="Chapter6"></a>
 
-  1. The AWS broker allows for the use of Shadow Topics. The Shadow Topics are used to retain a specific value within the Broker, so End-Device status updates can be managed.
-     + Shadow Topics are used to restore the state of variables, or applications.
-     + Shadow Topics retain expected values, and report if Published data reflects a difference in value.
-     + When difference exist, status of the delta is reported to those subscribed to appropriate topic messages.
-  
-     ![ShadowTopic UserStory](images/AWS_ShadowUserStory.png)
-	 
-  2. Updates to the device shadow are published on $aws/things/{ThingName}/shadow/update topic. 
-     When a message is sent to the board by changing the value of the **toggle** fiels in **Control Your Device** section:
-	 + This message is published on the $aws/things/{ThingName}/shadow/update topic. 
-	 + If the curent value of **toggle** in the device shadow is different from the **toggle** value present in the AWS Device Shadow, the AWS Shadow service reports this change to the device by publishing a message on $aws/things/{ThingName}/shadow/update/delta topic.
-	 + The JSON structure of the message sent should appear as below
-	   ```json
-        {
-          "state": {
-            "desired": {
-              "toggle": [value]
-            }
-          }
-        }
-        ```
-		
-   3. The meta data, and delta difference will be reported via the Serial Terminal upon a difference between desired/reported.
-	
-      ![Delta Metadata](images/DeltaToggle.png)
-	 
-   4. In response to this, the end device publishes a message to $aws/things/{ThingName}/shadow/update topic.
-      + This message is published to **report** the update to the **toggle** attribute.
-	  + The JSON structure of the message sent should appear as below
-	   ```json
-        {
-          "state": {
-            "reported": {
-              "toggle": [value]
-            }
-          }
-        }
-        ```
-	
-   5. Application flow when using the device shadow 	
-	
-      ![Message After Delta](images/SequenceOfEvents.png)
-	 
- ---
+1. The AWS broker allows for the use of Shadow Topics. The Shadow Topics are used to retain a specific value within the Broker so that End-Device status updates can be managed.
+	* Shadow Topics are used to restore the state of variables or applications.
+	* Shadow Topics retain expected values and report if Published data reflects a difference in value.
+	* When difference exists, the status of the delta is reported to those subscribed to appropriate topic messages.
+
+<img src="resources/media/image17.png"/>
+
+2. Updates to the device shadow are published on ``$aws/things/<ThingName>/shadow/update`` topic. When a message is sent to the board by changing the value of the **toggle** fields in **Control Your Device** section:
+	* This message is published on the ``$aws/things/<ThingName>/shadow/update`` topic.
+	* If the current value of toggle in the device shadow is different from the toggle value present in the AWS Device Shadow, the AWS Shadow service reports this change to the device by publishing a message on ``$aws/things/<ThingName>/shadow/update/delta`` topic.
+3. AWS IoT Core publishes a delta topic message if there is a difference between the reported and desired states. The device would have already subscribed to the delta topic.
+4. You can read more about AWS device shadows (here.)[https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-data-flow.html]
+
+---
+
+## Chapter 7: Connecting to Your Cloud Instance
+
+By default, the demo connects to an instance of AWS IoT maintained by Microchip. The demo lets you move the device connection between your cloud instance, and the Microchip maintained AWS IoT instance without a firmware change. Perform the following steps to get the device connected to your own cloud instance.
+
+1.  Create an AWS account or log in to your existing AWS account.
+    - Please refer to [Set up your AWS account](https://docs.aws.amazon.com/iot/latest/developerguide/setting-up.html) and [Create AWS IoT resources](https://docs.aws.amazon.com/iot/latest/developerguide/create-iot-resources.html) for details.
+
+2.  Navigate to [IoT Core console](https://console.aws.amazon.com/iot/) \> Manage \> Things and click on “**_Create_**” / “**_Register a Thing_**”
+
+<p align="center">
+<img src="resources/media/image7.png" width=480/>
+</p>
+
+3.  Select “**_Create a single thing_**”
+
+4.  For thing name, copy and paste the thing name from the original demo web-app. This thing name originates from the device certificate and is used by the firmware to send messages to a unique topic.
+
+<p align="center">
+<img src="resources/media/image8.png" width=480 />
+</p>
+
+5.  Select defaults for the other fields and click “Next” at the bottom of the page.
+
+6.  Select “**_Create thing without certificate_**” in the next page.
+
+7.  Go to “**_Secure_**” \> “**_Policies_**” and select “**_Create a Policy_**”
+
+<p align="center">
+<img src="resources/media/image9.png" width=480 />
+</p>
+
+8.  Create a new policy which allows all connected devices to perform all actions without restrictions
+
+  > :x: &nbsp; **_Note_**: This policy grants unrestricted access for all iot operations, and is to be used only in a development environment. For non-dev environments, all devices in your fleet must have credentials with privileges that authorize intended actions only, which include (but not limited to) AWS IoT MQTT actions such as publishing messages or subscribing to topics with specific scope and context. The specific permission policies can vary for your use cases. Identify the permission policies that best meet your business and security requirements.Please refer to [sample policies](https://docs.aws.amazon.com/iot/latest/developerguide/example-iot-policies.html) and [security best practices](https://docs.aws.amazon.com/iot/latest/developerguide/security-best-practices.html)
+
+| Item               | Policy Parameter |
+| ------------------ | ---------------- |
+| **_Name_**         | allowAll         |
+| **_Action_**       | iot:\*           |
+| **_Resource Arn_** | \*               |
+| **_Effect_**       | Allow            |
+
+<p align="center">
+<img src="resources/media/image10.png" width=480/>
+</p>
+
+9.  Navigate to **_Certificates_** \> **_Create a certificate_**
+
+<p align="center">
+<img src="resources/media/image11.png" width=480/>
+</p>
+
+10. Select Create with “**_Get Started_**” under “**_Use my certificate_**”.
+
+11. In the next screen, click “**_Next_**” without making any selections.
+
+12. Click on “**_Select certificates_**”
+
+13. In the MSD enumerated when the Curiosity Board is plugged in, you can find a “**_.cer_**” file with an alphanumeric name. Select this file when prompted to select a certificate.
+
+14. Select “**_Activate all_**” and click “**_Register certificates_**”
+
+<p align="center">
+<img src="resources/media/image12.png" width=480/>
+</p>
+
+15. Select the certificate and
+
+    1.  Click **_Attach policy_** and select the “allowAll” policy we created
+
+    2.  Click **_Attach thing_** and choose the *thing* we created
+
+<p align="center">
+<img src="resources/media/image13.png" width=240/>
+</p>
+
+16. Navigate to “**_Settings_**” and copy the endpoint URL
+
+<p align="center">
+<img src="resources/media/image14.png" width=480/>
+</p>
+
+17. Navigate to the MSD and open “**_cloud.json_**”
+
+  > :information_source: &nbsp; While editing `cloud.json` or `WIFI.CFG` manually, it is recommended to use ***notepad.exe*** . Other editors like Notepad++ can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
+
+18. Replace the “**_brokerName_**” attribute with the endpoint URL.
+
+19. Reset the device. Now, the device will connect to your own cloud instance.
+
+20. In the AWS IoT console, navigate to “**_test_**” and subscribe to topic “**_+/sensors_**”
+
+<p align="center">
+<img src="resources/media/image15.png" width=480 />
+</p>
+
+21. You will be able to observe periodic temperature data coming into the console from your device.
+
+22. To control the Green LED, publish the following message:
+
+<table>
+<thead>
+<tr class="header">
+<th><strong>Topic</strong></th>
+<td>$aws/things/<em><strong>thingName</strong></em>/shadow/update</td>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Payload</strong></td>
+<td><pre>
+{
+  "state": {
+    "desired": {
+      "toggle":1
+    }
+  }
+}
+</pre></td>
+</tr>
+</tbody>
+</table>
+
+Depending on the value of “**_toggle_**” (1/0) , the Green LED will be ON/OFF.
+
+---
 
 ### Detailed Operation
 1. There are three possible variations within application behavior possible by holding push buttons on startup
