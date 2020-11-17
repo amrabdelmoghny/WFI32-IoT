@@ -7,7 +7,7 @@ Features: **| Secure Cloud connectivity | Voice Control |**
 [![Latest release](https://img.shields.io/github/v/release/MicrochipTech/PIC32MZW1_Curiosity_OOB?include_prereleases&sort=semver&style=for-the-badge)](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest)
 [![Latest release date](https://img.shields.io/github/release-date/MicrochipTech/PIC32MZW1_Curiosity_OOB?style=for-the-badge)](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest)
 
-The WFI32-IoT board comes pre-programmed and configured for demonstrating the connectivity to the AWS Cloud IoT Core.
+The WFI32-IoT board comes pre-programmed and configured for demonstrating the connectivity to the AWS Cloud IoT Core. The demo uses **AWS C SDK version 4.0** to establish MQTT connection to AWS broker, subscribe to cloud topic/s and publish to the cloud.
 
 <p align="center">
 <img src="resources/media/figure_preface_1.png"/>
@@ -45,7 +45,7 @@ This example end-device leverages the catalog of devices, and libraries provided
 General Out-Of-Box operation is as described below:
 1. Use the WFI32E01PC single-chip WiFi module to establish local WiFi connection to Router/Switch or Network source. The **Blue 'Wi-Fi' LED** is used to indicate this status. 
 2. The on-chip ECC608 HSM is used to establishe a Secure (TLS) Socket Connection with select Cloud Provider using a TCP connection. The **Green 'Connect' LED** is used to indicate this status
-3. Using AWS C SDK V4.0, data is exchanged between client (end-device) and broker (cloud). 
+3. Using **AWS C SDK V4.0**, data is exchanged between client (end-device) and broker (cloud). 
 4. Sensor Data is sent as Telemetry Data between device and broker at a periodic rate of 1 Second. The **Yellow 'Data' LED** blinks to indicate this status. 
 5. Capture of Data sent from Broker to Device can be observed through a Serial terminal when USB-Micro is connected to WFI32-IoT board. 
 6. Behavior variation can be observed on the 'Data' LED when triggered through the web based API and sent through the broker to end device.
