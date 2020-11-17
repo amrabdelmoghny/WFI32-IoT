@@ -44,7 +44,7 @@ This example end-device leverages the catalog of devices, and libraries provided
 
 General Out-Of-Box operation is as described below:
 1. Use the WFI32E01PC single-chip WiFi module to establish local WiFi connection to Router/Switch or Network source. The **Blue 'Wi-Fi' LED** is used to indicate this status. 
-2. The on-chip ECC608 HSM is used to establishe a Secure (TLS) Socket Connection with select Cloud Provider using a TCP connection. The **Green 'Connect' LED** is used to indicate this status
+2. The on-module ATECC608A HSM is used to establishe a Secure (TLS) Socket Connection with select Cloud Provider using a TCP connection. The **Green 'Connect' LED** is used to indicate this status
 3. Using **AWS C SDK V4.0**, data is exchanged between client (end-device) and broker (cloud). 
 4. Sensor Data is sent as Telemetry Data between device and broker at a periodic rate of 1 Second. The **Yellow 'Data' LED** blinks to indicate this status. 
 5. Capture of Data sent from Broker to Device can be observed through a Serial terminal when USB-Micro is connected to WFI32-IoT board. 
@@ -165,7 +165,7 @@ General Out-Of-Box operation is as described below:
 
 1. The WFI32-IoT board is shipped pre-provisioned for coordination with the AWS Cloud system.
 2. Security is achieved by using the WolfSSL Transport Layer Security (TLS) stack configured within Harmony 3 eco-system.
-3. A Pre-Manufacturing process has configured the appropriate slot locations on the ATECC608A security device.
+3. A Pre-Manufacturing process has configured the appropriate slot locations on the ATECC608A HSM.
 4. All required certificates used for signing and authentication have been written to and 'locked' into allocated slots.
 	* This process is achieved through: [Trust&Go](https://www.microchip.com/design-centers/security-ics/trust-platform/trust-go)
 	* Full scope of support for Secure Aspects of development can be found here: [Trust Platform](https://www.microchip.com/design-centers/security-ics/trust-platform)
@@ -222,11 +222,10 @@ General Out-Of-Box operation is as described below:
  ---
 
 ### Detailed Operation
-  0. There are three possible variations within application behavior possible by holding push buttons on startup
-     + Default behavior: No Button Pressed
-     + Soft AP: SW0 is Held on startup (see description farther in document)
-     + Default behavior Restore DEFAULT Credentials: SW0 & SW1 Held on startup. This state is reflected by **BLINKING GREEN LED** until a Wi-Fi connection is established. 
-          + After a successful connection; last VALID CREDIENTIALS are maintained in the WINC for next power cycle connection. 
+1. There are three possible variations within application behavior possible by holding push buttons on startup
+	* Default behavior: No Button Pressed
+	* Soft AP: **SW0** is Held on startup (see description farther in document)
+	* Restore default Wi-Fi credentials: **SW0 & SW1** Held on startup. This state is reflected by **BLINKING GREEN LED** until a Wi-Fi connection is established. 
 
   1. Connect board to PC using USB-micro cable. 
 
