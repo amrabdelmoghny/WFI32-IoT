@@ -53,6 +53,8 @@ The WFI32-IoT board layout can be seen below.
 * **SW0** held: Enter Soft AP mode
 * **SW0 & SW1** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 
+---
+
 ## Chapter 2: Getting Started <a name="chapter2"></a>
 
 ### 2.1 Connecting the Board to the Host PC <a name="chapter2.1"></a>
