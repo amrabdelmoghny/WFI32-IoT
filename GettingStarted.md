@@ -30,7 +30,7 @@ The WFI32-IoT board layout can be seen below.
 
 ### 1.2 LED Indicators <a name="chapter1.2"></a>
 
-<img src="resources/media/figure_1_2_1.png" width="840"/>
+<img src="resources/media/leds.png" width="840"/>
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 * **SW0** held: Enter Soft AP mode
@@ -51,7 +51,7 @@ The WFI32-IoT board layout can be seen below.
 ### 2.2 Connecting the Board to Wi-Fi Networks <a name="chapter2.2"></a>
 
 #### 2.2.1 Via WFI32-IoT Webpage <a name="chapter2.2.1"></a>
-<img src="resources/media/figure_2_3_1.png" width="480"/>
+<img src="resources/media/webpageWifiConnectionBox.png" width="480"/>
 
 1. The lower left-hand corner of the webpage will show a wireless network connection window.
 2. Enter your AP credentials and click the **Download Configuration** button. 
@@ -69,15 +69,15 @@ The WFI32-IoT board layout can be seen below.
 5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
 6. Open **Microchip Wi-Fi Provisioning** Mobile phone application and press **CONNECT**.
 
-<img src="resources/media/figure_2_3_3.png" width="240"/>
+<img src="resources/media/mobileApp1.png" width="240"/>
 
 7. List of available APs is shown. You can press **SCAN** button to refresh.
-<img src="resources/media/figure_2_3_4.png" width="240"/>
+<img src="resources/media/mobileApp2.png" width="240"/>
 
 8. Choose one of the scanned APs or provide your own AP crednetials.Data provided is sent to the WFI32-IoT board as you press **SEND**. 
 
-<img src="resources/media/figure_2_3_5.png" width="240"/>
-<img src="resources/media/figure_2_3_6.png" width="240"/>
+<img src="resources/media/mobileApp3.png" width="240"/>
+<img src="resources/media/mobileApp4.png" width="240"/>
 
 9. Go back in the app so that the WFI32-IoT board applies the new credentilas.
 10. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
@@ -87,7 +87,7 @@ The WFI32-IoT board layout can be seen below.
 ### 2.3 Visualizing Cloud Data in Real Time <a name="chapter2.3"></a>
 
 #### Viewing the published messages
-<img src="resources/media/figure_2_4_0.png" width="720"/>
+<img src="resources/media/webpage Indicators.png" width="720"/>
 
 1. After connecting to an access point, WFI32-IoT board will try to connect to Microchip AWS Sandbox account which is indicated by a **blinking GREEN LED**.
 2. Once connection to cloud is successful, **GREEN LED** will turn solid.
@@ -95,21 +95,21 @@ The WFI32-IoT board layout can be seen below.
 4. The webpage will show a real-time graph of the data captured from the on-board light and temperature sensors.
 5. The on board **YELLOW LED** will blink for 500ms for each message published successfully to the cloud.
 
-<img src="resources/media/figure_2_4_1.png" width="720"/>
+<img src="resources/media/webpageGraphs.png" width="720"/>
 
 #### Sending messages to the board
 1. Click on **What's Next** button below the Temprature and Light graphs.
 2. Select **Implement a Cloud-Controlled Actuator** to demostrate cloud performed behaviors.
 
-<img src="resources/media/figure_2_4_2.png" width="720"/>
+<img src="resources/media/webpageCloudActuator.png" width="720"/>
 
 3. Click on **Learn More** button to expand page interface then Scroll to the bottom of **Step 5** where a panel will read **Control Your Device**.
 
-<img src="resources/media/figure_2_4_3.png" width="720"/>
+<img src="resources/media/webpageLearnMore.png" width="720"/>
 
 4. By default only a **Toggle** feature is demostrated. Custom implmentations are described further on above the panel.
 
-<img src="resources/media/figure_2_4_4.png" width="720"/>
+<img src="resources/media/webpageToggle.png" width="720"/>
 
 5. Click on **Send to device** to send **Toggle** button value. 
 6. The **YELLOW LED** will remain on/off for 3 seconds when **Toggle** button is selected/unselected, respectively. After the 3 seocnds, the **YELLOW LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
@@ -119,10 +119,18 @@ The WFI32-IoT board layout can be seen below.
 ### 2.4 Voice Control <a name="chapter2.4"></a>
 Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. Please also note that only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
 
+<img src="resources/media/voiceReg1.png" width="1080"/>
+
 1. Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file **VOICE.HTM** on the MSD.
+
+<img src="resources/media/voiceReg2.png" width="480"/>
+
 2. Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
+
+<img src="resources/media/voiceReg3.png" width="480"/>
+
 3. Successfully claimed devices will show up in the device listing in the left side panel.
-4. Using Amazon Alexa® app, enable the skill '<img src="resources/media/figure_2_5_1.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
+4. Using Amazon Alexa® app, enable the skill '<img src="resources/media/skillIcon.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
 5. You can now control the on-board **YELLOW LED** with voice commands using the friendly name provided while claiming the device earlier:
 > Alexa, turn on the light
 6. The **YELLOW LED** will remain on/off for 3 Seconds based on the voice command.
