@@ -48,4 +48,4 @@ Want to dive behind the scenes and learn how Connectivity, Security and Cloud ar
 
 ## FAQ and Troubleshooting
 
-Have some issues or things are not going as smooth as you wish? Luckily We have gathered some quick tips for you under the **FAQ and [Troubleshooting Page]()https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md**
+Have some issues or things are not going as smooth as you wish? Luckily We have gathered some quick tips for you under the **[FAQ and Troubleshooting Page](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md)**
