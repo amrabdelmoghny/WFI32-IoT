@@ -41,8 +41,8 @@ The WFI32-IoT board layout can be seen below.
 ## Chapter 2: Getting Started <a name="chapter2"></a>
 
 ### 2.1 Connecting the Board to the Host PC <a name="chapter2.1"></a>
-1. The WFI32-IoT can be connected to a computer using a standard micro-USB cable. 
-2. Once plugged in, the LED array will blink in the following order twice: **BLUE -> GREEN -> YELLOW -> RED**. 
+1. Connect the WFI32-IoT board to a PC using a standard micro-USB cable. 
+2. The LED array will blink twice in the following order: **BLUE --> GREEN --> YELLOW --> RED**. 
 3. When the board is not connected to Wi-Fi, the **RED LED** will light up.
 4. The board will appear as a removable storage device on the host PC
 5. Double-click on the **CLICK-ME.HTM** file to go to the demo webpage.
@@ -54,8 +54,8 @@ The WFI32-IoT board layout can be seen below.
 #### 2.2.1 Via WFI32-IoT Webpage <a name="chapter2.2.1"></a>
 <img src="resources/media/figure_2_3_1.png" width="480"/>
 
-1. The lower left-hand corner of the web page will show a wireless network connection window.
-2. Once the required details are entered, click the **Download Configuration** button. 
+1. The lower left-hand corner of the webpage will show a wireless network connection window.
+2. Enter your AP credentials and click the **Download Configuration** button. 
 3. A file named **WIFI.CFG** (text) file is downloaded to the host PC. 
 4. Drag and drop the file to the **CURIOSITY drive** to update the Wi-Fi credentials of the board.
 5. Reboot the device.
@@ -66,35 +66,36 @@ The WFI32-IoT board layout can be seen below.
 **Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the WIFI.CFG file.
  
 #### 2.2.2 Via Soft AP <a name="chapter2.2.2"></a>
-1. Download **Microchip Wi-Fi provisioning Mobile application** for Android here and for iOS here to your Mobile phone or Tablet.
-2. The Soft AP mode can be entered by pressing and holding the **SW0** push button for most of the power up time. 
+1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for Android [here](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) and for iOS here to your Mobile phone or Tablet.
+2. To enter SoftAP mode, hold the **SW0** push button for most of the power up time. 
 3. The **BLUE LED** will blink when Soft AP is available.
-4. The board can be detected as a Wi-Fi access point named **WFI32-IoT_<MAC_ADDRESS>**. 
 5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
 
 <img src="resources/media/figure_2_3_3.png" width="240"/>
 
-6. List of available APs is shown and you can press **SCAN** button to refresh.
+6. List of available APs is shown. You can press **SCAN** button to refresh.
 <img src="resources/media/figure_2_3_4.png" width="240"/>
 
-7. You can chose one of the scanned APs or provide your own AP crednetials. Provided credentials are sent to the WFI32-IoT board as you press **SEND**. 
+7. Choose one of the scanned APs or provide your own AP crednetials. Manually provided credentials are sent to the WFI32-IoT board as you press **SEND**. 
 
 <img src="resources/media/figure_2_3_5.png" width="240"/>
 <img src="resources/media/figure_2_3_6.png" width="240"/>
 
-8. Once you go back in the app, WFI32-IoT board will apply new credentilas.
+8. Go back in the app so that the WFI32-IoT board applies the new credentilas.
 9. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
+
+**Note**: WFI32-IoT board will NOT apply/use provided crednetials unless you go back in the app. This gives you the chance to keep sending new credentials or correct wrongly provided ones as long as you didn't go back in the app.
 
 ### 2.3 Visualizing Cloud Data in Real Time <a name="chapter2.3"></a>
 
 #### Viewing the published messages
 <img src="resources/media/figure_2_4_0.png" width="720"/>
 
-1. After connecting to an access point, WFI32-IoT board will try to connect to AWS cloud Miicrochip Sandbox account which is indicated by a **blinking GREEN LED**.
+1. After connecting to an access point, WFI32-IoT board will try to connect to Microchip AWS Sandbox account which is indicated by a **blinking GREEN LED**.
 2. Once connection to cloud is successful, **GREEN LED** will turn solid.
 3. Go to demo webpage (can always be reached out using the file **CLICK-ME.HTM**).
 4. The webpage will show a real-time graph of the data captured from the on-board light and temperature sensors.
-5. The on board **YELLOW LED** will blink for 500ms for each message published successfully to te cloud.
+5. The on board **YELLOW LED** will blink for 500ms for each message published successfully to the cloud.
 
 <img src="resources/media/figure_2_4_1.png" width="720"/>
 
@@ -108,12 +109,12 @@ The WFI32-IoT board layout can be seen below.
 
 <img src="resources/media/figure_2_4_3.png" width="720"/>
 
-4. By default only a **Toggle** feature is demostrated. Custome implmentations are described further on above the panel.
+4. By default only a **Toggle** feature is demostrated. Custom implmentations are described further on above the panel.
 
 <img src="resources/media/figure_2_4_4.png" width="720"/>
 
 5. Click on **Send to device** to send **Toggle** button value. 
-6. When **Toggle** button is selected, the **YELLOW LED** will remain on for 3 Seconds. When unselected, the **YELLOW LED** will remain off for 3 Seconds. After the 3 seocnds, the **YELLOW LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
+6. The **YELLOW LED** will remain on/off for 3 seconds when **Toggle** button is selected/unselected, respectively. After the 3 seocnds, the **YELLOW LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
 
 **Note**: Because Toggle manipulates the desired stat, the state must be changed to observe the behavior.
 
