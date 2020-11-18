@@ -10,7 +10,7 @@ Features: **| Secure Cloud connectivity | Voice Control |**
 The WFI32-IoT board comes pre-programmed and configured for demonstrating the connectivity to the AWS Cloud IoT Core. The demo uses **AWS C SDK version 4.0** to establish MQTT connection to AWS broker, subscribe to cloud topic/s and publish to the cloud.
 
 <p align="center">
-<img src="resources/media/figure_preface_1.png"/>
+<img src="resources/media/board1.png"/>
 </p>
  
 ## Table of Contents
