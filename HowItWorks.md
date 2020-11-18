@@ -61,30 +61,42 @@ General Out-Of-Box operation is as described below:
 ## Chapter 3: Application Structure <a name="Chapter3"></a>
 
 ### OS Tasks Perspective
+
 #### _APP_Tasks
 * Manages device's Wi-Fi connection, AP Provisioning, USB Mass Storage Device and Control operations including LED management and sensors access.
+
 #### _APP_AWS_Tasks
 * Manages AWS cloud connection/subscribe/publish.
 
 ### Application Logical Modules Perspective
-#### app.c/.h
+
+#### APP
+* Files: app.c/.h
 * This is the main/central module.
-* Manages all other modules except the cloud module.
 * Manages **Wi-Fi functionality**.
-#### app_wifi_prov.c/.h
+* Manages all other modules except the cloud module.
+
+#### APP_WIFI_PROV
+* Files: app_wifi_prov.c/.h
 * Manages **AP provisioning functionality**.
 * Gives access to provisioing the device using AP mode and a Mobile application.
-#### app_usb_msd.c/.h
+
+#### APP_USB_MSD
+* Files: app_usb_msd.c/.h
 * Manages **Mass Storage Device functionality**.
 * Gives access to:
 	* Configure the device for Wi-Fi connection via **WIFI.CFG**.
 	* configure the device for cloud connection via **CLOUD.JSON**.
 	* Demo Webpage via **CLICK-ME.HTM**.
 	* Device registration for Alexa Voice control via **VOICE.HTM**.
-#### app_ctrl.c/.h
+	
+#### APP_CTRL
+* Files: app_ctrl.c/.h
 * Manages device **Control operations** including LED management and sensors access.
-#### app_aws.c/.h
-* Manages **AWS cloud connection/subscribe/publish**.
+
+#### APP_AWS
+* Files: app_aws.c/.h
+* Manages **AWS cloud connection/subscribe/publish functionality**.
 
 ---
 
