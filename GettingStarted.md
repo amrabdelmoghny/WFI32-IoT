@@ -30,17 +30,7 @@ The WFI32-IoT board layout can be seen below.
 
 ### 1.2 LED Indicators <a name="chapter1.2"></a>
 
-* **BLUE - Wi-Fi indicator**
-	* **Solid**: Wi-Fi Network Connection | Indicates a successful connection to the local Wi-Fi network.
-	* **Blinking**: Soft AP Mode | Indicates that the board can be detected and used as a Wi-Fi access point. For details refer to the 2.3 section.
-* **GREEN - Connection indicator** 
-	* **Solid**: AWS Cloud Connection | Indicates a successful connection to the AWS Cloud.
-	* **Blinking**: Default Wi-Fi credentials | Indicates that the board is trying to establish a Wi-Fi connection using the default credentials.
-* **YELLOW - DATA indicator**
-	* **Blinking**: Data Publication to the Cloud | Indicates that sensor data in the form of MQTT packet has been successfully published to the AWS Cloud.
-	* **Solid for extended time**: State of Toggle sent within MQTT publish packet | Indicates the state of the “Toggle” switch, received as part of the packet published by AWS cloud on the subscribed topic.
-* **RED - ERROR** 
-	* **Solid**: Error Status | Indicates an error in the application.
+<img src="resources/media/figure_1_2_1.png"/>
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 * **SW0** held: Enter Soft AP mode
