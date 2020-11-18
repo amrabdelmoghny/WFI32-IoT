@@ -2,18 +2,11 @@
 
 Devices: **| PIC32 WFI32E | WFI32 | Trust\&Go (ECC608) |**
 
-Features: **| Secure Cloud connectivity | Voice Control |**
-
-[**Frequently Asked Questions**](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/blob/master/faq.md)
+Features: **| Secure Cloud Connectivity | Voice Control |**
 
 [![Latest release](https://img.shields.io/github/v/release/MicrochipTech/PIC32MZW1_Curiosity_OOB?include_prereleases&sort=semver&style=for-the-badge)](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest)
 [![Latest release date](https://img.shields.io/github/release-date/MicrochipTech/PIC32MZW1_Curiosity_OOB?style=for-the-badge)](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest)
  
-
-## Preface
-The WFI32-IoT board is a compact, easy-to-use development board that supports rapid prototyping of IoT devices and demonstrates cloud connectivity with voice control enablement. This kit is also a useful tool to evaluate the features of WFI32E01PC, the single-chip Wi-Fi module.
-
-The WFI32-IoT board contains the PIC32MZW1, a highly integrated IoT system core supporting smart Wi-Fi functionalities and a premium MCU. There are various types of on-board sensors for users to build up their applications. Users can also expand its functionality through MikroElectronika mikroBUS™ Click™ adapter boards. The on-board hardware crypto device can be used to make a secure and authenticated cloud connection.
  
 ## Table of Contents
 
