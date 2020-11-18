@@ -47,7 +47,6 @@ The WFI32-IoT board layout can be seen below.
 4. The board will appear as a removable storage device on the host PC
 5. Double-click on the **CLICK-ME.HTM** file to go to the demo webpage.
 
-<img src="resources/media/figure_2_1_1.png"/>
 
 ### 2.2 Connecting the Board to Wi-Fi Networks <a name="chapter2.2"></a>
 
