@@ -97,6 +97,8 @@ The WFI32-IoT board layout can be seen below.
 
 <img src="resources/media/webpageGraphs.png" width="720"/>
 
+**Note**: Take note of your Thing Name as it's going to be noted for registering the device for Alexa Voice Control in [section 2.4](#chapter2.4).
+
 #### Sending messages to the board
 1. Click on **What's Next** button below the Temprature and Light graphs.
 2. Select **Implement a Cloud-Controlled Actuator** to demostrate cloud performed behaviors.
@@ -125,7 +127,7 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
 
 <img src="resources/media/voiceReg2.png" width="480"/>
 
-2. Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
+2. Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature and light graphs.
 
 <img src="resources/media/voiceReg3.png" width="720"/>
 
