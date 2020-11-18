@@ -60,30 +60,29 @@ The WFI32-IoT board layout can be seen below.
 5. Reboot the device.
 6. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
 
-**Important**: The Wi-Fi network SSID and password are limited to 19 characters. Avoid using quotation marks, names, or phrases that begin or end in spaces. The WFI32-IoT board supports only 2.4 GHz networks inline, thus using mobile hotspots to connect the board to the Internet is recommended.
-
-**Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the WIFI.CFG file.
+**Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the **WIFI.CFG** file.
  
 #### 2.2.2 Via Soft AP <a name="chapter2.2.2"></a>
-1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for Android [here](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) and for iOS here to your Mobile phone or Tablet.
+1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for [Android](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) or for iOS.
 2. To enter SoftAP mode, hold the **SW0** push button for most of the power up time. 
 3. The **BLUE LED** will blink when Soft AP is available.
 5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
+6. Open **Microchip Wi-Fi Provisioning** Mobile phone application and press **CONNECT**.
 
 <img src="resources/media/figure_2_3_3.png" width="240"/>
 
-6. List of available APs is shown. You can press **SCAN** button to refresh.
+7. List of available APs is shown. You can press **SCAN** button to refresh.
 <img src="resources/media/figure_2_3_4.png" width="240"/>
 
-7. Choose one of the scanned APs or provide your own AP crednetials. Manually provided credentials are sent to the WFI32-IoT board as you press **SEND**. 
+8. Choose one of the scanned APs or provide your own AP crednetials.Data provided is sent to the WFI32-IoT board as you press **SEND**. 
 
 <img src="resources/media/figure_2_3_5.png" width="240"/>
 <img src="resources/media/figure_2_3_6.png" width="240"/>
 
-8. Go back in the app so that the WFI32-IoT board applies the new credentilas.
-9. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
+9. Go back in the app so that the WFI32-IoT board applies the new credentilas.
+10. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
 
-**Note**: WFI32-IoT board will NOT apply/use provided crednetials unless you go back in the app. This gives you the chance to keep sending new credentials or correct wrongly provided ones as long as you didn't go back in the app.
+**Note**: WFI32-IoT board will NOT apply/use provided credentials unless you go back in the app. This gives you the chance to keep sending new credentials or correct wrongly provided ones as long as you didn't go back in the app.
 
 ### 2.3 Visualizing Cloud Data in Real Time <a name="chapter2.3"></a>
 
