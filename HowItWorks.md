@@ -60,43 +60,21 @@ General Out-Of-Box operation is as described below:
 
 ## Chapter 3: Application Structure <a name="Chapter3"></a>
 
-### OS Tasks Perspective
+The application runs two application OS tasks/threads with multiple underlying logical modules for better code organizing.
 
-#### _APP_Tasks
-* Manages device's Wi-Fi connection, AP Provisioning, USB Mass Storage Device and Control operations including LED management and sensors access.
+| OS Task Name         	| App Logical Module		| Source/Header Files 	| Role                                                                          	|
+| --------------------- | ----------------------------- | --------------------- | ------------------------------------------------------------------------------------- |
+| **_APP_Tasks**    	| **APP**			| app.c/.h		| The main/central module that manages **Wi-Fi functionality**.              		|
+| 		     	| **APP_WIFI_PROV**		| app_wifi_prov.c/.h	| Manages **AP provisioning functionality** to provision the device using AP mode	|
+|		  	| **APP_USB_MSD**<sup>(*)</sup>	| app_usb_msd.c/.h	| Manages **Mass Storage Device functionality**  					|
+|		  	| **APP_CTRL**			| app_ctrl.c.h		| Manages device **Control operations** including LED management and sensors access	|
+| **_APP_AWS_Tasks**    | **APP_AWS**			| app_aws.c/.h		| Manages **AWS cloud connection/subscribe/publish functionality**			|
 
-#### _APP_AWS_Tasks
-* Manages AWS cloud connection/subscribe/publish.
-
-### Application Logical Modules Perspective
-
-#### APP
-* Files: app.c/.h
-* This is the main/central module.
-* Manages **Wi-Fi functionality**.
-* Manages all other modules except the cloud module.
-
-#### APP_WIFI_PROV
-* Files: app_wifi_prov.c/.h
-* Manages **AP provisioning functionality**.
-* Gives access to provisioing the device using AP mode and a Mobile application.
-
-#### APP_USB_MSD
-* Files: app_usb_msd.c/.h
-* Manages **Mass Storage Device functionality**.
-* Gives access to:
-	* Configure the device for Wi-Fi connection via **WIFI.CFG**.
-	* configure the device for cloud connection via **CLOUD.JSON**.
-	* Demo Webpage via **CLICK-ME.HTM**.
-	* Device registration for Alexa Voice control via **VOICE.HTM**.
-	
-#### APP_CTRL
-* Files: app_ctrl.c/.h
-* Manages device **Control operations** including LED management and sensors access.
-
-#### APP_AWS
-* Files: app_aws.c/.h
-* Manages **AWS cloud connection/subscribe/publish functionality**.
+(*) **Mass Storage Device** gives access to:
+* Configure the device for Wi-Fi connection via **WIFI.CFG**.
+* configure the device for cloud connection via **CLOUD.JSON**.
+* Demo Webpage via **CLICK-ME.HTM**.
+* Device registration for Alexa Voice control via **VOICE.HTM**.
 
 ---
 
