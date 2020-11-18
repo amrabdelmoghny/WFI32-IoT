@@ -36,10 +36,16 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
  
 ## Getting Started
 
-Want to quickly evaluate the WFI32-IoT board? Check out our **[Quick Start Guide]**(https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/GettingStarted.md) to know how to connect out-of-the-box to Microchip AWS Sandbox account to visualize board's Temperature and Light sensors data and control on-board LED using just a web intrerface or even using Amazon Alexa Voice control!
+Want to quickly evaluate the WFI32-IoT board? Check out our **[Quick Start Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/GettingStarted.md)** to know how to connect out-of-the-box to Microchip AWS Sandbox account to visualize board's Temperature and Light sensors data and control on-board LED using just a web intrerface or even using Amazon Alexa Voice control!
 
 ---
 
 ## Application Deep Dive
 
-Want to dive behind the scenes and learn how Connectivity, Security and Cloud are tied together? Check out out our **[Deep Dive Guide]**(https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/HowItWorks.md) to know how easy it is to migrate the demo to your own cloud instance.
+Want to dive behind the scenes and learn how Connectivity, Security and Cloud are tied together? Check out out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/HowItWorks.md)** to know how easy it is to migrate the demo to your own cloud instance.
+
+---
+
+## FAQ and Troubleshooting
+
+Have some issues or things are not going as smooth as you wish? Luckily We have gathered some quick tips for you under the **FAQ and [Troubleshooting Page]()https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md**
