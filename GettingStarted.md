@@ -1,4 +1,4 @@
-# Getting Started Guide: Secure Cloud Connectivity and Voice Control Demo for Microchip WFI32-IoT Board .
+# Quick Start Guide: Secure Cloud Connectivity and Voice Control Demo for Microchip WFI32-IoT Board .
 
 Devices: **| PIC32 WFI32E | WFI32 | Trust\&Go (ECC608) |**
 
