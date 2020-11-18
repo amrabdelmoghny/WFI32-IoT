@@ -31,7 +31,7 @@ The WFI32-IoT board features the following elements:
 The WFI32-IoT board comes pre-programmed and configured for demonstrating the connectivity to the AWS Cloud IoT Core.
 
 <p align="center">
-<img src="resources/media/figure_preface_1.png"/>
+<img src="resources/media/board1.png"/>
 </p>
  
 ## Getting Started
