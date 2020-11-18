@@ -127,7 +127,7 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
 
 2. Enter your thing name and a friendly name and claim your device by registering it. Thing name can be found at the top of the demo web page just above the temperature graph
 
-<img src="resources/media/voiceReg3.png" width="480"/>
+<img src="resources/media/voiceReg3.png" width="720"/>
 
 3. Successfully claimed devices will show up in the device listing in the left side panel.
 4. Using Amazon Alexa® app, enable the skill '<img src="resources/media/skillIcon.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
