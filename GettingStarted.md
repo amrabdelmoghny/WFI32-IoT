@@ -30,7 +30,7 @@ The WFI32-IoT board layout can be seen below.
 
 ### 1.2 LED Indicators <a name="chapter1.2"></a>
 
-<img src="resources/media/figure_1_2_1.png"/>
+<img src="resources/media/figure_1_2_1.png" width="840"/>
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 * **SW0** held: Enter Soft AP mode
