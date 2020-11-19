@@ -1,4 +1,4 @@
-# Quick Start Guide: Secure Cloud Connectivity and Voice Control Demo for Microchip WFI32-IoT Board .
+# Quick Start Guide: Secure Cloud Connectivity and Voice Control Demo for Microchip WFI32-IoT Board
 
 Devices: **| PIC32 WFI32E | WFI32 | Trust\&Go (ECC608) |**
 
@@ -12,7 +12,9 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
 <p align="center">
 <img src="resources/media/board1.png"/>
 </p>
- 
+
+Please check out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/HowItWorks.md)** to dive behind the scenes, learn how Connectivity, Security and Cloud are tied together and experience how smooth it is to migrate the demo to your own cloud instance. We have also gathered some FAQs and troubleshooting tips for you under the **[FAQ and Troubleshooting Page](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md)**.
+
 ## Table of Contents
 
 1. [Overview](#chapter1)
@@ -26,8 +28,6 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
 		2. 	[Via Soft AP](#chapter2.2.2)
 	4.	[Visualizing Cloud Data in Real Time](#chapter2.3)
 	5.	[Voice Control](#chapter2.4)
-3. [Application Deep Dive](#chapter3)
-4. [FAQ and Troubleshooting](#chapter4)
 
 
 ## 1. Overview <a name="chapter1"></a>
@@ -149,15 +149,4 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
 **Note**: Supported browsers inlcude Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge while Internet Explorer is not supported. 
  
 **Note**: Only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
- 
----
- 
-## 3. Application Deep Dive <a name="chapter3"></a>
- 
- Want to dive behind the scenes and learn how Connectivity, Security and Cloud are tied together? Check out out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/HowItWorks.md)** to know how easy it is to migrate the demo to your own cloud instance.
- 
----
- 
-## 4. FAQ and Troubleshooting <a name="chapter4"></a>
 
-Have some issues or things are not going as smooth as you wish? We have gathered some quick tips for you under the **[FAQ and Troubleshooting Page](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md)**
