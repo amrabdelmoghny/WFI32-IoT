@@ -1,4 +1,4 @@
-# Application Deep Dive: Secure Cloud Connectivity and Voice Control Demo for Microchip WFI32-IoT Board .
+# Application Deep Dive: Secure Cloud Connectivity and Voice Control Demo for Microchip WFI32-IoT Board
 
 Devices: **| PIC32 WFI32E | WFI32 | Trust\&Go (ECC608) |**
 
@@ -173,11 +173,22 @@ The application runs two application OS tasks/threads with multiple underlying l
 	* Shadow Topics retain expected values and report if Published data reflects a difference in value.
 	* When difference exists, the status of the delta is reported to those subscribed to appropriate topic messages.
 
-<img src="resources/media/image17.png"/>
-
-2. Updates to the device shadow are published on ``$aws/things/<ThingName>/shadow/update`` topic. When a message is sent to the board by changing the value of the **toggle** fields in **Control Your Device** section:
+2. Updates to the device shadow are published on ``$aws/things/<thingName>/shadow/update`` topic. When a message is sent to the board by changing the value of the **toggle** field in **Control Your Device** section:
 	* This message is published on the ``$aws/things/<ThingName>/shadow/update`` topic.
 	* If the current value of toggle in the device shadow is different from the toggle value present in the AWS Device Shadow, the AWS Shadow service reports this change to the device by publishing a message on ``$aws/things/<ThingName>/shadow/update/delta`` topic.
+	* The JSON structure of the message sent should be as below:
+	```json
+	{
+	  "state":
+	  {
+	       "desired":
+	       {
+		     "toggle": toBeUpdatedToggleValue
+	       }
+	  }
+	}
+	```
+	
 3. AWS IoT Core publishes a delta topic message if there is a difference between the reported and desired states. The device would have already subscribed to the delta topic.
 4. You can read more about AWS device shadows (here.)[https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-data-flow.html]
 
