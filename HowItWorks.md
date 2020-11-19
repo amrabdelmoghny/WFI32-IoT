@@ -15,15 +15,15 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
  
 ## Table of Contents
 
-1. [Chapter 1: Requirements](#chapter1)
-2. [Chapter 2: Application Scope](#chapter2)
-3. [Chapter 3: Application Structure](#chapter3)
-4. [Chapter 4: Application Description](#chapter4)
-5. [Chapter 5: Secure Provisioning & Transport Layer Security](#chapter5)
-6. [Chapter 6: Understanding the Device Shadow in AWS ](#chapter6)
-7. [Chapter 7: Detailed operation](#chapter7)
+1. [Requirements](#chapter1)
+2. [Application Scope](#chapter2)
+3. [Application Structure](#chapter3)
+4. [Application Description](#chapter4)
+5. [Secure Provisioning & Transport Layer Security](#chapter5)
+6. [Understanding the Device Shadow in AWS ](#chapter6)
+7. [Detailed operation](#chapter7)
  
-## Chapter 1: Requirements <a name="Chapter1"></a>
+## 1. Requirements <a name="Chapter1"></a>
 
 * **MPLAB® X Integrated Development Environment (IDE) v5.40 or later**
 MPLAB® X IDE is a computer software program based on the open source NetBeans IDE from Oracle. It is used to develop applications for Microchip microcontrollers and digital signal controllers. It runs on Windows®, Mac OS® and Linux®. 
@@ -38,7 +38,7 @@ The WFI32-IoT board is a compact, easy-to-use development board that supports ra
 
 ---
 
-## Chapter 2: Application Scope <a name="Chapter2"></a>
+## 2. Application Scope <a name="Chapter2"></a>
 The WFI32-IoT-IoT development board has been created with the intention of demostrating a one source solution for evaluation of existing cloud provider solutions. 
 This example end-device leverages the catalog of devices, and libraries provided through Microchip's extensive product line to showcase a basic Internet of Things product connection. Data exchange between server and in field device is implemented using on board sensors for temperature and light value observations. Behavior actions are demonstrated through visual indication of the 'Data' LED as controlled through the Web based APIs. 
 
@@ -58,7 +58,7 @@ General Out-Of-Box operation is as described below:
 
 ---
 
-## Chapter 3: Application Structure <a name="Chapter3"></a>
+## 3. Application Structure <a name="Chapter3"></a>
 
 The application runs two application OS tasks/threads with multiple underlying logical modules for better code organizing.
 
@@ -78,7 +78,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ---
 
-## Chapter 4: Application Description <a name="Chapter4"></a>
+## 4. Application Description <a name="Chapter4"></a>
 
 ### AWS Cloud
 * Publish payload for sensor data (telemetry)
@@ -151,7 +151,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ---
 
-## Chapter 5: Secure Provisioning & Transport Layer Security <a name="Chapter5"></a>
+## 5. Secure Provisioning & Transport Layer Security <a name="Chapter5"></a>
 
 1. The WFI32-IoT board is shipped pre-provisioned for coordination with the AWS Cloud system.
 2. Security is achieved by using the WolfSSL Transport Layer Security (TLS) stack configured within Harmony 3 eco-system.
@@ -164,7 +164,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ---
 
-## Chapter 6: Understanding the Device Shadow in AWS <a name="Chapter6"></a>
+## 6. Understanding the Device Shadow in AWS <a name="Chapter6"></a>
 
 1. The AWS broker allows for the use of Shadow Topics. The Shadow Topics are used to retain a specific value within the Broker so that End-Device status updates can be managed.
 	* Shadow Topics are used to restore the state of variables or applications.
@@ -181,7 +181,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ---
 
-## Chapter 7: Connecting to Your Cloud Instance
+## 7. Connecting to Your Cloud Instance
 
 By default, the demo connects to an instance of AWS IoT maintained by Microchip. The demo lets you move the device connection between your cloud instance, and the Microchip maintained AWS IoT instance without a firmware change. Perform the following steps to get the device connected to your own cloud instance.
 
