@@ -188,9 +188,8 @@ The application runs two application OS tasks/threads with multiple underlying l
 	  }
 	}
 	```
-	
 3. AWS IoT Core publishes a delta topic message if there is a difference between the reported and desired states. The device would have already subscribed to the delta topic.
-4. You can read more about AWS device shadows (here.)[https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-data-flow.html]
+4. You can read more about AWS device shadows [here](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-data-flow.html).
 
 ---
 
