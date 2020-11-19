@@ -24,8 +24,8 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
 	3.	[Connecting the Board to Wi-Fi Networks](#chapter2.2)
 		1. 	[Via WFI32-IoT Web page](#chapter2.2.1)
 		2. 	[Via Soft AP](#chapter2.2.2)
-	4.	[2.3 Visualizing Cloud Data in Real Time](#chapter2.3)
-	5.	[2.4 Voice Control](#chapter2.4)
+	4.	[Visualizing Cloud Data in Real Time](#chapter2.3)
+	5.	[Voice Control](#chapter2.4)
 3. [Application Deep Dive](#chapter3)
 4. [FAQ and Troubleshooting](#chapter4)
 
