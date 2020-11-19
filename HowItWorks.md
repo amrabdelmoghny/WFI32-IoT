@@ -174,8 +174,8 @@ The application runs two application OS tasks/threads with multiple underlying l
 	* When difference exists, the status of the delta is reported to those subscribed to appropriate topic messages.
 
 2. Updates to the device shadow are published on ``$aws/things/<thingName>/shadow/update`` topic. When a message is sent to the board by changing the value of the **toggle** field in **Control Your Device** section:
-	* This message is published on the ``$aws/things/<ThingName>/shadow/update`` topic.
-	* If the current value of toggle in the device shadow is different from the toggle value present in the AWS Device Shadow, the AWS Shadow service reports this change to the device by publishing a message on ``$aws/things/<ThingName>/shadow/update/delta`` topic.
+	* This message is published on the ``$aws/things/<thingName>/shadow/update`` topic.
+	* If the current value of toggle in the device shadow is different from the toggle value present in the AWS Device Shadow, the AWS Shadow service reports this change to the device by publishing a message on ``$aws/things/<thingName>/shadow/update/delta`` topic.
 	* The JSON structure of the message sent should be as below:
 	```json
 	{
