@@ -12,6 +12,8 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
 <p align="center">
 <img src="resources/media/board1.png"/>
 </p>
+
+Please check out our **[Quick Start Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/README.md)** to experience an out-of-the-box cloud connection to Microchip AWS Sandbox account. We have also gathered some FAQs and troubleshooting tips for you under the **[FAQ and Troubleshooting Page](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md)**.
  
 ## Table of Contents
 
