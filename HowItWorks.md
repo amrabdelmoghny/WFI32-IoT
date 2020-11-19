@@ -197,36 +197,29 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 By default, the demo connects to an instance of AWS IoT maintained by Microchip. The demo lets you move the device connection between your cloud instance, and the Microchip maintained AWS IoT instance without a firmware change. Perform the following steps to get the device connected to your own cloud instance.
 
-1.  Create an AWS account or log in to your existing AWS account.
-    - Please refer to [Set up your AWS account](https://docs.aws.amazon.com/iot/latest/developerguide/setting-up.html) and [Create AWS IoT resources](https://docs.aws.amazon.com/iot/latest/developerguide/create-iot-resources.html) for details.
+1. Create an AWS account or log in to your existing AWS account. Please refer to [Set up your AWS account](https://docs.aws.amazon.com/iot/latest/developerguide/setting-up.html) and [Create AWS IoT resources](https://docs.aws.amazon.com/iot/latest/developerguide/create-iot-resources.html) for details.
 
-2.  Navigate to [IoT Core console](https://console.aws.amazon.com/iot/) \> Manage \> Things and click on “**_Create_**” / “**_Register a Thing_**”
+2. Navigate to [IoT Core console](https://console.aws.amazon.com/iot/) \> Manage \> Things and click on **Create**/ **Register a Thing**
 
-<p align="center">
-<img src="resources/media/image7.png" width=480/>
-</p>
+<img src="resources/media/HowItWorks/understandDeviceShadow1.png" width=720/>
 
-3.  Select “**_Create a single thing_**”
+3.  Select **Create a single thing**
 
 4.  For thing name, copy and paste the thing name from the original demo web-app. This thing name originates from the device certificate and is used by the firmware to send messages to a unique topic.
 
-<p align="center">
-<img src="resources/media/image8.png" width=480 />
-</p>
+<img src="resources/media/HowItWorks/understandDeviceShadow2.png" width=480 />
 
-5.  Select defaults for the other fields and click “Next” at the bottom of the page.
+5.  Select defaults for the other fields and click **Next** at the bottom of the page.
 
-6.  Select “**_Create thing without certificate_**” in the next page.
+6.  Select **Create thing without certificate** in the next page.
 
-7.  Go to “**_Secure_**” \> “**_Policies_**” and select “**_Create a Policy_**”
+7.  Go to **Secure** \> **Policies** and select **Create a Policy**.
 
-<p align="center">
-<img src="resources/media/image9.png" width=480 />
-</p>
+<img src="resources/media/HowItWorks/understandDeviceShadow3.png" width=480 />
 
 8.  Create a new policy which allows all connected devices to perform all actions without restrictions
 
-  > :x: &nbsp; **_Note_**: This policy grants unrestricted access for all iot operations, and is to be used only in a development environment. For non-dev environments, all devices in your fleet must have credentials with privileges that authorize intended actions only, which include (but not limited to) AWS IoT MQTT actions such as publishing messages or subscribing to topics with specific scope and context. The specific permission policies can vary for your use cases. Identify the permission policies that best meet your business and security requirements.Please refer to [sample policies](https://docs.aws.amazon.com/iot/latest/developerguide/example-iot-policies.html) and [security best practices](https://docs.aws.amazon.com/iot/latest/developerguide/security-best-practices.html)
+**Note**: This policy grants unrestricted access for all iot operations, and is to be used only in a development environment. For non-dev environments, all devices in your fleet must have credentials with privileges that authorize intended actions only, which include (but not limited to) AWS IoT MQTT actions such as publishing messages or subscribing to topics with specific scope and context. The specific permission policies can vary for your use cases. Identify the permission policies that best meet your business and security requirements.Please refer to [sample policies](https://docs.aws.amazon.com/iot/latest/developerguide/example-iot-policies.html) and [security best practices](https://docs.aws.amazon.com/iot/latest/developerguide/security-best-practices.html).
 
 | Item               | Policy Parameter |
 | ------------------ | ---------------- |
@@ -235,59 +228,45 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 | **_Resource Arn_** | \*               |
 | **_Effect_**       | Allow            |
 
-<p align="center">
-<img src="resources/media/image10.png" width=480/>
-</p>
+<img src="resources/media/HowItWorks/understandDeviceShadow4.png" width=480/>
 
-9.  Navigate to **_Certificates_** \> **_Create a certificate_**
+9.  Navigate to **Certificates** \> **Create a certificate**
 
-<p align="center">
-<img src="resources/media/image11.png" width=480/>
-</p>
+<img src="resources/media/HowItWorks/understandDeviceShadow5.png" width=480/>
 
-10. Select Create with “**_Get Started_**” under “**_Use my certificate_**”.
+10. Select Create with **Get Started** under **Use my certificate**.
 
-11. In the next screen, click “**_Next_**” without making any selections.
+11. In the next screen, click **Next** without making any selections.
 
-12. Click on “**_Select certificates_**”
+12. Click on **Select certificates**.
 
-13. In the MSD enumerated when the Curiosity Board is plugged in, you can find a “**_.cer_**” file with an alphanumeric name. Select this file when prompted to select a certificate.
+13. In the MSD enumerated when the Curiosity Board is plugged in, you can find a **xx.CER** file with an alphanumeric name. Select this file when prompted to select a certificate.
 
-14. Select “**_Activate all_**” and click “**_Register certificates_**”
+14. Select **Activate all** and click **Register certificates**.
 
-<p align="center">
-<img src="resources/media/image12.png" width=480/>
-</p>
+<img src="resources/media/HowItWorks/understandDeviceShadow6.png" width=480/>
 
 15. Select the certificate and
+	1.  Click **Attach policy** and select the **allowAll** policy we created.
+	2.  Click **Attach thing** and choose the **thing** we created.
 
-    1.  Click **_Attach policy_** and select the “allowAll” policy we created
+<img src="resources/media/HowItWorks/understandDeviceShadow7.png" width=240/>
 
-    2.  Click **_Attach thing_** and choose the *thing* we created
+16. Navigate to **Settings** and copy the endpoint URL
 
-<p align="center">
-<img src="resources/media/image13.png" width=240/>
-</p>
+<img src="resources/media/HowItWorks/understandDeviceShadow8.png" width=480/>
 
-16. Navigate to “**_Settings_**” and copy the endpoint URL
-
-<p align="center">
-<img src="resources/media/image14.png" width=480/>
-</p>
-
-17. Navigate to the MSD and open “**_cloud.json_**”
+17. Navigate to the MSD and open **CLOUD.JSON**
 
   > :information_source: &nbsp; While editing `cloud.json` or `WIFI.CFG` manually, it is recommended to use ***notepad.exe*** . Other editors like Notepad++ can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
 
-18. Replace the “**_brokerName_**” attribute with the endpoint URL.
+18. Replace the **Endpoint** attribute with the endpoint URL and save.
 
 19. Reset the device. Now, the device will connect to your own cloud instance.
 
-20. In the AWS IoT console, navigate to “**_test_**” and subscribe to topic “**_+/sensors_**”
+20. In the AWS IoT console, navigate to **test** and subscribe to topic **+/sensors**
 
-<p align="center">
-<img src="resources/media/image15.png" width=480 />
-</p>
+<img src="resources/media/HowItWorks/understandDeviceShadow9.png" width=480 />
 
 21. You will be able to observe periodic temperature data coming into the console from your device.
 
