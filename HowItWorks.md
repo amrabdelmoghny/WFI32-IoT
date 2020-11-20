@@ -207,7 +207,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 4.  For thing name, copy and paste the thing name from the original demo web-app. This thing name originates from the device certificate and is used by the firmware to send messages to a unique topic.
 
-<img src="resources/media/HowItWorks/understandDeviceShadow2.png" width=480 />
+<img src="resources/media/HowItWorks/understandDeviceShadow2.png" width=720 />
 
 5.  Select defaults for the other fields and click **Next** at the bottom of the page.
 
@@ -215,7 +215,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 7.  Go to **Secure** \> **Policies** and select **Create a Policy**.
 
-<img src="resources/media/HowItWorks/understandDeviceShadow3.png" width=480 />
+<img src="resources/media/HowItWorks/understandDeviceShadow3.png" width=720 />
 
 8.  Create a new policy which allows all connected devices to perform all actions without restrictions
 
@@ -228,11 +228,12 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 | **_Resource Arn_** | \*               |
 | **_Effect_**       | Allow            |
 
-<img src="resources/media/HowItWorks/understandDeviceShadow4.png" width=480/>
+
+<img src="resources/media/HowItWorks/understandDeviceShadow4.png" width=720/>
 
 9.  Navigate to **Certificates** \> **Create a certificate**
 
-<img src="resources/media/HowItWorks/understandDeviceShadow5.png" width=480/>
+<img src="resources/media/HowItWorks/understandDeviceShadow5.png" width=720/>
 
 10. Select Create with **Get Started** under **Use my certificate**.
 
@@ -240,23 +241,23 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 12. Click on **Select certificates**.
 
-13. In the MSD enumerated when the Curiosity Board is plugged in, you can find a **xx.CER** file with an alphanumeric name. Select this file when prompted to select a certificate.
+13. On the **Curiosity drive**, you can find a **xx.CER** file with an alphanumeric name. Select this file when prompted to select a certificate.
 
 14. Select **Activate all** and click **Register certificates**.
 
-<img src="resources/media/HowItWorks/understandDeviceShadow6.png" width=480/>
+<img src="resources/media/HowItWorks/understandDeviceShadow6.png" width=720/>
 
 15. Select the certificate and
 	1.  Click **Attach policy** and select the **allowAll** policy we created.
 	2.  Click **Attach thing** and choose the **thing** we created.
 
-<img src="resources/media/HowItWorks/understandDeviceShadow7.png" width=240/>
+<img src="resources/media/HowItWorks/understandDeviceShadow7.png" width=480/>
 
 16. Navigate to **Settings** and copy the endpoint URL
 
-<img src="resources/media/HowItWorks/understandDeviceShadow8.png" width=480/>
+<img src="resources/media/HowItWorks/understandDeviceShadow8.png" width=720/>
 
-17. Navigate to the MSD and open **CLOUD.JSON**
+17. On the **Curiosity drive**, open **CLOUD.JSON**.
 
   > :information_source: &nbsp; While editing `cloud.json` or `WIFI.CFG` manually, it is recommended to use ***notepad.exe*** . Other editors like Notepad++ can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
 
@@ -266,36 +267,27 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 20. In the AWS IoT console, navigate to **test** and subscribe to topic **+/sensors**
 
-<img src="resources/media/HowItWorks/understandDeviceShadow9.png" width=480 />
+<img src="resources/media/HowItWorks/understandDeviceShadow9.png" width=720 />
 
-21. You will be able to observe periodic temperature data coming into the console from your device.
+21. You will be able to observe periodic temperature and light data coming into the console from your device.
 
-22. To control the Green LED, publish the following message:
+22. To control the **Yellow LED**, publish the following message:
 
-<table>
-<thead>
-<tr class="header">
-<th><strong>Topic</strong></th>
-<td>$aws/things/<em><strong>thingName</strong></em>/shadow/update</td>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Payload</strong></td>
-<td><pre>
-{
-  "state": {
-    "desired": {
-      "toggle":1
-    }
-  }
-}
-</pre></td>
-</tr>
-</tbody>
-</table>
+	* topic: ``$aws/things/<thingName>/shadow/update``
+	* payload:
+	```json
+	{
+	  "state":
+	  {
+	       "desired":
+	       {
+		     "toggle": toBeUpdatedToggleValue
+	       }
+	  }
+	}
+	```
 
-Depending on the value of “**_toggle_**” (1/0) , the Green LED will be ON/OFF.
+Depending on the value of **toggle**, the **Yellow LED** will be on/off for 3 seconds.
 
 ---
 
