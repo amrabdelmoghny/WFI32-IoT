@@ -259,7 +259,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 17. On the **Curiosity drive**, open **CLOUD.JSON**.
 
-  > :information_source: &nbsp; While editing `cloud.json` or `WIFI.CFG` manually, it is recommended to use ***notepad.exe*** . Other editors like Notepad++ can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
+**Note**: While editing **CLOUD.JSON** or **WIFI.CFG** manually, it is recommended to use **Notepad** . Other editors like **Notepad++** can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
 
 18. Replace the **Endpoint** attribute with the endpoint URL and save.
 
@@ -287,7 +287,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 	}
 	```
 
-Depending on the value of **toggle**, the **Yellow LED** will be on/off for 3 seconds.
+23. Depending on the value of **toggle**, the **Yellow LED** will be on/off for 3 seconds.
 
 ---
 
