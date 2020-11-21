@@ -131,25 +131,27 @@ The application runs two application OS tasks/threads with multiple underlying l
 	  }
 	}
 	```
-* The PIC IoT development board publishes data from the on-board light and temperature sensor every 1 second to the cloud.
+* The WFI32-IoT board publishes data from the on-board light and temperature sensor every 1 second to the cloud.
 * The data received over the subscribed topic is displayed on a serial terminal and **YELLOW LED blinks** accordingly.
 
 ### Establish MQTT connection to cloud  
-* The C code for establishing MQTT connection is available in **src/app_aws.c** file.
-* AWS C SDK API ``IotMqtt_Connect`` is called for publishing data to the cloud.
+* File: **src/app_aws.c**.
+* App function: ``APP_AWS_Tasks``
+* AWS C SDK API: ``IotMqtt_Connect``
 
 ### Sending MQTT publish packets  
-* The C code for sending MQTT publish packets is available in **src/app_aws.c** file.
-* The API ``static int publishMessages()`` is responsible for publishing data at an interval of 1 second.
-* AWS C SDK API ``IotMqtt_PublishAsync`` is called for publishing data to the cloud.
+* File: **src/app_aws.c**
+* App function: ``static int publishMessages()``
+* AWS C SDK API: ``IotMqtt_PublishAsync``
 
 ### Subscribe to topic/s
-* The C code for subscribing to topic/s is available in **src/app_aws.c** file.
-* AWS C SDK API ``IotMqtt_SubscribeSync`` is called for subscribing to cloud topic/s.
+* File: **src/app_aws.c**
+* App function: ``APP_AWS_Tasks``
+* AWS C SDK API: ``IotMqtt_SubscribeSync``
 
 ### Processing Packets received over subscribed topic
-* The C code for processing MQTT publish packets received over the subscribed topic is available in **src/app_aws.c** file.
-* The ``static void mqttSubscriptionCallback( void * param1, IotMqttCallbackParam_t * const pPublish )`` function is used for processing packets published over the subscribed topic.
+* File: **src/app_aws.c**
+* App function: ``mqttSubscriptionCallback``
 
 ---
 
