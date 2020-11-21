@@ -141,7 +141,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ### Sending MQTT publish packets  
 * File: **src/app_aws.c**
-* App function: ``static int publishMessages()``
+* App function: ``publishMessages``
 * AWS C SDK API: ``IotMqtt_PublishAsync``
 
 ### Subscribe to topic/s
