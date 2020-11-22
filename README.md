@@ -130,7 +130,7 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
 
 <img src="resources/media/voiceReg1.png" width="1080"/>
 
-1. Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file **VOICE.HTM** on the MSD.
+1. Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file **VOICE.HTM** on the **CURIOSITY drive**.
 
 <img src="resources/media/voiceReg2.png" width="480"/>
 
