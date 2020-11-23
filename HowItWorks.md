@@ -331,8 +331,8 @@ In case you want to re-flash the device, perform the following steps:
 ---
 
 ### 10. Debugging <a name="Chapter10"></a>
-When connecting WFI32-IoT board t0 a PC using a USB cable, it enumerates as a USB MSD (Mass Storage Device) in addition to two other virtual COM ports reflecting UART1 and UART3 of the module where:
-* UART1 is used for application debug logs
+When connecting WFI32-IoT board to a PC using a standard micro-USB cable, it enumerates as a USB MSD (Mass Storage Device) in addition to two other virtual COM ports reflecting UART1 and UART3 of the module where:
+* UART1 is used for application debug logs.
 * UART3 is used for Wi-Fi FW and AWS C SDK logs.
 
-**Note**: UART1 and UART2 settings should be 115200 8N1.
+**Note**: UART1 and UART3 settings should be 115200 8N1.
