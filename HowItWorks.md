@@ -315,7 +315,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 ---
 
-### Re-flash the demo <a name="Chapter8"></a>
+### 8. Re-flash the demo <a name="Chapter8"></a>
 In case you want to re-flash the device, perform the following steps:
 
 1. Download and install [MPLABX Integrated Programming Environment](https://www.microchip.com/mplab/mplab-integrated-programming-environment)
@@ -326,11 +326,11 @@ In case you want to re-flash the device, perform the following steps:
 
 ---
 
-### Code generation using Harmony 3 <a name="Chapter9"></a>
+### 9. Code generation using Harmony 3 <a name="Chapter9"></a>
 
 ---
 
-### Debugging <a name="Chapter10"></a>
+### 10. Debugging <a name="Chapter10"></a>
 When connecting WFI32-IoT board t0 a PC using a USB cable, it enumerates as a USB MSD (Mass Storage Device) in addition to two other virtual COM ports reflecting UART1 and UART3 of the module where:
 * UART1 is used for application debug logs
 * UART3 is used for Wi-Fi FW and AWS C SDK logs.
