@@ -203,13 +203,13 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 2. Navigate to [IoT Core console](https://console.aws.amazon.com/iot/) \> Manage \> Things and click on **Create**/ **Register a Thing**
 
-<img src="resources/media/HowItWorks/understandDeviceShadow1.png" width=720/>
+<img src="resources/media/HowItWorks/yourCloudInstance1.png" width=720/>
 
 3.  Select **Create a single thing**
 
 4.  For thing name, copy and paste the thing name from the original demo web-app. This thing name originates from the device certificate and is used by the firmware to send messages to a unique topic.
 
-<img src="resources/media/HowItWorks/understandDeviceShadow2.png" width=720 />
+<img src="resources/media/HowItWorks/yourCloudInstance2.png" width=720 />
 
 5.  Select defaults for the other fields and click **Next** at the bottom of the page.
 
@@ -217,7 +217,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 7.  Go to **Secure** \> **Policies** and select **Create a Policy**.
 
-<img src="resources/media/HowItWorks/understandDeviceShadow3.png" width=720 />
+<img src="resources/media/HowItWorks/yourCloudInstance3.png" width=720 />
 
 8.  Create a new policy which allows all connected devices to perform all actions without restrictions
 
@@ -231,11 +231,11 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 | **_Effect_**       | Allow            |
 
 
-<img src="resources/media/HowItWorks/understandDeviceShadow4.png" width=720/>
+<img src="resources/media/HowItWorks/yourCloudInstance4.png" width=720/>
 
 9.  Navigate to **Certificates** \> **Create a certificate**
 
-<img src="resources/media/HowItWorks/understandDeviceShadow5.png" width=720/>
+<img src="resources/media/HowItWorks/yourCloudInstance5.png" width=720/>
 
 10. Select Create with **Get Started** under **Use my certificate**.
 
@@ -247,17 +247,17 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 14. Select **Activate all** and click **Register certificates**.
 
-<img src="resources/media/HowItWorks/understandDeviceShadow6.png" width=720/>
+<img src="resources/media/HowItWorks/yourCloudInstance6.png" width=720/>
 
 15. Select the certificate and
 	1.  Click **Attach policy** and select the **allowAll** policy we created.
 	2.  Click **Attach thing** and choose the **thing** we created.
 
-<img src="resources/media/HowItWorks/understandDeviceShadow7.png" width=480/>
+<img src="resources/media/HowItWorks/yourCloudInstance7.png" width=480/>
 
 16. Navigate to **Settings** and copy the endpoint URL
 
-<img src="resources/media/HowItWorks/understandDeviceShadow8.png" width=720/>
+<img src="resources/media/HowItWorks/yourCloudInstance8.png" width=720/>
 
 17. On the **Curiosity drive**, open **CLOUD.JSON**.
 
@@ -269,7 +269,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 20. In the AWS IoT console, navigate to **test** and subscribe to topic **+/sensors**
 
-<img src="resources/media/HowItWorks/understandDeviceShadow9.png" width=720 />
+<img src="resources/media/HowItWorks/yourCloudInstance9.png" width=720 />
 
 21. You will be able to observe periodic temperature and light data coming into the console from your device.
 
