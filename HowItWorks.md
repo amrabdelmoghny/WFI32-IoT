@@ -318,11 +318,19 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 ### 8. Re-flash the demo <a name="Chapter8"></a>
 In case you want to re-flash the device, perform the following steps:
 
-1. Download and install [MPLABX Integrated Programming Environment](https://www.microchip.com/mplab/mplab-integrated-programming-environment)
+1. Download and install [MPLABX Integrated Programming Environment](https://www.microchip.com/mplab/mplab-integrated-programming-environment).
+2. Download the latest FW image (hex file) from the [releases](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest) tab.
 2. Connect WFI32-IoT board USB to your PC.
-3. Open MPLABX IPE and select **PIC32MZ1025W104132** device and **PKOB** tool.
-4. Download the latest FW image (hex file) from the [releases](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest) tab and load it into the IPE **hex file** section.
-6. Click on **connect** and then the **program** in the IPE and wait for device programming to complete.
+3. Open MPLABX IPE.
+
+<img src="resources/media/HowItWorks/reflash1.png" width=720/>
+
+4. Select **PIC32MZ1025W104132** device and **PKOB** tool then click on **connect**.
+
+<img src="resources/media/HowItWorks/reflash2.png" width=720/>
+
+5. Select **Browse** and navigate to where the downloaded hex file and load it the IPE.
+6. Click on **program** in the IPE and wait for device programming to complete.
 
 ---
 
