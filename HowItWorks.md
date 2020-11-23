@@ -22,8 +22,11 @@ Please check out our **[Quick Start Guide](https://github.com/amrabdelmoghny/WFI
 3. [Application Structure](#chapter3)
 4. [Application Description](#chapter4)
 5. [Secure Provisioning & Transport Layer Security](#chapter5)
-6. [Understanding the Device Shadow in AWS ](#chapter6)
-7. [Detailed operation](#chapter7)
+6. [Understanding the Device Shadow in AWS](#chapter6)
+7. [Connecting to Your Cloud Instance](#chapter7)
+8. [Re-flash the demo](#chapter8)
+9. [Code generation using Harmony 3](#chapter9)
+10. [Debugging](#chapter10)
  
 ## 1. Requirements <a name="Chapter1"></a>
 
@@ -214,7 +217,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ---
 
-## 7. Connecting to Your Cloud Instance
+## 7. Connecting to Your Cloud Instance <a name="Chapter7"></a>
 
 By default, the demo connects to an instance of AWS IoT maintained by Microchip. The demo lets you move the device connection between your cloud instance, and the Microchip maintained AWS IoT instance without a firmware change. Perform the following steps to get the device connected to your own cloud instance.
 
@@ -312,68 +315,24 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 ---
 
-### Detailed Operation
-1. There are three possible variations within application behavior possible by holding push buttons on startup
-	* Default behavior: No Button Pressed
-	* Soft AP: **SW0** is Held on startup (see description farther in document)
-	* Restore default Wi-Fi credentials: **SW0 & SW1** Held on startup. This state is reflected by **BLINKING GREEN LED** until a Wi-Fi connection is established. 
+### Re-flash the demo <a name="Chapter8"></a>
+In case you want to re-flash the device, perform the following steps:
 
-  1. Connect board to PC using USB-micro cable. 
+1. Download and install [MPLABX Integrated Programming Environment](https://www.microchip.com/mplab/mplab-integrated-programming-environment)
+2. Connect WFI32-IoT board USB to your PC.
+3. Open MPLABX IPE and select **PIC32MZ1025W104132** device and **PKOB** tool.
+4. Download the latest FW image (hex file) from the [releases](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest) tab and load it into the IPE **hex file** section.
+6. Click on **connect** and then the **program** in the IPE and wait for device programming to complete.
 
-     + The LEDs will **Cycle** upon startup: **BLUE-->GREEN-->YELLOW-->RED**, short delay, **BLUE-->GREEN-->YELLOW-->RED**.
+---
 
-  2. The **BLUE LED** will begin to blink, this indicates the board is attempting to join the local **ACCESS POINT**.
+### Code generation using Harmony 3 <a name="Chapter9"></a>
 
-     ![Connecting_2](images/picawsLeverage.png)
+---
 
-  3. Update the Wi-Fi Credentials; upon connecting the blinking will stop, and the **LED** will become **STATIC**. Below are the easiest methods to update credentials.
-     + The board will appear on the PC enumerated as a mass storage device under the name **CURIOSITY**. Credentials can be downloaded as the file **WIFI.CFG** using the **CLICK-ME.HTM** file stored on the **CURIOSITY** device.
-     
-     ![URL Hosted Credentials](images/wifiCredentialsWeb.png)
+### Debugging <a name="Chapter10"></a>
+When connecting WFI32-IoT board t0 a PC using a USB cable, it enumerates as a USB MSD (Mass Storage Device) in addition to two other virtual COM ports reflecting UART1 and UART3 of the module where:
+* UART1 is used for application debug logs
+* UART3 is used for Wi-Fi FW and AWS C SDK logs.
 
-     + This will launch the URL: https://pic-iot.com/aws/{ThingName}. 
-     + After entering credentials, the **.CFG** file is produced through the web browser. No information is shared through the internet. 
-     + Drag and Drop, or Copy and Paste the **WIFI.CFG** file onto the **CURIOSITY** device to load new credentials onto the IoT demonstration board.
-	 
-     
-     ![WiFi Config](images/wifiNotepad.png)     
-     
-     + Use a **Serial Terminal** to update the WiFi Credentials loaded onto the WINC module. Use the Command Line Interface (CLI) supported command ``wifi host_name,pass_code,auth_type`` | host_name/pass_code are entered strings, auth_type is int value: (0: open, 1: WEP, 2: WPA).
-
-     ![Serial Credentials](images/serialWiFi.png)
-
-  4. After becoming connected to the ACCESS POINT, the GREEN LED will begin to blink, this indicates the board is attempting to establish a TCP/IP and MQTT connection with the cloud providing service. The GREEN LED will stop blinking and become STATIC when the TCP and MQTT connection is established.
-     + Using the in module TCP/IP stack pre-configured with provisioned credentials; the device establishes a **MQTT** connection with the IoT Broker provider (AWS).
-     ![Status Display](images/awsConnection.png)
-
-  5. After successfully establishing MQTT connection, the **YELLOW LED** will blink, indicating data exchanged between the End-Device (PIC-IoT), and BROKER (AWS). 
-
-     ![Telemetry Data](images/PublishDataToAWS.png)
-
-  6. Connect to the www.avr-iot.com/aws/{thingName}, or www.pic-iot.com/aws/{thingName}, device specific website to view publish/subscribe data. 
-     + This page can be found via launching the **CLICK-ME.HTM** file on the **CURIOSITY** device.
-     + There will be (2) scrolling graphs visible. (1) shows temperature sensor, (1) shows the light sensor value. 
-     + Additional graphs can be produced altered through the published topic message.
-
-     ![Telemetry Data](images/awsSensors.png)
-
-  7. **Control Your Device** using the (3) rows beneath the '**Control Your Device**' section used to publish subscription data to end-devices through the broker. 
-     + **Only the use of Toggle is supported natively**
-     + **Expanding features would require custom written Firmware implementation**
-     + These example rows demonstrate options for: Toggle (boolean), Text Field (String), Sliders (integer)
-
-     ![Subscribe Data](images/Actuators.png)
-
-  8. When connection is established with the Broker, the publish message topic will be printed to a serial terminal through the CDC-USB bridge.
-     + 9600 is expected Baud Rate.
-     + When a topic subscription is received, the payload is printed in JSON format to the terminal.
-     + Topic subscription message are sent when the 'Send to device' push button on the webpage is pressed. 
-
-     ![Serial Subscribe Message](images/DeviceStartUpConsole.png)
-
-  9. When the 'Desired' state is updated in the 'Delta' Shadow Topic. 
-     + Device which required updates to the 'Desired' state which differs from their last 'Reported' value will receieve a published message on the '.../delta' MQTT topic. 
-     + Upon reception the device will report the updated 'Desired' value for the attribute with timestamp on the console.
-
-     ![Delta Subscribe Message 2](images/DeltaToggle.png)
-
+**Note**: UART1 and UART2 settings should be 115200 8N1.
