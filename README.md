@@ -100,7 +100,7 @@ The WFI32-IoT board layout can be seen below.
 2. Once connection to cloud is successful, **GREEN LED** will turn solid.
 3. Go to demo webpage (can always be reached out using the file **CLICK-ME.HTM**).
 4. The webpage will show a real-time graph of the data captured from the on-board light and temperature sensors.
-5. The on board **YELLOW LED** will blink for 500ms for each message published successfully to the cloud.
+5. The on board **YELLOW LED** will blink for 300 ms for each message published successfully to the cloud.
 
 <img src="resources/media/webpageGraphs.png" width="720"/>
 
@@ -121,7 +121,7 @@ The WFI32-IoT board layout can be seen below.
 <img src="resources/media/webpageToggle.png" width="720"/>
 
 5. Click on **Send to device** to send **Toggle** button value. 
-6. The **YELLOW LED** will remain on/off for 3 seconds when **Toggle** button is selected/unselected, respectively. After the 3 seocnds, the **YELLOW LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
+6. The **YELLOW LED** will remain on/off for 2 seconds when **Toggle** button is selected/unselected, respectively. After the 3 seocnds, the **YELLOW LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
 
 **Note**: Because Toggle manipulates the desired stat, the state must be changed to observe the behavior.
 
@@ -142,7 +142,7 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
 4. Using Amazon Alexa® app, enable the skill '<img src="resources/media/skillIcon.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
 5. You can now control the on-board **YELLOW LED** with voice commands using the friendly name provided while claiming the device earlier:
 > Alexa, turn on the light
-6. The **YELLOW LED** will remain on/off for 3 Seconds based on the voice command.
+6. The **YELLOW LED** will remain on/off for 2 Seconds based on the voice command.
    
 **Note**: You can find out more information about connecting a smart home device to Alexa from [this link](http://tinyurl.com/alexa-smart-home)
  
