@@ -170,28 +170,47 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ## 6. Understanding the Device Shadow in AWS <a name="Chapter6"></a>
 
-1. The AWS broker allows for the use of Shadow Topics. The Shadow Topics are used to retain a specific value within the Broker so that End-Device status updates can be managed.
-	* Shadow Topics are used to restore the state of variables or applications.
-	* Shadow Topics retain expected values and report if Published data reflects a difference in value.
-	* When difference exists, the status of the delta is reported to those subscribed to appropriate topic messages.
+1. The AWS broker allows for the use of Shadow Topics. The Shadow Topics are used to retain a specific value within the Broker, so End-Device status updates can be managed.
+ 	* Shadow Topics are used to restore the state of variables, or applications.
+	* Shadow Topics retain expected values, and report if Published data reflects a difference in value.
+	* When difference exist, status of the delta is reported to those subscribed to appropriate topic messages.
 
-2. Updates to the device shadow are published on ``$aws/things/<thingName>/shadow/update`` topic. When a message is sent to the board by changing the value of the **toggle** field in **Control Your Device** section:
-	* This message is published on the ``$aws/things/<thingName>/shadow/update`` topic.
-	* If the current value of toggle in the device shadow is different from the toggle value present in the AWS Device Shadow, the AWS Shadow service reports this change to the device by publishing a message on ``$aws/things/<thingName>/shadow/update/delta`` topic.
-	* The JSON structure of the message sent should be as below:
+2. Updates to the device shadow are published on ``$aws/things/{thingName}/shadow/update`` topic.  When a message is sent to the board by changing the value of the **toggle** button in **Control Your Device** section:
+	* This message is published on the ``$aws/things/{thingName}/shadow/update topic``. 
+	* If the published value of **toggle** is different from the **toggle** value present in the AWS Device Shadow, the AWS Shadow service reports this change to the device by publishing a message on ``$aws/things/{thingName}/shadow/update/delta`` topic.
+	* The JSON structure of the message sent should appear as below
 	```json
 	{
-	  "state":
-	  {
-	       "desired":
-	       {
-		     "toggle": toBeUpdatedToggleValue
-	       }
+	  "state": {
+	    "desired": {
+	      "toggle": toBeUpdatedToggleValue
+	    }
 	  }
 	}
 	```
-3. AWS IoT Core publishes a delta topic message if there is a difference between the reported and desired states. The device would have already subscribed to the delta topic.
-4. You can read more about AWS device shadows [here](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-data-flow.html).
+3. The meta data, and delta difference will be reported via the Serial Terminal upon a difference between desired/reported.
+
+<img src="resources/media/HowItWorks/understandingDeviceShadow1.png" width=720/>
+<img src="resources/media/HowItWorks/understandingDeviceShadow2.png" width=720/>
+
+4. In response to this, the end device publishes a message to ``$aws/things/{thingName}/shadow/update`` topic.
+	* This message is published to **report** the update to the **toggle** attribute.
+	* The JSON structure of the message sent should appear as below
+	```json
+	{
+	  "state": {
+	    "reported": {
+	      "toggle": updatedToggleValue
+	    }
+	  }
+	}
+	```
+
+5. Application flow when using the device shadow
+
+<img src="resources/media/HowItWorks/understandingDeviceShadow3.png" width=720/>
+
+6. You can read more about AWS device shadows [here](https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-data-flow.html).
 
 ---
 
