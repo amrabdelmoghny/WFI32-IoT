@@ -308,7 +308,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 	}
 	```
 
-23. Depending on the value of **toggle**, the **Yellow LED** will be on/off for 3 seconds.
+23. Depending on the value of **toggle**, the **Yellow LED** will be on/off for 2 seconds.
 
 ---
 
