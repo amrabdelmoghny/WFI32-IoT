@@ -325,12 +325,12 @@ In case you want to re-flash the device, perform the following steps:
 
 <img src="resources/media/HowItWorks/reflash1.png" width=720/>
 
-4. Select **PIC32MZ1025W104132** device and **PKOB** tool then click on **connect**.
+4. Select **PIC32MZ1025W104132** device and **PKOB** tool then click on **Connect**.
 
 <img src="resources/media/HowItWorks/reflash2.png" width=720/>
 
-5. Select **Browse** and navigate to where the downloaded hex file and load it the IPE.
-6. Click on **program** in the IPE and wait for device programming to complete.
+5. **Browse** your PC to load the downloaded hex file into IPE.
+6. Click on **Program** in the IPE and wait for device programming to complete.
 
 ---
 
