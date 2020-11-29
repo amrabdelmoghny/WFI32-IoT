@@ -65,14 +65,14 @@ The WFI32-IoT board layout can be seen below.
 3. A file named **WIFI.CFG** (text) file is downloaded to the host PC. 
 4. Drag and drop the file to the **CURIOSITY drive** to update the Wi-Fi credentials of the board.
 5. Reboot the device.
-6. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
+6. **Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
 
 **Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the **WIFI.CFG** file.
  
 #### 2.2.2 Via Soft AP <a name="chapter2.2.2"></a>
 1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for [Android](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) or for iOS.
 2. To enter SoftAP mode, hold the **SW0** push button for most of the power up time. 
-3. The **BLUE LED** will blink when Soft AP is available.
+3. All **LEDs** will be off when Soft AP is available.
 5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
 6. Open **Microchip Wi-Fi Provisioning** Mobile phone application and press **CONNECT**.
 
@@ -87,7 +87,7 @@ The WFI32-IoT board layout can be seen below.
 <img src="resources/media/mobileApp4.png" width="240"/>
 
 9. Go back in the app so that the WFI32-IoT board applies the new credentilas.
-10. The **BLUE LED** will light up once a successful connection to the Wi-Fi Access Point is made.
+10. **Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
 
 **Note**: WFI32-IoT board will NOT apply/use provided credentials unless you go back in the app. This gives you the chance to keep sending new credentials or correct wrongly provided ones as long as you didn't go back in the app.
 
