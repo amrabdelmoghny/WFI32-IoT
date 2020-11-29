@@ -275,7 +275,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 	1.  Click **Attach policy** and select the **allowAll** policy we created.
 	2.  Click **Attach thing** and choose the **thing** we created.
 
-<img src="resources/media/HowItWorks/yourCloudInstance7.png" width=480/>
+<img src="resources/media/HowItWorks/yourCloudInstance7.png" width=240/>
 
 16. Navigate to **Settings** and copy the endpoint URL
 
