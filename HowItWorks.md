@@ -55,9 +55,9 @@ General Out-Of-Box operation is as described below:
 5. Capture of Data sent from Broker to Device can be observed through a Serial terminal when USB-Micro is connected to WFI32-IoT board. 
 6. Behavior variation can be observed on the 'Data' LED when triggered through the web based API and sent through the broker to end device.
 
-**Note**: The **SW0 & SW1** user buttons have no effect outside of variation of start-up operation where:
-* **SW0** held: Enter Soft AP mode.
-* **SW0 & SW1** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
+**Note**: The **SW1 & SW2** user buttons have no effect outside of variation of start-up operation where:
+* **SW1** held: Enter Soft AP mode.
+* **SW1 & SW2** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 
 **Note**: The **Red 'Data' LED** remaining on may indicate a hardware fault or a non connected Wi-Fi.
 
