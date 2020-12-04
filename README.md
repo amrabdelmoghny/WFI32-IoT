@@ -40,8 +40,8 @@ The WFI32-IoT board layout can be seen below.
 <img src="resources/media/leds.png" width="840"/>
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
-* **SW0** held: Enter Soft AP mode
-* **SW0 & SW1** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
+* **SW1** held: Enter Soft AP mode
+* **SW1 & SW2** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
 
 ---
 
@@ -71,7 +71,7 @@ The WFI32-IoT board layout can be seen below.
  
 #### 2.2.2 Via Soft AP <a name="chapter2.2.2"></a>
 1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for [Android](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) or for iOS.
-2. To enter SoftAP mode, hold the **SW0** push button for most of the power up time. 
+2. To enter SoftAP mode, hold the **SW1** push button for most of the power up time. 
 3. All **LEDs** will be off when Soft AP is available.
 5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
 6. Open **Microchip Wi-Fi Provisioning** Mobile phone application and press **CONNECT**.
