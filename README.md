@@ -50,9 +50,8 @@ The WFI32-IoT board layout can be seen below.
 ### 2.1 Connecting the Board to the Host PC <a name="chapter2.1"></a>
 1. Connect the WFI32-IoT board to a PC using a standard micro-USB cable. 
 2. The LED array will blink twice in the following order: **BLUE --> GREEN --> YELLOW --> RED**. 
-3. When the board is not connected to Wi-Fi, the **RED LED** will light up.
-4. The board will appear as a removable storage device on the host PC
-5. Double-click on the **CLICK-ME.HTM** file to go to the demo webpage.
+3. The board will appear as a removable storage device on the host PC
+4. Double-click on the **CLICK-ME.HTM** file to go to the demo webpage.
 
 
 ### 2.2 Connecting the Board to Wi-Fi Networks <a name="chapter2.2"></a>
