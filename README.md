@@ -120,7 +120,7 @@ The WFI32-IoT board layout can be seen below.
 <img src="resources/media/webpageToggle.png" width="720"/>
 
 5. Click on **Send to device** to send **Toggle** button value. 
-6. The **YELLOW LED** will remain on/off for 2 seconds when **Toggle** button is selected/unselected, respectively. After the 3 seocnds, the **YELLOW LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
+6. The **YELLOW LED** will remain on/off for 2 seconds when **Toggle** button is selected/unselected, respectively. After the 2 seocnds, the **YELLOW LED** will go back to its normal functionality; blinking on each successfull message published to the cloud.
 
 **Note**: Because Toggle manipulates the desired stat, the state must be changed to observe the behavior.
 
