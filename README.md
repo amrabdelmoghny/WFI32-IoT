@@ -19,7 +19,7 @@ Please check out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32
 
 1. [Overview](#chapter1)
 	1. 	[Board Layout](#chapter1.1)
-	2.	[LED Indicators](#chapter1.2)
+	2.	[OOB Flow](#chapter1.2)
 	3.	[Switch Button Use Cases](#chapter1.3)
 2. [Getting Started](#chapter2)
 	1.	[Connecting the Board to the Host PC](#chapter2.1)
@@ -35,7 +35,7 @@ Please check out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32
 ### 1.1 Board Layout <a name="chapter1.1"></a>
 The WFI32-IoT board layout can be seen below.
 
-### 1.2 LED Indicators <a name="chapter1.2"></a>
+### 1.2 OOB flow <a name="chapter1.2"></a>
 
 <img src="resources/media/leds.png" width="840"/>
 
