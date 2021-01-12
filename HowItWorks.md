@@ -57,9 +57,9 @@ General Out-Of-Box operation is as described below:
 
 **Note**: The **SW1 & SW2** user buttons have no effect outside of variation of start-up operation where:
 * **SW1** held: Enter Soft AP mode.
-* **SW1 & SW2** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
+* **SW1 & SW2** held: Use factory default configuration. Default Wi-Fi credentials are {**MCHP.IOT, microchip**}
 
-**Note**: The **Red 'Data' LED** remaining on may indicate a hardware fault or a non connected Wi-Fi.
+**Note**: The **Red 'Data' LED** remaining on may indicate a hardware fault.
 
 ---
 
@@ -77,9 +77,9 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 (*) **Mass Storage Device** gives access to:
 * Configure the device for Wi-Fi connection via **WIFI.CFG**.
-* configure the device for cloud connection via **CLOUD.JSON**.
-* Demo Webpage via **CLICK-ME.HTM**.
-* Device registration for Alexa Voice control via **VOICE.HTM**.
+* configure the device for cloud connection via **cloud.json**.
+* Demo Webpage via **clickme.html**.
+* Device registration for Alexa Voice control via **voice.html**.
 
 ---
 
@@ -144,7 +144,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ### Sending MQTT publish packets  
 * File: **src/app_aws.c**
-* App function: ``publishMessages``
+* App function: ``publishMessage``
 * AWS C SDK API: ``IotMqtt_PublishAsync``
 
 ### Subscribe to topic/s
@@ -154,7 +154,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ### Processing Packets received over subscribed topic
 * File: **src/app_aws.c**
-* App function: ``mqttSubscriptionCallback``
+* App function: ``MqttCallback``
 
 ---
 
@@ -281,9 +281,9 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 <img src="resources/media/HowItWorks/yourCloudInstance8.png" width=720/>
 
-17. On the **Curiosity drive**, open **CLOUD.JSON**.
+17. On the **Curiosity drive**, open **cloud.json**.
 
-**Note**: While editing **CLOUD.JSON** or **WIFI.CFG** manually, it is recommended to use **Notepad** . Other editors like **Notepad++** can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
+**Note**: While editing **cloud.json** or **WIFI.CFG** manually, it is recommended to use **Notepad** . Other editors like **Notepad++** can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
 
 18. Replace the **Endpoint** attribute with the endpoint URL and save.
 
