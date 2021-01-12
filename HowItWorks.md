@@ -57,29 +57,30 @@ General Out-Of-Box operation is as described below:
 
 **Note**: The **SW1 & SW2** user buttons have no effect outside of variation of start-up operation where:
 * **SW1** held: Enter Soft AP mode.
-* **SW1 & SW2** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
+* **SW1 & SW2** held: Use factory default configuration. Default Wi-Fi credentials are {**MCHP.IOT, microchip**}
 
-**Note**: The **Red 'Data' LED** remaining on may indicate a hardware fault or a non connected Wi-Fi.
+**Note**: The **Red 'Data' LED** remaining on may indicate a hardware fault.
 
 ---
 
 ## 3. Application Structure <a name="Chapter3"></a>
 
-The application runs two application OS tasks/threads with multiple underlying logical modules for better code organizing.
+The application runs multiple logical modules as follows:
 
-| OS Task Name         	| App Logical Module		| Source/Header Files 	| Role                                                                          	|
-| --------------------- | ----------------------------- | --------------------- | ------------------------------------------------------------------------------------- |
-| **_APP_Tasks**    	| **APP**			| app.c/.h		| The main/central module that manages **Wi-Fi functionality**.              		|
-| 		     	| **APP_WIFI_PROV**		| app_wifi_prov.c/.h	| Manages **AP provisioning functionality** to provision the device using AP mode	|
-|		  	| **APP_USB_MSD**<sup>(*)</sup>	| app_usb_msd.c/.h	| Manages **Mass Storage Device functionality**  					|
-|		  	| **APP_CTRL**			| app_ctrl.c.h		| Manages device **Control operations** including LED management and sensors access	|
-| **_APP_AWS_Tasks**    | **APP_AWS**			| app_aws.c/.h		| Manages **AWS cloud connection/subscribe/publish functionality**			|
+| App Logical Module		| Source/Header Files 	| Role                                                                          	|
+| ----------------------------- | --------------------- | ------------------------------------------------------------------------------------- |
+| **APP**			| app.c/.h		| The main/central module that manages **Wi-Fi functionality**.              		|
+| **APP_WIFI_PROV**		| app_wifi_prov.c/.h	| Manages **AP provisioning functionality** to provision the device using AP mode	|
+| **APP_USB_MSD**		| app_usb_msd.c/.h	| Manages **Mass Storage Device functionality**  					|
+| **APP_CTRL**			| app_ctrl.c.h		| Manages device **Control operations** including LED management and sensors access	|
+| **APP_AWS**			| app_aws.c/.h		| Manages **AWS cloud connection/subscribe/publish functionality**			|
+| **APP_COMMANDS**		| app_commands.c/.h	| Manage **User commands given via command line**					|
 
 (*) **Mass Storage Device** gives access to:
 * Configure the device for Wi-Fi connection via **WIFI.CFG**.
-* configure the device for cloud connection via **CLOUD.JSON**.
-* Demo Webpage via **CLICK-ME.HTM**.
-* Device registration for Alexa Voice control via **VOICE.HTM**.
+* configure the device for cloud connection via **cloud.json**.
+* Demo Webpage via **clickme.html**.
+* Device registration for Alexa Voice control via **voice.html**.
 
 ---
 
@@ -144,7 +145,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ### Sending MQTT publish packets  
 * File: **src/app_aws.c**
-* App function: ``publishMessages``
+* App function: ``publishMessage``
 * AWS C SDK API: ``IotMqtt_PublishAsync``
 
 ### Subscribe to topic/s
@@ -154,7 +155,7 @@ The application runs two application OS tasks/threads with multiple underlying l
 
 ### Processing Packets received over subscribed topic
 * File: **src/app_aws.c**
-* App function: ``mqttSubscriptionCallback``
+* App function: ``MqttCallback``
 
 ---
 
@@ -281,9 +282,9 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 
 <img src="resources/media/HowItWorks/yourCloudInstance8.png" width=720/>
 
-17. On the **Curiosity drive**, open **CLOUD.JSON**.
+17. On the **Curiosity drive**, open **cloud.json**.
 
-**Note**: While editing **CLOUD.JSON** or **WIFI.CFG** manually, it is recommended to use **Notepad** . Other editors like **Notepad++** can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
+**Note**: While editing **cloud.json** or **WIFI.CFG** manually, it is recommended to use **Notepad** . Other editors like **Notepad++** can damage the underlying FAT12 FS. You can read more about this generic issue in the discussion [here](https://github.com/adafruit/circuitpython/issues/111). In case you come across this, please re-flash the image to recover.
 
 18. Replace the **Endpoint** attribute with the endpoint URL and save.
 
@@ -342,5 +343,10 @@ In case you want to re-flash the device, perform the following steps:
 When connecting WFI32-IoT board to a PC using a standard micro-USB cable, it enumerates as a USB MSD (Mass Storage Device) in addition to two other virtual COM ports reflecting UART1 and UART3 of the module where:
 * UART1 is used for application debug logs.
 * UART3 is used for Wi-Fi FW and AWS C SDK logs.
+
+UART1 supports a set of user commands via command line as follows:
+1. "**rssi**" command: prints current connection RSSI value.
+2. "**unixtime**" command: prints current UNIX time.
+3. "**debug <debug_level>**": sets application debug level (accepted values are 0 through 4).
 
 **Note**: UART1 and UART3 settings should be 115200 8N1.

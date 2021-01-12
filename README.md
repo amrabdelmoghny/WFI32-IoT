@@ -41,7 +41,7 @@ The WFI32-IoT board layout can be seen below.
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 * **SW1** held: Enter Soft AP mode
-* **SW1 & SW2** held: Use default Wi-Fi credentials {**MCHP.IOT, microchip**}
+* **SW1 & SW2** held: Use factory default configuration. Default Wi-Fi credentials are {**MCHP.IOT, microchip**}
 
 ---
 
@@ -51,7 +51,7 @@ The WFI32-IoT board layout can be seen below.
 1. Connect the WFI32-IoT board to a PC using a standard micro-USB cable. 
 2. The LED array will blink twice in the following order: **BLUE --> GREEN --> YELLOW --> RED**. 
 3. The board will appear as a removable storage device on the host PC
-4. Double-click on the **CLICK-ME.HTM** file to go to the demo webpage.
+4. Double-click on the **clickme.html** file to go to the demo webpage.
 
 
 ### 2.2 Connecting the Board to Wi-Fi Networks <a name="chapter2.2"></a>
@@ -97,7 +97,7 @@ The WFI32-IoT board layout can be seen below.
 
 1. After connecting to an access point, WFI32-IoT board will try to connect to Microchip AWS Sandbox account which is indicated by a **blinking GREEN LED**.
 2. Once connection to cloud is successful, **GREEN LED** will turn solid.
-3. Go to demo webpage (can always be reached out using the file **CLICK-ME.HTM**).
+3. Go to demo webpage (can always be reached out using the file **clickme.html**).
 4. The webpage will show a real-time graph of the data captured from the on-board light and temperature sensors.
 5. The on board **YELLOW LED** will blink for 300 ms for each message published successfully to the cloud.
 
@@ -129,7 +129,7 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
 
 <img src="resources/media/voiceReg1.png" width="1080"/>
 
-1. Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file **VOICE.HTM** on the **CURIOSITY drive**.
+1. Create an account and log-in to the [device registration page](https://microchiptech.github.io/mchpiotvoice/). You can also reach out to this page using the file **voice.html** on the **CURIOSITY drive**.
 
 <img src="resources/media/voiceReg2.png" width="480"/>
 
