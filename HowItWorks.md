@@ -65,15 +65,16 @@ General Out-Of-Box operation is as described below:
 
 ## 3. Application Structure <a name="Chapter3"></a>
 
-The application runs two application OS tasks/threads with multiple underlying logical modules for better code organizing.
+The application runs multiple logical modules as follows:
 
-| OS Task Name         	| App Logical Module		| Source/Header Files 	| Role                                                                          	|
-| --------------------- | ----------------------------- | --------------------- | ------------------------------------------------------------------------------------- |
-| **_APP_Tasks**    	| **APP**			| app.c/.h		| The main/central module that manages **Wi-Fi functionality**.              		|
-| 		     	| **APP_WIFI_PROV**		| app_wifi_prov.c/.h	| Manages **AP provisioning functionality** to provision the device using AP mode	|
-|		  	| **APP_USB_MSD**<sup>(*)</sup>	| app_usb_msd.c/.h	| Manages **Mass Storage Device functionality**  					|
-|		  	| **APP_CTRL**			| app_ctrl.c.h		| Manages device **Control operations** including LED management and sensors access	|
-| **_APP_AWS_Tasks**    | **APP_AWS**			| app_aws.c/.h		| Manages **AWS cloud connection/subscribe/publish functionality**			|
+| App Logical Module		| Source/Header Files 	| Role                                                                          	|
+| ----------------------------- | --------------------- | ------------------------------------------------------------------------------------- |
+| **APP**			| app.c/.h		| The main/central module that manages **Wi-Fi functionality**.              		|
+| **APP_WIFI_PROV**		| app_wifi_prov.c/.h	| Manages **AP provisioning functionality** to provision the device using AP mode	|
+| **APP_USB_MSD**		| app_usb_msd.c/.h	| Manages **Mass Storage Device functionality**  					|
+| **APP_CTRL**			| app_ctrl.c.h		| Manages device **Control operations** including LED management and sensors access	|
+| **APP_AWS**			| app_aws.c/.h		| Manages **AWS cloud connection/subscribe/publish functionality**			|
+| **APP_COMMANDS**		| app_commands.c/.h	| Manage **User commands given via command line**					|
 
 (*) **Mass Storage Device** gives access to:
 * Configure the device for Wi-Fi connection via **WIFI.CFG**.
@@ -342,5 +343,10 @@ In case you want to re-flash the device, perform the following steps:
 When connecting WFI32-IoT board to a PC using a standard micro-USB cable, it enumerates as a USB MSD (Mass Storage Device) in addition to two other virtual COM ports reflecting UART1 and UART3 of the module where:
 * UART1 is used for application debug logs.
 * UART3 is used for Wi-Fi FW and AWS C SDK logs.
+
+UART1 supports a set of user commands via command line as follows:
+1. "rssi" command: prints current connection RSSI value.
+2. "unixtime" command: prints current UNIX time.
+3. "debug <debug_level>": Sets application debug level (accepted values are 0 through 4).
 
 **Note**: UART1 and UART3 settings should be 115200 8N1.
