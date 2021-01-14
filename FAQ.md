@@ -20,3 +20,5 @@ For regulatory compliance, the OOB demo is configured to use RF channels that wo
 The configuration is stored in an NVM based FAT16 filesystem that is exposed via USB as a mass storage device. We are limited to FAT16 since we need to use a small file system. However, FAT16 causes some issues with modern editors and browsers. Please read the demo README for more details. 
 
 While downloading configurations, download them to your PC and then copy it to the device. While editing the configuration files, use Notepad.exe
+
+#### 4.  **What is the flash and RAM usage of the demo?**
