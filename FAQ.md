@@ -22,3 +22,5 @@ The configuration is stored in an NVM based FAT16 filesystem that is exposed via
 While downloading configurations, download them to your PC and then copy it to the device. While editing the configuration files, use Notepad.exe
 
 #### 4.  **What is the flash and RAM usage of the demo?**
+
+#### 5.  **What is the flash and RAM usage in normal Vs MicroMIPS modes?**
