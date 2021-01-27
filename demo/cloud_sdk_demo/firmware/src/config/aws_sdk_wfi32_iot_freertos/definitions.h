@@ -82,7 +82,6 @@
 #include "net_pres/pres/net_pres_socketapi.h"
 #include "library/tcpip/tcpip.h"
 #include "system/sys_time_h2_adapter.h"
-#include "system/sys_clk_h2_adapter.h"
 #include "system/sys_random_h2_adapter.h"
 #include "system/command/sys_command.h"
 #include "peripheral/clk/plib_clk.h"

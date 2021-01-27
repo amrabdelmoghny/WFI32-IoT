@@ -101,7 +101,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: GPIO_RB8}
+        attributes: {value: SWITCH2}
   - type: String
     attributes: {id: BSP_PIN_118_FUNCTION_TYPE}
     children:
@@ -381,7 +381,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: GPIO_RK13}
+        attributes: {value: LED_YELLOW}
   - type: String
     attributes: {id: BSP_PIN_5_FUNCTION_TYPE}
     children:
@@ -458,7 +458,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: GPIO_RK12}
+        attributes: {value: LED_RED}
   - type: String
     attributes: {id: BSP_PIN_6_FUNCTION_TYPE}
     children:
@@ -507,7 +507,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: GPIO_RK14}
+        attributes: {value: LED_GREEN}
   - type: String
     attributes: {id: BSP_PIN_76_FUNCTION_TYPE}
     children:
@@ -542,7 +542,7 @@ children:
     - type: Values
       children:
       - type: User
-        attributes: {value: GPIO_RC9}
+        attributes: {value: LED_BLUE}
   - type: String
     attributes: {id: BSP_PIN_77_FUNCTION_TYPE}
     children:

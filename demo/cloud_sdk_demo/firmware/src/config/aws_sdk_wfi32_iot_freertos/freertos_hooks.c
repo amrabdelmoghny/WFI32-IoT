@@ -36,8 +36,6 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
 // DOM-IGNORE-END
-#include <stdio.h>
-
 #include "FreeRTOS.h"
 #include "task.h"
 
@@ -59,9 +57,7 @@
 void vApplicationStackOverflowHook( TaskHandle_t pxTask, signed char *pcTaskName )
 {
    ( void ) pcTaskName;
-//   ( void ) pxTask;
-   
-   printf("sov:%s\r\n", pcTaskName);
+   ( void ) pxTask;
 
    /* Run time task stack overflow checking is performed if
    configCHECK_FOR_STACK_OVERFLOW is defined to 1 or 2.  This hook  function is
@@ -101,7 +97,6 @@ void vApplicationStackOverflowHook( TaskHandle_t pxTask, signed char *pcTaskName
 
 void vApplicationMallocFailedHook( void )
 {
-    printf("mal_fail\r\n");
    /* vApplicationMallocFailedHook() will only be called if
       configUSE_MALLOC_FAILED_HOOK is set to 1 in FreeRTOSConfig.h.  It is a hook
       function that will get called if a call to pvPortMalloc() fails.
@@ -153,10 +148,8 @@ void vAssertCalled( const char * pcFile, unsigned long ulLine )
 {
    volatile unsigned long ul = 0;
 
-//   ( void ) pcFile;
-//   ( void ) ulLine;
-   
-   printf("rtasrt:%s[%u]", pcFile, ulLine);
+   ( void ) pcFile;
+   ( void ) ulLine;
 
    taskENTER_CRITICAL();
    {

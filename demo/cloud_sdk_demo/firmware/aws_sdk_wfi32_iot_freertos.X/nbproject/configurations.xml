@@ -406,6 +406,8 @@
                 <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src/lldp_manager.h</itemPath>
                 <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src/lldp_private.h</itemPath>
                 <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src/lldp_tlv.h</itemPath>
+                <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src/tcpip_mac_bridge_manager.h</itemPath>
+                <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src/tcpip_mac_bridge_private.h</itemPath>
               </logicalFolder>
               <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/tcpip_common_ports.h</itemPath>
               <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/tcpip_mac.h</itemPath>
@@ -451,6 +453,7 @@
               <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/tcpip_commands.h</itemPath>
               <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/tcpip.h</itemPath>
               <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/tcpip_ethernet.h</itemPath>
+              <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/tcpip_mac_bridge.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f8" displayName="net_pres" projectFiles="true">
@@ -554,7 +557,6 @@
             <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/system/system_common.h</itemPath>
             <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/system/system_module.h</itemPath>
             <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/system/system_media.h</itemPath>
-            <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/system/sys_clk_h2_adapter.h</itemPath>
             <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/system/sys_time_h2_adapter.h</itemPath>
             <itemPath>../src/config/aws_sdk_wfi32_iot_freertos/system/sys_random_h2_adapter.h</itemPath>
           </logicalFolder>
@@ -621,6 +623,9 @@
       </logicalFolder>
       <logicalFolder name="f3" displayName="wolfcrypt" projectFiles="true">
         <logicalFolder name="f1" displayName="port" projectFiles="true">
+          <logicalFolder name="f1" displayName="atmel" projectFiles="true">
+            <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/atmel/atmel.h</itemPath>
+          </logicalFolder>
           <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/pic32mz-crypt.h</itemPath>
           <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_cf_pb.h</itemPath>
           <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_ClearFlags_pb.h</itemPath>
@@ -771,7 +776,6 @@
       <itemPath>../src/app_common.h</itemPath>
       <itemPath>../src/app_usb_msd.h</itemPath>
       <itemPath>../src/app_wifi_prov.h</itemPath>
-      <itemPath>../src/atmel.h</itemPath>
       <itemPath>../src/iot_config.h</itemPath>
       <itemPath>../src/app.h</itemPath>
       <itemPath>../src/app_aws.h</itemPath>
@@ -1256,6 +1260,9 @@
       </logicalFolder>
       <logicalFolder name="f3" displayName="wolfcrypt" projectFiles="true">
         <logicalFolder name="f1" displayName="port" projectFiles="true">
+          <logicalFolder name="f1" displayName="atmel" projectFiles="true">
+            <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/atmel/atmel.c</itemPath>
+          </logicalFolder>
           <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/port/pic32/pic32mz-crypt.c</itemPath>
           <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/port/pic32/crypt_aes_sam6149.c</itemPath>
           <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/port/pic32/crypt_aes_u2238.c</itemPath>
@@ -1361,7 +1368,6 @@
       </logicalFolder>
       <itemPath>../src/app_usb_msd.c</itemPath>
       <itemPath>../src/app_wifi_prov.c</itemPath>
-      <itemPath>../src/atmel.c</itemPath>
       <itemPath>../src/app.c</itemPath>
       <itemPath>../src/app_aws.c</itemPath>
       <itemPath>../src/main.c</itemPath>
@@ -1463,14 +1469,16 @@
         <targetDevice>PIC32MZ1025W104132</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool></platformTool>
+        <platformTool>snap</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>2.40</languageToolchainVersion>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
         <pack name="PIC32MZ-W_DFP" vendor="Microchip" version="1.3.177"/>
       </packs>
+      <ScriptingSettings>
+      </ScriptingSettings>
       <compileType>
         <linkerTool>
           <linkerLibItems>
@@ -1489,6 +1497,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
@@ -1584,7 +1593,7 @@
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros" value=""/>
         <property key="remove-unused-sections" value="true"/>
-        <property key="report-memory-usage" value="false"/>
+        <property key="report-memory-usage" value="true"/>
         <property key="serial-length" value=""/>
         <property key="serial-origin" value=""/>
         <property key="stack-size" value=""/>
@@ -1862,6 +1871,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="10000000-100fffff"/>
         <property key="memories.rww" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/aws_sdk_wfi32_iot_freertos.X/debug/aws_sdk_wfi32_iot_freertos/aws_sdk_wfi32_iot_freertos_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

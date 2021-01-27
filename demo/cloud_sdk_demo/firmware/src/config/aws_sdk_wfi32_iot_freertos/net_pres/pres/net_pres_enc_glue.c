@@ -43,8 +43,9 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include "wolfssl/ssl.h"
 #include "wolfssl/wolfcrypt/logging.h"
 #include "wolfssl/wolfcrypt/random.h"
+#include "system/console/sys_console.h"
 
-#include "atmel.h"
+extern  int CheckAvailableSize(WOLFSSL *ssl, int size);
 
 extern char g_Cloud_Endpoint[100];
 
@@ -154,7 +155,7 @@ bool NET_PRES_EncProviderStreamClientInit0(NET_PRES_TransportObject * transObjec
     net_pres_wolfSSLInfoStreamClient0.isInited = true;
     return true;
 }
-bool NET_PRES_EncProviderStreamClientDeinit0()
+bool NET_PRES_EncProviderStreamClientDeinit0(void)
 {
 #ifdef WOLFSSL_ATECC_TNGTLS
    atmel_finish();
@@ -183,7 +184,7 @@ bool NET_PRES_EncProviderStreamClientOpen0(uintptr_t transHandle, void * provide
         memcpy(providerData, &ssl, sizeof(WOLFSSL*));
         return true;
 }
-bool NET_PRES_EncProviderStreamClientIsInited0()
+bool NET_PRES_EncProviderStreamClientIsInited0(void)
 {
     return net_pres_wolfSSLInfoStreamClient0.isInited;
 }
@@ -230,7 +231,7 @@ int32_t NET_PRES_EncProviderWrite0(void * providerData, const uint8_t * buffer, 
 }
 uint16_t NET_PRES_EncProviderWriteReady0(void * providerData, uint16_t reqSize, uint16_t minSize)
 {
-    extern  int CheckAvailableSize(WOLFSSL *ssl, int size);
+    
     char buffer;
     WOLFSSL* ssl;
     memcpy(&ssl, providerData, sizeof(WOLFSSL*));

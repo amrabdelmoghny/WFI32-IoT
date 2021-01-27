@@ -337,6 +337,39 @@ In case you want to re-flash the device, perform the following steps:
 
 ### 9. Code generation using Harmony 3 <a name="Chapter9"></a>
 
+To add additional features to the OOB demo, you might have to regenerate the demo code using Harmony3 after adding additional components or changing the existing configuration.
+Ensure that you use the same version or Harmony 3 components used in the original demo codebase while regenerating code. You can see the version dependencies of the demo in `harmony-manifest-success.yml` file found at `WFI32-IoT\demo\cloud_sdk_demo\firmware\src\config\aws_sdk_wfi32_iot_freertos` into Harmony3 content manager. 
+
+In case of a mismatch between the Harmony 3 components present in the demo and the ones available in disk, Harmony3 Configurator will popup a warning screen during launch. In the case of the sample shown below, the `Wireless` component available in disk is older `3.3.1` while the version used in the project is `3.4.0`. 
+
+<p align="center">
+<img src="resources/media/HowItWorks/mh3_mismatch.PNG" width=480/>
+</p>
+
+It is recommended to use the same versions used in the project while regenerating the project. 
+
+To sync your Harmony3 setup to match the versions used in the demo, follow these steps:
+
+1. Open Harmony3 Content manager
+2. Navigate to `Local Packages` and click on `Load manifest file`
+
+3. When you select the project manifest file, the required versions of Harmony3 dependencies will be checked out by content manager.
+
+4. Close content manager and open the Harmony configurator to continue.
+
+
+<p align="center">
+<img src="resources/media/HowItWorks/cm_local_repo.PNG" width=480/>
+</p>
+
+While generating code, make sure that you use “USER_ALL” merge strategy.
+
+The default demo code includes some changes to the generated “net_pres_enc_glue.c” file. Make sure that you retain the changes shown in the images below during code generation. These changes are to enable support for ECC608 TNGTLS in the TLS flow. If the right dependencies are loaded, there should not be any additional merges while regenerating code without any configuration change.
+
+<p align="center">
+<img src="resources/media/HowItWorks/retain_netGlue_file.png" width=400/>
+</p>
+
 ---
 
 ### 10. Debugging <a name="Chapter10"></a>

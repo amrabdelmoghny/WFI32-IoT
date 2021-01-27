@@ -19,6 +19,9 @@
 #ifndef USER_H
 #define USER_H
 
+#include "peripheral/gpio/plib_gpio.h"
+
+
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -44,6 +47,16 @@ extern "C" {
     #define WOLFSSL_ATECC508A_NOIDLE
 #endif
 
+#define LED_RED_On    LED_RED_Clear
+#define LED_YELLOW_On LED_YELLOW_Clear
+#define LED_GREEN_On  LED_GREEN_Clear
+#define LED_BLUE_On   LED_BLUE_Clear
+
+#define LED_RED_Off    LED_RED_Set
+#define LED_YELLOW_Off LED_YELLOW_Set
+#define LED_GREEN_Off  LED_GREEN_Set
+#define LED_BLUE_Off   LED_BLUE_Set
+    
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
 }

@@ -23,12 +23,6 @@ children:
   - type: Boolean
     attributes: {id: DRV_WIFI_PIC32MZW1_SUPPORT_WPA3}
     children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: readOnly}
-        children:
-        - {type: Value, value: 'false'}
     - type: Values
       children:
       - type: Dynamic
@@ -44,6 +38,13 @@ children:
         attributes: {id: enabled}
         children:
         - {type: Value, value: 'true'}
+  - type: Boolean
+    attributes: {id: DRV_WIFI_PIC32MZW1_USE_SYS_DEBUG}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: drvWifiPic32mzw1, value: 'true'}
 - type: Attachments
   children:
   - type: DirectDependency

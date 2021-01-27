@@ -5,7 +5,7 @@ frameworkPath: ../../../../microchip/harmony/mh3
 processor: PIC32MZ1025W104132
 projectName: ''
 settings:
-  PackageFilter: aws_cloud;azure-rtos-threadx;bootloader;bsp;classb_sam_e5x_d5x;core;core_apps_pic32mz_w1;crypto;cryptoauthlib;cryptoauthlib_apps;csp;csp_apps_pic32mz_w1;ethercat;reference_apps;net;quick_docs;usb;wireless;x2c;
+  PackageFilter: audio;aws_cloud;azure-rtos-threadx;bootloader;bootloader_apps_uart;bsp;bt;core;core_apps_pic32mz_w1;crypto;cryptoauthlib;cryptoauthlib_apps;csp;csp_apps_pic32mz_w1;net;quick_docs;touch;touch_apps;usb;wireless;
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'

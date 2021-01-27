@@ -52,7 +52,7 @@
 
 #if defined(WOLFSSL_ATMEL) || defined(WOLFSSL_ATECC508A) || \
     defined(WOLFSSL_ATECC608A)
-    #include "atmel.h"
+    #include <wolfssl/wolfcrypt/port/atmel/atmel.h>
 #endif
 #if defined(WOLFSSL_RENESAS_TSIP)
     #include <wolfssl/wolfcrypt/port/Renesas/renesas-tsip-crypt.h>

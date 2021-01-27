@@ -23,4 +23,8 @@ While downloading configurations, download them to your PC and then copy it to t
 
 #### 4.  **What is the flash and RAM usage of the demo?**
 
+<p align="center">
+<img src="resources/media/FAQ/mem_usage.PNG" width=400/>
+</p>
+
 #### 5.  **What is the flash and RAM usage in normal Vs MicroMIPS modes?**
