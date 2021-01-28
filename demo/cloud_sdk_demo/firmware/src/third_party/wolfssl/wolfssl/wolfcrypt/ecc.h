@@ -51,7 +51,7 @@
 #endif
 
 #if defined(WOLFSSL_ATECC508A) || defined(WOLFSSL_ATECC608A)
-    #include "atmel.h"
+    #include <wolfssl/wolfcrypt/port/atmel/atmel.h>
 #endif /* WOLFSSL_ATECC508A */
 
 #if defined(WOLFSSL_CRYPTOCELL)
