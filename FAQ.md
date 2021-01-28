@@ -23,8 +23,21 @@ While downloading configurations, download them to your PC and then copy it to t
 
 #### 4.  **What is the flash and RAM usage of the demo?**
 
-<p align="center">
+<p>
 <img src="resources/media/FAQ/mem_usage.PNG" width=400/>
 </p>
 
 #### 5.  **What is the flash and RAM usage in normal Vs MicroMIPS modes?**
+
+When compiled in microMIPS mode and used with MPLAB XC license to enable *Os* Optimization level, Program memory savings of around **20% (201.2 KB)** can be observed.
+
+<p>
+<img src="resources/media/FAQ/mem_usage_opt_Os_uMIPS.PNG" width=400/>
+</p>
+
+GCC and Linker settings in the Project Properties are highlighted below:
+
+<p>
+<img src="resources/media/FAQ/prj_prop_gcc_opt_Os_uMIPS.png" width=600/>
+<img src="resources/media/FAQ/prj_prop_ld_libs_uMIPS.png" width=600/>
+</p>
