@@ -359,7 +359,7 @@ To sync your Harmony3 setup to match the versions used in the demo, follow these
 
 
 <p align="center">
-<img src="resources/media/HowItWorks/cm_local_repo.PNG" width=480/>
+<img src="resources/media/HowItWorks/cm_local_repo.png" width=480/>
 </p>
 
 While generating code, make sure that you use “USER_ALL” merge strategy.
