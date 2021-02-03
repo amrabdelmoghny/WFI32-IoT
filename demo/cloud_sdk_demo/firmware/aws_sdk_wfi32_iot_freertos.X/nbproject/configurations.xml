@@ -1514,12 +1514,12 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/aws_sdk_wfi32_iot_freertos/driver/wifi/pic32mzw1/include/;../src/third_party/wolfssl/wolfssl;../src/third_party/wolfssl;../src;../src/config/aws_sdk_wfi32_iot_freertos;../src/packs/PIC32MZ1025W104132_DFP;../src/config/aws_sdk_wfi32_iot_freertos/library;../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src;../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src/common;../src/config/aws_sdk_wfi32_iot_freertos/library/cryptoauthlib;../src/config/aws_sdk_wfi32_iot_freertos/library/cryptoauthlib/crypto;../src/config/aws_sdk_wfi32_iot_freertos/library/cryptoauthlib/pkcs11;;../src/config/aws_sdk_wfi32_iot_freertos/system/fs/fat_fs/file_system;../src/config/aws_sdk_wfi32_iot_freertos/system/fs/fat_fs/hardware_access;../src/third_party/aws/libraries;../src/third_party/aws/libraries/aws/common/include;../src/third_party/aws/libraries/aws/defender/include;../src/third_party/aws/libraries/aws/jobs/include;../src/third_party/aws/libraries/aws/shadow/include;../src/third_party/aws/libraries/cbor;../src/third_party/aws/libraries/platform;../src/third_party/aws/libraries/platform/types;../src/third_party/aws/libraries/standard/common/include;../src/third_party/aws/libraries/standard/mqtt/include;../src/third_party/aws/libraries/standard/serializer/include;../src/third_party/aws/ports;../src/third_party/aws/ports/common/include;../src/third_party/aws/ports/pic32mzw1/include"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/aws_sdk_wfi32_iot_freertos/driver/wifi/pic32mzw1/include/;../src/third_party/wolfssl/wolfssl;../src/third_party/wolfssl;../src;../src/config/aws_sdk_wfi32_iot_freertos;../src/packs/PIC32MZ1025W104132_DFP;../src/config/aws_sdk_wfi32_iot_freertos/library;../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src;../src/config/aws_sdk_wfi32_iot_freertos/library/tcpip/src/common;../src/config/aws_sdk_wfi32_iot_freertos/library/cryptoauthlib;../src/config/aws_sdk_wfi32_iot_freertos/library/cryptoauthlib/crypto;../src/config/aws_sdk_wfi32_iot_freertos/library/cryptoauthlib/pkcs11;../src/config/aws_sdk_wfi32_iot_freertos/system/fs/fat_fs/file_system;../src/config/aws_sdk_wfi32_iot_freertos/system/fs/fat_fs/hardware_access;../src/third_party/aws/libraries;../src/third_party/aws/libraries/aws/common/include;../src/third_party/aws/libraries/aws/defender/include;../src/third_party/aws/libraries/aws/jobs/include;../src/third_party/aws/libraries/aws/shadow/include;../src/third_party/aws/libraries/cbor;../src/third_party/aws/libraries/platform;../src/third_party/aws/libraries/platform/types;../src/third_party/aws/libraries/standard/common/include;../src/third_party/aws/libraries/standard/mqtt/include;../src/third_party/aws/libraries/standard/serializer/include;../src/third_party/aws/ports;../src/third_party/aws/ports/common/include;../src/third_party/aws/ports/pic32mzw1/include"/>
         <property key="generate-16-bit-code" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="true"/>
         <property key="isolate-each-function" value="true"/>
         <property key="make-warnings-into-errors" value="false"/>
-        <property key="optimization-level" value="-O1"/>
+        <property key="optimization-level" value="-Os"/>
         <property key="place-data-into-section" value="false"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
@@ -1532,6 +1532,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
+        <appendMe value="-minterlink-compressed"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -1542,9 +1543,9 @@
         <property key="exclude-floating-point-library" value="false"/>
         <property key="expand-macros" value="false"/>
         <property key="extra-include-directories-for-assembler"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/aws_sdk_wfi32_iot_freertos;"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/aws_sdk_wfi32_iot_freertos"/>
         <property key="extra-include-directories-for-preprocessor"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/aws_sdk_wfi32_iot_freertos;"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../src/third_party/rtos/FreeRTOS/Source/include;../src/config/aws_sdk_wfi32_iot_freertos"/>
         <property key="false-conditionals" value="false"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
@@ -1580,7 +1581,7 @@
         <property key="fill-flash-options-what" value="0"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
-        <property key="generate-micro-compressed-code" value="false"/>
+        <property key="generate-micro-compressed-code" value="true"/>
         <property key="heap-size" value="175000"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
@@ -1613,7 +1614,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../src/third_party/rtos/FreeRTOS/Source/include;../src;../src/config/aws_sdk_wfi32_iot_freertos;../src/packs/PIC32MZ1025W104132_DFP;;../src/config/aws_sdk_wfi32_iot_freertos/system/fs/fat_fs/file_system;../src/config/aws_sdk_wfi32_iot_freertos/system/fs/fat_fs/hardware_access"/>
+                  value="../src/third_party/rtos/FreeRTOS/Source/portable/MPLAB/PIC32MZ;../src/third_party/rtos/FreeRTOS/Source/include;../src;../src/config/aws_sdk_wfi32_iot_freertos;../src/packs/PIC32MZ1025W104132_DFP;../src/config/aws_sdk_wfi32_iot_freertos/system/fs/fat_fs/file_system;../src/config/aws_sdk_wfi32_iot_freertos/system/fs/fat_fs/hardware_access"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -1871,8 +1872,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="10000000-100fffff"/>
         <property key="memories.rww" value="true"/>
-        <property key="programmerToGoFilePath"
-                  value="C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/aws_sdk_wfi32_iot_freertos.X/debug/aws_sdk_wfi32_iot_freertos/aws_sdk_wfi32_iot_freertos_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

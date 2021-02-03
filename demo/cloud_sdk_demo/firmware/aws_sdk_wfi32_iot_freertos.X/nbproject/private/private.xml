@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/config/aws_sdk_wfi32_iot_freertos/library/cryptoauthlib/crypto/hashes/sha2_routines.h</file>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/third_party/wolfssl/wolfssl/wolfcrypt/sha256.h</file>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/config/aws_sdk_wfi32_iot_freertos/net_pres/pres/net_pres_enc_glue.c</file>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/app_ctrl.c</file>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/config/aws_sdk_wfi32_iot_freertos/user.h</file>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/config/aws_sdk_wfi32_iot_freertos/config.h</file>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/config/aws_sdk_wfi32_iot_freertos/configuration.h</file>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/config/aws_sdk_wfi32_iot_freertos/harmony-manifest-success.yml</file>
+            <file>file:/C:/github/WFI32-IoT/demo/cloud_sdk_demo/firmware/src/config/aws_sdk_wfi32_iot_freertos/net_pres/pres/net_pres_enc_glue.h</file>
+        </group>
+    </open-files>
+</project-private>
