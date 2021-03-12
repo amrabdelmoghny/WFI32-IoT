@@ -79,7 +79,8 @@ The WFI32-IoT board layout can be seen below.
 
 7. List of available APs is shown. You can press **SCAN** button to refresh.
 
-**Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported. 
+**Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported.
+
 <img src="resources/media/mobileApp2.png" width="240"/>
 
 8. Choose one of the scanned APs or provide your own AP crednetials. Data provided is sent to the WFI32-IoT board as you press **SEND**. 
