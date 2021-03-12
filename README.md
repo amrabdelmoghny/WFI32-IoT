@@ -69,7 +69,7 @@ The WFI32-IoT board layout can be seen below.
 **Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the **WIFI.CFG** file.
  
 #### 2.2.2 Via Soft AP <a name="chapter2.2.2"></a>
-1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for [Android](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) or for iOS.
+1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for [Android](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) or for [iOS](https://apps.apple.com/us/app/wi-fi-provisioning/id1553255731).
 2. To enter SoftAP mode, hold the **SW1** push button for most of the power up time. 
 3. All **LEDs** will be off when Soft AP is available.
 5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
@@ -78,9 +78,11 @@ The WFI32-IoT board layout can be seen below.
 <img src="resources/media/mobileApp1.png" width="240"/>
 
 7. List of available APs is shown. You can press **SCAN** button to refresh.
+
+**Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported. 
 <img src="resources/media/mobileApp2.png" width="240"/>
 
-8. Choose one of the scanned APs or provide your own AP crednetials.Data provided is sent to the WFI32-IoT board as you press **SEND**. 
+8. Choose one of the scanned APs or provide your own AP crednetials. Data provided is sent to the WFI32-IoT board as you press **SEND**. 
 
 <img src="resources/media/mobileApp3.png" width="240"/>
 <img src="resources/media/mobileApp4.png" width="240"/>
