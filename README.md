@@ -39,6 +39,10 @@ The WFI32-IoT board layout can be seen below.
 
 <img src="resources/media/leds.png" width="840"/>
 
+If you have an OLEDB Click board connected to the board's Click interface, you will:
+1. See Wi-Fi icon <img src="resources/media/wifiIcon.png" width="25"/> once board is Wi-Fi connected.
+2. Additionally, see Cloud icon <img src="resources/media/cloudIcon.png" width="25"/> once board is Cloud connected.
+
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 * **SW1** held: Enter Soft AP mode
 * **SW1 & SW2** held: Use factory default configuration. Default Wi-Fi credentials are {**MCHP.IOT, microchip**}
