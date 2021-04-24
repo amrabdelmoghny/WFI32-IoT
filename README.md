@@ -93,7 +93,8 @@ If you have an OLEDB Click board connected to the board's Click interface, you w
 <img src="resources/media/mobileApp4.png" width="240"/>
 
 9. Go back in the app so that the WFI32-IoT board applies the new credentilas.
-10. **Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
+10. Device should automatically reboot.
+11. **Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
 
 **Note**: WFI32-IoT board will NOT apply/use provided credentials unless you go back in the app. This gives you the chance to keep sending new credentials or correct wrongly provided ones as long as you didn't go back in the app.
 
