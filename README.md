@@ -44,8 +44,8 @@ If you have an OLEDB Click board connected to the board's Click interface, you w
 2. Additionally, see Cloud icon <img src="resources/media/cloudIcon.png" width="25"/> once board is Cloud connected.
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
-* **SW1** held during boot-up: Enter Soft AP mode
-* **SW1 & SW2** held during boot-up: Use factory default configuration. Default Wi-Fi credentials are {**MCHP.IOT, microchip**}
+* **SW1** held during boot-up: Enter Soft AP mode (indicated by **Slow Blinking BLUE LED**).
+* **SW1 & SW2** held during boot-up: Use factory default configuration. Default Wi-Fi credentials are {**MCHP.IOT, microchip**}.
 
 ---
 
@@ -68,15 +68,15 @@ If you have an OLEDB Click board connected to the board's Click interface, you w
 3. A file named **WIFI.CFG** (text) file is downloaded to the host PC. 
 4. Drag and drop the file to the **CURIOSITY drive** to update the Wi-Fi credentials of the board.
 5. Reboot the device.
-6. **Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
+6. **Fast Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
 
 **Note**: Any information entered in the SSID and password fields is not transmitted over the web or to the Microchip or AWS servers. Instead, the information is used locally (within the browser) to generate the **WIFI.CFG** file.
  
 #### 2.2.2 Via Soft AP <a name="chapter2.2.2"></a>
 1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for [Android](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) or for [iOS](https://apps.apple.com/us/app/wi-fi-provisioning/id1553255731).
-2. To enter SoftAP mode, hold the **SW1** push button for most of the power up time. 
-3. All **LEDs** will be off when Soft AP is available.
-5. Using the Mobile phone or tablet, connect to the **WFI32-IoT_<MAC_ADDRESS>** hotspot. 
+2. To enter SoftAP mode, hold the **SW1** push button for most of the power up time.
+3. **Slow Blinking BLUE LED** indicates Soft AP is available.
+5. Using the Mobile phone or tablet, connect to the **WFI32-IoT>** AP. 
 6. Open **Microchip Wi-Fi Provisioning** Mobile phone application and press **CONNECT**.
 
 <img src="resources/media/mobileApp1.png" width="240"/>
@@ -84,6 +84,8 @@ If you have an OLEDB Click board connected to the board's Click interface, you w
 7. List of available APs is shown. You can press **SCAN** button to refresh.
 
 **Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported.
+
+**Note**: Make sure you have location service in your phone enabled.
 
 <img src="resources/media/mobileApp2.png" width="240"/>
 
@@ -94,7 +96,7 @@ If you have an OLEDB Click board connected to the board's Click interface, you w
 
 9. Go back in the app so that the WFI32-IoT board applies the new credentilas.
 10. Device should automatically reboot.
-11. **Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
+11. **Fast Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
 
 **Note**: WFI32-IoT board will NOT apply/use provided credentials unless you go back in the app. This gives you the chance to keep sending new credentials or correct wrongly provided ones as long as you didn't go back in the app.
 
