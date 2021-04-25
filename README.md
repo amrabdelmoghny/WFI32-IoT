@@ -76,7 +76,7 @@ If you have an OLEDB Click board connected to the board's Click interface, you w
 1. Download **Microchip Wi-Fi Provisioning** Mobile phone application for [Android](https://play.google.com/store/apps/details?id=com.microchip.wifiapplication&hl=en_US&gl=US) or for [iOS](https://apps.apple.com/us/app/wi-fi-provisioning/id1553255731).
 2. To enter SoftAP mode, hold the **SW1** push button for most of the power up time.
 3. **Slow Blinking BLUE LED** indicates Soft AP is available.
-5. Using the Mobile phone or tablet, connect to the **WFI32-IoT>** AP. 
+5. Using the Mobile phone or tablet, connect to the **WFI32-IoT** AP. 
 6. Open **Microchip Wi-Fi Provisioning** Mobile phone application and press **CONNECT**.
 
 <img src="resources/media/mobileApp1.png" width="240"/>
