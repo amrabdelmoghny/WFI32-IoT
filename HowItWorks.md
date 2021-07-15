@@ -56,8 +56,8 @@ General Out-Of-Box operation is as described below:
 6. Behavior variation can be observed on the 'Data' LED when triggered through the web based API and sent through the broker to end device.
 
 **Note**: The **SW1 & SW2** user buttons have no effect outside of variation of start-up operation where:
-* **SW1** held: Enter Soft AP mode.
-* **SW1 & SW2** held: Use factory default configuration. Default Wi-Fi credentials are {**MCHP.IOT, microchip**}
+* **SW1** held during boot-up: Enter Soft AP mode.
+* **SW1 & SW2** held during boot-up: Use factory default configuration. Default Wi-Fi credentials are {**MCHP.IOT, microchip**}
 
 **Note**: The **Red 'Data' LED** remaining on may indicate a hardware fault.
 
