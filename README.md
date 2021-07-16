@@ -83,7 +83,7 @@ If you have an OLEDB Click board connected to the board's Click interface, you w
 
 7. List of available APs is shown. You can press **SCAN** button to refresh.
 
-**Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported.
+**Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported due to iOS limitation.
 
 **Note**: Make sure you have location service in your phone enabled.
 
