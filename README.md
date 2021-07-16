@@ -150,7 +150,7 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
 3. Successfully claimed devices will show up in the device listing in the left side panel.
 4. Using Amazon Alexa® app, enable the skill '<img src="resources/media/skillIcon.png" width="30" /> [Microchip IoT](https://www.amazon.com/gp/product/B08B5THZH5?ref&ref=cm_sw_em_r_as_dp_iuhtblwcTlYL4)' and add the dev board as a smart home device.   
 5. You can now control the on-board **YELLOW LED** with voice commands using the friendly name provided while claiming the device earlier:
-> Alexa, turn on the light
+> Alexa, turn on the myCuriosity
 6. The **YELLOW LED** will remain on/off for 2 Seconds based on the voice command.
    
 **Note**: You can find out more information about connecting a smart home device to Alexa from [this link](http://tinyurl.com/alexa-smart-home)
