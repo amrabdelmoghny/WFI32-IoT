@@ -160,6 +160,10 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
 
 ## 3. Want To Know More? <a name="chapter3"></a>
 
-Curious to learn more? Please check out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/HowItWorks.md)** to dive behind the scenes, learn how Connectivity, Security and Cloud are tied together and experience how smooth it is to migrate the demo to your own cloud instance. We have also gathered some FAQs and troubleshooting tips for you under the **[FAQ and Troubleshooting Page](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md)**. You can also refer to WFI32-IoT board **[HW user guide]()**. Please feel free to check out **[WFI32E01PC module Product page](https://www.microchip.com/wwwproducts/en/WFI32E01PC)** for tips, guides, knowledge base article, code examples and further more!
-
-Another Evaluation board for WFI32E01PC module is called **[Curisoity Board](https://www.microchip.com/developmenttools/ProductDetails/PartNO/EV12F11A)**; where you can have access to more module interfaces (i.e Ethernet) and more pins for prototyping. A very similar and exciting demo for Curisoity Board is available **[here](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB)**.
+Curious to learn more? ..
+- Check out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/HowItWorks.md)** to dive behind the scenes, learn how Connectivity, Security and Cloud are tied together and experience how smooth it is to migrate the demo to your own cloud instance. 
+- We have gathered some FAQs and troubleshooting tips for you under the **[FAQ and Troubleshooting Page](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md)**. 
+- Refer to WFI32-IoT board **[HW user guide]()**. 
+- Check out **[WFI32E01PC module Product page](https://www.microchip.com/wwwproducts/en/WFI32E01PC)** for tips, guides, knowledge base article, code examples and further more!
+- Check out **[Curisoity Board](https://www.microchip.com/developmenttools/ProductDetails/PartNO/EV12F11A)**; another evaluation board for WFI32E01PC module where you can have access to more module interfaces (i.e Ethernet) and more pins for prototyping. 
+- A very similar and exciting demo for Curisoity Board is available **[here](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB)**.
