@@ -38,9 +38,9 @@ The WFI32-IoT board layout can be seen below.
 
 <img src="resources/media/leds.png" width="840"/>
 
-If you have an OLEDB Click board connected to the board's Click interface, you will:
-1. See Wi-Fi icon <img src="resources/media/wifiIcon.png" width="25"/> once board is Wi-Fi connected.
-2. Additionally, see Cloud icon <img src="resources/media/cloudIcon.png" width="25"/> once board is Cloud connected.
+If you have an [OLEDB Click board](https://www.mikroe.com/oled-b-click) connected to the WFI32-IoT board's Click interface, the OLED board will:
+1. Show **Wi-Fi icon/image** once board is Wi-Fi connected.
+2. Show additionally **Cloud icon/image** once board is Cloud connected.
 
 ### 1.3 Switch Button Use Cases <a name="chapter1.3"></a>
 * **SW1** held during boot-up: Enter Soft AP mode (indicated by **Slow Blinking BLUE LED**).
