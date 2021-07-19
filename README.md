@@ -13,8 +13,6 @@ The WFI32-IoT board comes pre-programmed and configured for demonstrating the co
 <img src="resources/media/board1.png"/>
 </p>
 
-Please check out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/HowItWorks.md)** to dive behind the scenes, learn how Connectivity, Security and Cloud are tied together and experience how smooth it is to migrate the demo to your own cloud instance. We have also gathered some FAQs and troubleshooting tips for you under the **[FAQ and Troubleshooting Page](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md)**. You can also refer to WFI32-IoT board **[HW user guide]()**. Please feel free to check out **[WFI32E01PC module Product page](https://www.microchip.com/wwwproducts/en/WFI32E01PC)** for tips, guides, knowledge base article, code examples and further more!
-
 ## Table of Contents
 
 1. [Overview](#chapter1)
@@ -28,6 +26,7 @@ Please check out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32
 		2. 	[Via Soft AP](#chapter2.2.2)
 	4.	[Visualizing Cloud Data in Real Time](#chapter2.3)
 	5.	[Voice Control](#chapter2.4)
+3. [Want To Know More?](#chapter3)
 
 
 ## 1. Overview <a name="chapter1"></a>
@@ -159,3 +158,8 @@ Please note that supported browsers inlcudes Google Chrome, Mozilla Firefox, Saf
  
 **Note**: Only devices registered to the Microchip Cloud account can be registered for voice control and controlled via the voice skills. In case of registration errors, please contact [Microchip support](http://microchip.com/support)
 
+## 3. Want To Know More? <a name="chapter3"></a>
+
+Curious to learn more? Please check out our **[Deep Dive Guide](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/HowItWorks.md)** to dive behind the scenes, learn how Connectivity, Security and Cloud are tied together and experience how smooth it is to migrate the demo to your own cloud instance. We have also gathered some FAQs and troubleshooting tips for you under the **[FAQ and Troubleshooting Page](https://github.com/amrabdelmoghny/WFI32-IoT/blob/main/FAQ.md)**. You can also refer to WFI32-IoT board **[HW user guide]()**. Please feel free to check out **[WFI32E01PC module Product page](https://www.microchip.com/wwwproducts/en/WFI32E01PC)** for tips, guides, knowledge base article, code examples and further more!
+
+Another Evaluation board for WFI32E01PC module is called **[Curisoity Board](https://www.microchip.com/developmenttools/ProductDetails/PartNO/EV12F11A)**; where you can have access to more module interfaces (i.e Ethernet) and more pins for prototyping. A very similar and exciting demo for Curisoity Board is available **[here](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB)**.
