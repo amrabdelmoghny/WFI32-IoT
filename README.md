@@ -84,7 +84,7 @@ If you have an [OLEDB Click board](https://www.mikroe.com/oled-b-click) connecte
 
 **Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported due to iOS limitation.
 
-**Note**: Make sure you have location service in your phone enabled.
+**Note**: Make sure you have location service in your phone enabled. Location service is needed by the application to be able to fetch Wi-Fi scan results (Android only), AP name and default Gateway.
 
 <img src="resources/media/mobileApp2.png" width="240"/>
 
