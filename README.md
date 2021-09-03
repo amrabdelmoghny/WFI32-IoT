@@ -101,7 +101,7 @@ If you have an [OLEDB Click board](https://www.mikroe.com/oled-b-click) connecte
 12. Device should automatically reboot.
 13. **Fast Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
 14. <a name="step14"></a>For WPA3, Mobile app doesn't currently have native support for Wi-Fi provisioning. Please follow next steps to if your AP is WPA3 enabled.
-15. Navigate from **Wi-Fi** tab to **OTHER** tab and type in the following string without the double quotations: "*apply,ssid,password,4*". Please replace *ssid* with your AP name and *password* with your AP password.
+15. Navigate from **Wi-Fi** tab to **OTHER** tab and type in the following string without the double quotations: "*apply,ssid,password,4*". Please replace *ssid* with your AP name and *password* with your AP password. Press **SEND** when done.
 	
 <img src="resources/media/mobileApp7.png" width="240"/>
 	
