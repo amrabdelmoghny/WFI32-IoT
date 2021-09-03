@@ -80,7 +80,7 @@ If you have an [OLEDB Click board](https://www.mikroe.com/oled-b-click) connecte
 
 <img src="resources/media/mobileApp1.png" width="240"/>
 
-7. If your AP security mode is WPA3, please jump to [step 14](#step14).
+7. Mobile app doesn't currently have native support for Wi-Fi provisioning for WPA3 enabled APs. If your AP security mode is WPA3, please jump to [step 14](#step14).
 8. List of available APs is shown. You can press **SCAN** button to refresh.
 
 **Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported due to iOS limitation.
@@ -100,12 +100,13 @@ If you have an [OLEDB Click board](https://www.mikroe.com/oled-b-click) connecte
 
 12. Device should automatically reboot.
 13. **Fast Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
-14. <a name="step14"></a>For WPA3, Mobile app doesn't currently have native support for Wi-Fi provisioning. Please follow next steps to if your AP is WPA3 enabled.
-15. Navigate from **Wi-Fi** tab to **OTHER** tab and type in the following string without the double quotations: "*apply,ssid,password,4*". Please replace *ssid* with your AP name and *password* with your AP password. Press **SEND** when done.
+
+##### For WPA3-enabled AP: <a name="step14"></a>
+14. Navigate from **Wi-Fi** tab to **OTHER** tab and type in the following string without the double quotations: "*apply,ssid,password,4*". Please replace *ssid* with your AP name and *password* with your AP password. Press **SEND** when done.
 	
 <img src="resources/media/mobileApp7.png" width="240"/>
 	
-16. Go back in the app and press **YES** when prompted so that the WFI32-IoT board applies the new credentilas.
+15. Go back in the app and press **YES** when prompted so that the WFI32-IoT board applies the new credentilas.
 	
 <img src="resources/media/mobileApp8.png" width="240"/>
 
