@@ -80,7 +80,8 @@ If you have an [OLEDB Click board](https://www.mikroe.com/oled-b-click) connecte
 
 <img src="resources/media/mobileApp1.png" width="240"/>
 
-7. List of available APs is shown. You can press **SCAN** button to refresh.
+7. If your AP security mode is WPA3, please jump to [step 14](#step14).
+8. List of available APs is shown. You can press **SCAN** button to refresh.
 
 **Note**: For iPhone/iPad, you have to provide your own AP crednetials as **SCAN** function is not supported due to iOS limitation.
 
@@ -88,14 +89,25 @@ If you have an [OLEDB Click board](https://www.mikroe.com/oled-b-click) connecte
 
 <img src="resources/media/mobileApp2.png" width="240"/>
 
-8. Choose one of the scanned APs or provide your own AP crednetials. Data provided is sent to the WFI32-IoT board as you press **SEND**. 
+9. Choose one of the scanned APs or provide your own AP crednetials. Data provided is sent to the WFI32-IoT board as you press **SEND**. 
 
 <img src="resources/media/mobileApp3.png" width="240"/>
 <img src="resources/media/mobileApp4.png" width="240"/>
 
-9. Go back in the app so that the WFI32-IoT board applies the new credentilas.
-10. Device should automatically reboot.
-11. **Fast Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
+10. Go back in the app and press **YES** when prompted so that the WFI32-IoT board applies the new credentilas.
+
+<img src="resources/media/mobileApp6.png" width="240"/>
+
+12. Device should automatically reboot.
+13. **Fast Blinking BLUE LED** indicates connecting to local AP and **solid BLUE LED** indicates connection is successful.
+14. <a name="step14"></a>For WPA3, Mobile app doesn't currently have native support for Wi-Fi provisioning. Please follow next steps to if your AP is WPA3 enabled.
+15. Navigate from **Wi-Fi** tab to **OTHER** tab and type in the following string without the double quotations: "*apply,ssid,password,4*". Please replace *ssid* with your AP name and *password* with your AP password.
+	
+<img src="resources/media/mobileApp7.png" width="240"/>
+	
+16. Go back in the app and press **YES** when prompted so that the WFI32-IoT board applies the new credentilas.
+	
+<img src="resources/media/mobileApp8.png" width="240"/>
 
 **Note**: WFI32-IoT board will NOT apply/use provided credentials unless you go back in the app. This gives you the chance to keep sending new credentials or correct wrongly provided ones as long as you didn't go back in the app.
 
