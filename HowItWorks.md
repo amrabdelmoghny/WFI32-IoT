@@ -27,7 +27,6 @@ Please check out our **[Quick Start Guide](https://github.com/amrabdelmoghny/WFI
 8. [Re-flash the demo](#chapter8)
 9. [Code generation using Harmony 3](#chapter9)
 10. [Power Save Modes](#chapter10)
-11. [Debugging](#chapter11)
  
 ## 1. Requirements <a name="Chapter1"></a>
 
@@ -400,19 +399,3 @@ XDS mode supports only EXT INT0 (SW1 button press) as a wakeup source.
 Following command is used to enter DS/XDS sleep mode:
 
 "**power_mode <power_mode>**": Supported values are in the range 0:3 for future use. As of now, only DS & XDS sleep modes are supported and desired mode should be selected via MHC as mentioned above.
-
----
-
-### 10. Debugging <a name="Chapter11"></a>
-When connecting WFI32-IoT board to a PC using a standard micro-USB cable, it enumerates as a USB MSD (Mass Storage Device) in addition to two other virtual COM ports reflecting UART1 and UART3 of the module where:
-* UART1 is used for application debug logs.
-* UART3 is used for Wi-Fi FW and AWS C SDK logs.
-
-UART1 supports a set of user commands via command line as follows:
-1. "**rssi**": prints current connection RSSI value.
-2. "**unixtime**": prints current UNIX time.
-3. "**debug <debug_level>**": sets application debug level (accepted values are 0 through 4).
-4. "**power_mode <power_mode>**": sets power save mode (accepted values are 0 to 3).
-5. "**reboot**": Execute a system reboot.
-
-**Note**: UART1 and UART3 settings should be 115200 8N1.
