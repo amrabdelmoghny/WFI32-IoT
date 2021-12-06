@@ -373,7 +373,7 @@ The default demo code includes some changes to the generated “net_pres_enc_glu
 
 ---
 
-### 10. Power Save Modes <a name="Chapter11"></a>
+### 10. Power Save Modes <a name="Chapter10"></a>
 WFI32-IoT OOB demo supports two low power modes: Extreme Deep Sleep mode (XDS) and Deep Sleep mode (DS). 
 
 #### Deep Sleep Mode
@@ -381,11 +381,11 @@ By default, OOB demo is configured to run into deep sleep mode (DS). Power perip
 <p align="center">
 <img src="resources/media/HowItWorks/powerSave1.png" width=800/>
 </p>
-DS mode supports both RTCC and EXT INT0 (SW1 button press) as a wakeup source. By default, RTCC frequency is set to 1 second. RTCC frequency can be changed in the function **setup_rtcc()**, file **app_ctrl.c**, line 380:
+DS mode supports both RTCC and EXT INT0 (SW1 button press) as a wakeup source. By default, RTCC frequency is set to 1 second. RTCC frequency can be changed in the function setup_rtcc(), file app_ctrl.c, line 380:
 <p align="center">
 <img src="resources/media/HowItWorks/rtccConfig.png" width=400/>
 </p>
-Different RTCC frequencies can be found in the file **plib_rtcc.h**, enum **RTCC_ALARM_MASK**:
+Different RTCC frequencies can be found in the file plib_rtcc.h, enum RTCC_ALARM_MASK:
 <p align="center">
 <img src="resources/media/HowItWorks/rtccConfig2.png" width=400/>
 </p>
