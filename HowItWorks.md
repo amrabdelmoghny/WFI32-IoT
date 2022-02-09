@@ -374,10 +374,8 @@ The default demo code includes some changes to the generated “net_pres_enc_glu
 
 ### 10. Power Save Modes <a name="Chapter10"></a>
 WFI32-IoT OOB demo supports following low power modes:
-PIC sleep modes:
-- Extreme Deep Sleep mode (XDS), Deep Sleep mode (DS). 
-WI-FI sleep modes:
-- Connected sleep mode (WSM), Wi-Fi off (WOFF).
+- PIC sleep modes: Extreme Deep Sleep mode (XDS), Deep Sleep mode (DS). 
+- WI-FI sleep modes: Connected sleep mode (WSM), Wi-Fi off (WOFF).
 
 #### Deep Sleep Mode
 By default, OOB demo is configured to run into deep sleep mode (DS). Power peripheral library configuration details for DS mode is shown below in Harmony3 configurator project graph:
