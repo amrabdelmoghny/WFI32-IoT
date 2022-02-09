@@ -373,21 +373,44 @@ The default demo code includes some changes to the generated “net_pres_enc_glu
 ---
 
 ### 10. Power Save Modes <a name="Chapter10"></a>
-WFI32-IoT OOB demo supports two low power modes: Extreme Deep Sleep mode (XDS) and Deep Sleep mode (DS). 
+WFI32-IoT OOB demo supports following low power modes:
+PIC sleep modes:
+- Extreme Deep Sleep mode (XDS), Deep Sleep mode (DS). 
+WI-FI sleep modes:
+- Connected sleep mode (WSM), Wi-Fi off (WOFF).
 
 #### Deep Sleep Mode
 By default, OOB demo is configured to run into deep sleep mode (DS). Power peripheral library configuration details for DS mode is shown below in Harmony3 configurator project graph:
 <p align="center">
 <img src="resources/media/HowItWorks/powerSave1.png" width=800/>
 </p>
-DS mode supports both RTCC and EXT INT0 (SW1 button press) as a wakeup source. By default, RTCC frequency is set to 1 second. RTCC frequency can be changed in the function setup_rtcc(), file app_ctrl.c, line 380:
-<p align="center">
-<img src="resources/media/HowItWorks/rtccConfig.png" width=400/>
-</p>
-Different RTCC frequencies can be found in the file plib_rtcc.h, enum RTCC_ALARM_MASK:
-<p align="center">
-<img src="resources/media/HowItWorks/rtccConfig2.png" width=400/>
-</p>
+DS mode supports both RTCC and EXT INT0 (SW1 button press) as a wakeup source. Under this MHC configuration, you can use command line to choose between different PIC and Wi-Fi sleep modes as follows:
+
+**power_mode <PIC | WIFI> <power_mode>**
+
+|                	| **WIFI WSM ON** 	| **WIFI WSM OFF** 	| **WIFI OFF** | **WIFI ON** 	|
+| ------------------ 	| --------------------- | --------------------- | ------------ | -------------- |
+| **PIC run**		| WIFI 0       	 	| WIFI 1		| WIFI 2	| WIFI 3	|
+| **PIC idle**		| WIFI 0 **then** PIC 0	| N/A      	 	| WIFI 2 **then** PIC 0 | N/A	| 
+| **PIC sleep**       	| WIFI 0 **then** PIC 1	| N/A      	 	| WIFI 2 **then** PIC 1 | N/A	|
+| **PIC dream** 	| N/A               	| N/A               	| N/A         	| N/A      	|
+| **PIC deep sleep** 	| PIC 3               	| PIC 3               	| PIC 3         | PIC 3        	|
+
+**Note**: PIC sleep and idle modes will not work unless Wi-Fi is in WSM or WOFF modes.
+
+**Note**: RTCC default frequency is 1 second which means that selected PIC sleep mode will exit after 1 second at most. You can change that using command line:
+**rtcc_freq <freq_val>**
+- Half sec: 0
+- Sec: 1
+- 10 sec: 2
+- Min: 3
+- 10 min: 4
+- Hour: 5
+- Day: 6
+- Week: 7
+- Month: 8
+- Year: 9
+- OFF: 255
 
 #### Extreme Deep Sleep Mode
 In case you want to enable extreme deep sleep mode (XDS), then below modification to Power peripheral library Harmony3 configuration is needed:
@@ -396,6 +419,5 @@ In case you want to enable extreme deep sleep mode (XDS), then below modificatio
 </p>
 XDS mode supports only EXT INT0 (SW1 button press) as a wakeup source.
 
-Following command is used to enter DS/XDS sleep mode:
-
-"**power_mode <power_mode>**": Supported values are in the range 0:3 for future use. As of now, only DS & XDS sleep modes are supported and desired mode should be selected via MHC as mentioned above.
+Following command is used to enter XDS sleep mode:
+**power_mode PIC 3**
