@@ -384,31 +384,19 @@ By default, OOB demo is configured to run into deep sleep mode (DS). Power perip
 </p>
 DS mode supports both RTCC and EXT INT0 (SW1 button press) as a wakeup source. Under this MHC configuration, you can use command line to choose between different PIC and Wi-Fi sleep modes as follows:
 
-**power_mode <PIC | WIFI> <power_mode>**
+**power_mode <power_mode>**
 
-|                	| **WIFI WSM ON** 	| **WIFI WSM OFF** 	| **WIFI OFF** | **WIFI ON** 	|
-| ------------------ 	| --------------------- | --------------------- | ------------ | -------------- |
-| **PIC run**		| WIFI 0       	 	| WIFI 1		| WIFI 2	| WIFI 3	|
-| **PIC idle**		| WIFI 0 **then** PIC 0	| N/A      	 	| WIFI 2 **then** PIC 0 | N/A	| 
-| **PIC sleep**       	| WIFI 0 **then** PIC 1	| N/A      	 	| WIFI 2 **then** PIC 1 | N/A	|
-| **PIC dream** 	| N/A               	| N/A               	| N/A         	| N/A      	|
-| **PIC deep sleep** 	| PIC 3               	| PIC 3               	| PIC 3         | PIC 3        	|
+|               | **PIC Power Mode** 	| **Wi-Fi Power Mode** 	|
+| ------------- | --------------------- | --------------------- |
+| **0**		| IDLE       	 	| WSM_ON		|
+| **1**		| IDLE	| N/A      	| WOFF			|
+| **2**       	| SLEEP	| N/A      	| WSM_ON		|
+| **3** 	| SLEEP               	| WOFF               	|
+| **4** 	| DS/XDS               	| -               	|
+| **4** 	| -               	| WON               	|
 
-**Note**: PIC sleep and idle modes will not work unless Wi-Fi is in WSM or WOFF modes.
-
-**Note**: RTCC default frequency is 1 second which means that selected PIC sleep mode will exit after 1 second at most. You can change that using command line:
+**Note**: RTCC default frequency is 1 second. Once you call "**power_mode**" command, this changes to 10 seconds. You can always change RTCC frequency using command line:
 **rtcc_freq <freq_val>**
-- Half sec: 0
-- Sec: 1
-- 10 sec: 2
-- Min: 3
-- 10 min: 4
-- Hour: 5
-- Day: 6
-- Week: 7
-- Month: 8
-- Year: 9
-- OFF: 255
 
 #### Extreme Deep Sleep Mode
 In case you want to enable extreme deep sleep mode (XDS), then below modification to Power peripheral library Harmony3 configuration is needed:
@@ -418,4 +406,4 @@ In case you want to enable extreme deep sleep mode (XDS), then below modificatio
 XDS mode supports only EXT INT0 (SW1 button press) as a wakeup source.
 
 Following command is used to enter XDS sleep mode:
-**power_mode PIC 3**
+**power_mode 4**
