@@ -393,7 +393,7 @@ DS mode supports both RTCC and EXT INT0 (SW1 button press) as a wakeup source. U
 | **2**       	| SLEEP	| N/A      	| WSM_ON		|
 | **3** 	| SLEEP               	| WOFF               	|
 | **4** 	| DS/XDS               	| -               	|
-| **4** 	| -               	| WON               	|
+| **5** 	| -               	| WON               	|
 
 **Note**: RTCC default frequency is 1 second. Once you call "**power_mode**" command, this changes to 10 seconds. You can always change RTCC frequency using command line:
 **rtcc_freq <freq_val>**
