@@ -4,8 +4,7 @@ Devices: **| PIC32 WFI32E | WFI32 | Trust\&Go (ECC608) |**
 
 Features: **| Secure Cloud connectivity | Voice Control |**
 
-[![Latest release](https://img.shields.io/github/v/release/MicrochipTech/PIC32MZW1_Curiosity_OOB?include_prereleases&sort=semver&style=for-the-badge)](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest)
-[![Latest release date](https://img.shields.io/github/release-date/MicrochipTech/PIC32MZW1_Curiosity_OOB?style=for-the-badge)](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/MicrochipTech/WFI32-IoT?include_prereleases&sort=semver&style=for-the-badge)](https://github.com/MicrochipTech/WFI32-IoT/releases/latest)
 
 The WFI32-IoT board comes pre-programmed and configured for demonstrating the connectivity to the AWS Cloud IoT Core. The demo uses **AWS C SDK version 4.0** to establish MQTT connection to AWS broker, subscribe to cloud topic/s and publish to the cloud.
 
@@ -41,6 +40,19 @@ For the latest version, please refer to: [XC-Compiler](https://www.microchip.com
 * **WFI32-IoT Board**
 The WFI32-IoT board is a compact, easy-to-use development board that supports rapid prototyping of IoT devices and demonstrates cloud connectivity with voice control enablement. This kit is also a useful tool to evaluate the features of WFI32E01PC, the single-chip Wi-Fi module. The board also includes an on-board debugger and requires no external hardware to program and debug the MCU.
 
+* **Manifest**
+    - {name: "cryptoauthlib", version: "v3.2.4"}
+    - {name: "csp", version: "v3.10.0"}
+    - {name: "usb", version: "v3.8.0"}
+    - {name: "wolfssl", version: "v4.7.0"}
+    - {name: "crypto", version: "v3.7.4"}
+    - {name: "CMSIS-FreeRTOS", version: "v10.3.1"}
+    - {name: "core", version: "v3.10.0"}
+    - {name: "wireless_wifi", version: "v3.6.1"}
+    - {name: "dev_packs", version: "v3.10.0"}
+    - {name: "net", version: "v3.7.0"}
+    - {name: "bsp", version: "v3.9.0"}
+
 ---
 
 ## 2. Application Scope <a name="Chapter2"></a>
@@ -71,10 +83,11 @@ The application runs multiple logical modules as follows:
 | ----------------------------- | --------------------- | ------------------------------------------------------------------------------------- |
 | **APP**			| app.c/.h		| The main/central module that manages **Wi-Fi functionality**.              		|
 | **APP_WIFI_PROV**		| app_wifi_prov.c/.h	| Manages **AP provisioning functionality** to provision the device using AP mode	|
-| **APP_USB_MSD**		| app_usb_msd.c/.h	| Manages **Mass Storage Device functionality**  					|
+| **APP_USB_MSD**		| app_usb_msd.c/.h	| Manages **Mass Storage Device functionality***  					|
 | **APP_CTRL**			| app_ctrl.c.h		| Manages device **Control operations** including LED management and sensors access	|
 | **APP_AWS**			| app_aws.c/.h		| Manages **AWS cloud connection/subscribe/publish functionality**			|
 | **APP_COMMANDS**		| app_commands.c/.h	| Manage **User commands given via command line**					|
+| **APP_PS**			| app_ps.c/.h		| Manage **PIC/Wi-Fi sleep modes**					|
 
 (*) **Mass Storage Device** gives access to:
 * Configure the device for Wi-Fi connection via **WIFI.CFG**.
@@ -320,7 +333,7 @@ By default, the demo connects to an instance of AWS IoT maintained by Microchip.
 In case you want to re-flash the device, perform the following steps:
 
 1. Download and install [MPLABX Integrated Programming Environment](https://www.microchip.com/mplab/mplab-integrated-programming-environment).
-2. Download the latest FW image (hex file) from the [releases](https://github.com/MicrochipTech/PIC32MZW1_Curiosity_OOB/releases/latest) tab.
+2. Download the latest FW image (hex file) from the [releases](https://github.com/MicrochipTech/WFI32-IoT/releases/latest) tab.
 2. Connect WFI32-IoT board USB to your PC.
 3. Open MPLABX IPE.
 
